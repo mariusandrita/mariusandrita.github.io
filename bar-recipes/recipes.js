@@ -35,6 +35,7 @@ const recipes = [
   {
     name: "Hugo",
     tagline: "Floral, ușor, răcoritor",
+    cat: "modern",
     image: "images/hugo.png",
     theme: "#87d656", // Elderflower green
     glass: Categories.Glasses.BALLOON,
@@ -69,6 +70,7 @@ const recipes = [
   {
     name: "Bumbo",
     tagline: "Băutura Piraților",
+    cat: "historic",
     image: "images/bumbo.png",
     theme: "#a85d20", // Amber rum
     glass: Categories.Glasses.ROCKS_OR_MUG,
@@ -101,6 +103,7 @@ const recipes = [
   {
     name: "Grog",
     tagline: "Băutura Marinei Britanice",
+    cat: "historic",
     image: "images/grog.png",
     theme: "#7a491e", // Dark rum brown
     glass: Categories.Glasses.MUG,
@@ -160,6 +163,7 @@ const recipes = [
   {
     name: "Blue Margarita",
     tagline: "Vibrantă, exotică, albastră",
+    cat: "twist",
     image: "images/blue-margarita.png",
     theme: "#00a8e8", // Bright Ocean Blue
     glass: Categories.Glasses.MARTINI,
@@ -252,7 +256,8 @@ const recipes = [
   },
   {
     name: "Raspberry Mojito",
-    tagline: "Fructat, răcoritor, vibrant (Autentic)",
+    tagline: "Fructat, răcoritor, vibrant",
+    cat: "twist",
     image: "images/raspberry-mojito.png",
     theme: "#e30b5d", // Raspberry red
     glass: Categories.Glasses.HIGHBALL,
@@ -288,7 +293,8 @@ const recipes = [
   },
   {
     name: "Negroni Sbagliato",
-    tagline: "Amar, efervescent, „greșit\" (clasic modern)",
+    tagline: "Amar, efervescent, „greșit\"",
+    cat: "modern",
     image: "images/negroni-sbagliato.png",
     theme: "#c8102e", // Campari red
     glass: Categories.Glasses.ROCKS,
@@ -316,6 +322,36 @@ const recipes = [
       "Completează cu prosecco rece, turnat ușor, ca să păstrezi bulele.",
       "Amestecă o dată, delicat, cu lingura de bar.",
       "Garnisește cu o felie de portocală."
+    ]
+  },
+  {
+    name: "Gin Tonic",
+    tagline: "Răcoritor, botanic, efervescent",
+    image: "images/gin-tonic.png",
+    theme: "#3fa9d6", // Cool tonic blue
+    cat: "classic",
+    glass: Categories.Glasses.HIGHBALL,
+    tools: [Categories.Tools.BAR_SPOON, Categories.Tools.CITRUS_KNIFE],
+    ingredients: {
+      ml: [
+        "50 ml Gin (ex. Bombay Sapphire / Tanqueray)",
+        "150 ml Apă tonică (ex. Schweppes / Fever-Tree)",
+        Categories.Ice.PLENTY,
+        "1 felie de lime (garnitură)"
+      ],
+      parts: [
+        "1 parte Gin (ex. Bombay Sapphire / Tanqueray)",
+        "3 părți Apă tonică (ex. Schweppes / Fever-Tree)",
+        Categories.Ice.PLENTY,
+        "1 felie de lime (garnitură)"
+      ]
+    },
+    method: [
+      "Umple paharul highball cu gheață până sus (răcește paharul).",
+      "Toarnă ginul peste gheață.",
+      "Completează cu apă tonică rece, turnată ușor pe marginea paharului ca să păstrezi bulele.",
+      "Amestecă o singură dată, delicat, cu lingura de bar.",
+      "Garnisește cu o felie de lime (sau, opțional, boabe de ienupăr, castravete și o rămurică de rozmarin)."
     ]
   }
 ];

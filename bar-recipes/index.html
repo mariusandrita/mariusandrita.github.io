@@ -69,6 +69,7 @@
   <script>
     const grid = document.getElementById('cards');
     const toggle = document.getElementById('unit-toggle');
+    const CAT_LABELS = { modern: 'Clasic Modern', historic: 'Tradițional', twist: 'Variantă', classic: 'Clasic' };
 
     function renderRecipes(useMl) {
       grid.innerHTML = '';
@@ -92,16 +93,9 @@
         card.innerHTML = `
           <div class="card-inner">
             <div class="card-front">
-              ${r.iba ? `<div class="iba-badge" title="Cocktail oficial IBA — certificat" aria-label="Cocktail oficial IBA certificat">
-                <svg class="iba-stamp" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-                  <defs><path id="ibaArc" d="M60,60 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs>
-                  <circle class="iba-disc" cx="60" cy="60" r="59"/>
-                  <circle class="iba-ring" cx="60" cy="60" r="56"/>
-                  <circle class="iba-ring" cx="60" cy="60" r="49"/>
-                  <text class="iba-arc"><textPath href="#ibaArc" startOffset="0">★ IBA CERTIFIED ★ IBA CERTIFIED </textPath></text>
-                  <path class="iba-tick" d="M36 61 L52 79 L86 36"/>
-                </svg>
-              </div>` : ''}
+              ${r.iba
+                ? `<img class="iba-badge" src="images/iba-seal.png" alt="IBA Approved" title="International Barman Association — Approved" loading="lazy">`
+                : (r.cat ? `<span class="card-tag tag-${r.cat}" title="Rețetă verificată">✓ ${CAT_LABELS[r.cat]}</span>` : '')}
               <div class="card-img">
                 <img src="${r.image}" alt="${r.name}" loading="lazy">
               </div>
