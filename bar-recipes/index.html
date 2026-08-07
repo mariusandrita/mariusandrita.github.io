@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rețetar Băuturi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Colecție de rețete</p>
+    <h1>Rețetar Băuturi</h1>
+    <p class="subtitle">Cocktailuri clasice, explicate pas cu pas — de la pahar la garnitură.</p>
+    <div class="toggle-container">
+      <span>Măsuri (Părți)</span>
+      <label class="switch">
+        <input type="checkbox" id="unit-toggle" checked>
+        <span class="slider round"></span>
+      </label>
+      <span>Mililitri (ml)</span>
+    </div>
+  </header>
+
+  <main id="cards" class="grid"></main>
+
+  <section class="syrups">
+    <h2>Siropuri de casă</h2>
+    <p class="syrups-intro">Bazele dulci din spatele rețetelor — făcute în casă, autentice.</p>
+    <div class="syrup-grid">
+      <article class="syrup-card">
+        <h3>Sirop simplu (de zahăr)</h3>
+        <p class="ratio">1 : 1 &middot; zahăr alb : apă</p>
+        <ol>
+          <li>Încălzește 100 ml apă (fără să fiarbă).</li>
+          <li>Adaugă 100 g zahăr alb și amestecă până se dizolvă complet.</li>
+          <li>Răcește. Se ține la frigider ~1 lună.</li>
+        </ol>
+      </article>
+      <article class="syrup-card">
+        <h3>Sirop de zahăr brun</h3>
+        <p class="ratio">1 : 1 (sau 2 : 1 pentru intens) &middot; zahăr brun : apă</p>
+        <ol>
+          <li>Încălzește 100 ml apă (fără să fiarbă).</li>
+          <li>Adaugă 100 g zahăr brun (sau 200 g pentru varianta groasă) și amestecă până se dizolvă.</li>
+          <li>Note de caramel și melasă. Frigider ~1 lună. Ideal pentru Bumbo și Grog.</li>
+        </ol>
+      </article>
+      <article class="syrup-card">
+        <h3>Sirop de soc</h3>
+        <p class="ratio">flori proaspete de soc &middot; pentru Hugo</p>
+        <ol>
+          <li>Fierbe 1 L apă cu 800 g–1 kg zahăr până se dizolvă (sirop simplu).</li>
+          <li>Toarnă cald peste ~25 umbele de flori de soc și 2 lămâi feliate.</li>
+          <li>Macerează 24–48 h la rece, apoi strecoară fin. Frigider ~3 săptămâni.</li>
+          <li>Alternativ: sirop cumpărat gata (Monin / Giffard).</li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <footer>Făcut cu gheață, citrice și puțină migală &middot; 2026</footer>
+
+  <script src="categories.js"></script>
+  <script src="recipes.js"></script>
+  <script>
+    const grid = document.getElementById('cards');
+    const toggle = document.getElementById('unit-toggle');
+
+    function renderRecipes(useMl) {
+      grid.innerHTML = '';
+      recipes.forEach((r, i) => {
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.style.animationDelay = `${i * 0.1}s`;
+        if (r.theme) {
+          card.style.setProperty('--card-theme', r.theme);
+        }
+        
+        // Add click to flip
+        card.addEventListener('click', () => {
+          card.classList.toggle('flipped');
+        });
+        
+        const allIngredients = useMl ? r.ingredients.ml : r.ingredients.parts;
+        const ingredients = allIngredients.filter(ing => !(ing && ing.isIce));
+        const iceItems = allIngredients.filter(ing => ing && ing.isIce);
+        
+        card.innerHTML = `
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="card-img">
+                <img src="${r.image}" alt="${r.name}" loading="lazy">
+              </div>
+              <div class="card-front-overlay">
+                <h2>${r.name}</h2>
+                ${r.tagline ? `<p class="tagline">${r.tagline}</p>` : ''}
+                <div class="flip-hint">Click pentru rețetă</div>
+              </div>
+            </div>
+            
+            <div class="card-back">
+              <div class="card-body">
+                <h2>${r.name}</h2>
+                <div class="glass-info">
+                  ${renderIngredientWithCategoryIcon(r.glass)}
+                </div>
+
+                <h3>Ingrediente</h3>
+                <ul class="ingredients">
+                  ${ingredients.map(ing => `<li>${renderIngredientWithCategoryIcon(ing)}</li>`).join('')}
+                </ul>
+
+                ${iceItems.length ? `
+                <h3>Gheață</h3>
+                <ul class="ice">
+                  ${iceItems.map(ice => `<li>${renderIngredientWithCategoryIcon(ice)}</li>`).join('')}
+                </ul>` : ''}
+
+                <h3>Ustensile</h3>
+                <ul class="tools">
+                  ${r.tools.map(t => `<li>${renderIngredientWithCategoryIcon(t)}</li>`).join('')}
+                </ul>
+
+                <h3>Preparare</h3>
+                <ol class="method">
+                  ${r.method.map(m => `<li>${m}</li>`).join('')}
+                </ol>
+              </div>
+            </div>
+          </div>`;
+        grid.appendChild(card);
+      });
+    }
+
+    toggle.addEventListener('change', (e) => {
+      renderRecipes(e.target.checked);
+    });
+
+    // Initial render
+    renderRecipes(toggle.checked);
+  </script>
+</body>
+</html>
