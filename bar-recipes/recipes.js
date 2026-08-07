@@ -2,6 +2,7 @@ const recipes = [
   {
     name: "Aperol Spritz",
     tagline: "Amar, efervescent, italian",
+    iba: true,
     image: "images/aperol-spritz.png",
     theme: "#ff6a00", // Orange
     glass: Categories.Glasses.BALLOON,
@@ -129,6 +130,7 @@ const recipes = [
   {
     name: "Classic Margarita",
     tagline: "Rețeta originală cu Don Julio",
+    iba: true,
     image: "images/margarita.png",
     theme: "#a8e036", // Lime green
     glass: Categories.Glasses.MARTINI,
@@ -186,7 +188,8 @@ const recipes = [
   },
   {
     name: "Piña Colada",
-    tagline: "Tropical, dulce, cremos (IBA Standard)",
+    tagline: "Tropical, dulce, cremos",
+    iba: true,
     image: "images/pina-colada.png",
     theme: "#fced95", // Pineapple yellow
     glass: Categories.Glasses.HIGHBALL,
@@ -214,7 +217,8 @@ const recipes = [
   },
   {
     name: "Mojito",
-    tagline: "Răcoritor, mentolat, energizant (IBA Standard)",
+    tagline: "Răcoritor, mentolat, energizant",
+    iba: true,
     image: "images/mojito.png",
     theme: "#00b551", // Mint green
     glass: Categories.Glasses.HIGHBALL,

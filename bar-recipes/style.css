@@ -171,6 +171,51 @@ h1 {
   border: 1px solid var(--border);
 }
 
+/* IBA official — green "certified" rubber stamp, top-right of the card front */
+.iba-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 6;
+  width: 70px;
+  height: 70px;
+  transform: rotate(-11deg);
+  pointer-events: none;
+  filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.6));
+}
+
+.iba-stamp {
+  width: 100%;
+  height: 100%;
+  color: #ffffff; /* rings, text, check — white */
+}
+
+.iba-disc {
+  fill: #2f8f26; /* solid green backing so it reads on any photo */
+}
+
+.iba-ring {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.5;
+}
+
+.iba-arc {
+  fill: currentColor;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: 0.4px;
+}
+
+.iba-tick {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .card-back {
   transform: rotateY(180deg);
   overflow-y: auto;
