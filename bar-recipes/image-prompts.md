@@ -10,15 +10,15 @@ Save each output as `images/<name>.png`.
 |---|---|
 | Aperol Spritz | ✅ keep |
 | Hugo | ✅ keep |
-| Bumbo | 🔴 regenerate — image shows ice, recipe is no-ice |
+| Bumbo | ✅ regenerated — no ice now |
 | Grog | ✅ keep |
 | Classic Margarita | ✅ keep |
 | Blue Margarita | ✅ keep |
 | Piña Colada | ✅ keep |
-| Mojito | 🟡 optional — bar is generic, not distinctly Havana |
+| Mojito | ✅ regenerated — now at La Bodeguita del Medio, Havana |
 | Raspberry Mojito | ✅ keep |
 | Negroni Sbagliato | ✅ keep |
-| Gin Tonic | 🔴 generate — no image yet |
+| Gin Tonic | ✅ generated — Andalusian terrace |
 
 ---
 
@@ -44,7 +44,7 @@ Save each output as `images/<name>.png`.
 
 > A vertical 9:16 portrait, high-quality, professional, photorealistic image of a classic Bumbo pirate cocktail — a warm amber rum drink served **neat, without any ice**, in a rustic wooden barrel-mug, its surface dusted with freshly grated nutmeg and a pinch of cinnamon. Clustered tightly directly behind the mug, slightly out of focus, is a bottle of "Mount Gay Barbados Rum" and a small pewter pot of brown sugar. The background features a candlelit 18th-century pirate ship captain's cabin — dark aged timber, a flickering lantern, an old sea map and a weathered pirate portrait on the wall. Moody, golden candlelight, adventurous atmosphere.
 
-**Status:** 🔴 Regenerate — locale is great, but the current mug shows **ice cubes** while the recipe is *fără gheață*. Regen with the "no ice" wording above.
+**Status:** ✅ Regenerated — no ice now, smooth surface dusted with nutmeg.
 
 ## Grog — Royal Navy ship ⚓ → `grog.png`
 
@@ -74,7 +74,7 @@ Save each output as `images/<name>.png`.
 
 > A vertical 9:16 portrait, high-quality, professional, photorealistic image of a classic Mojito — refreshing and effervescent, over crushed ice in a tall highball glass, packed with fresh mint sprigs and lime wedges. Clustered tightly directly behind the glass, slightly out of focus, is a bottle of "Captain Morgan White Rum". The background features a lively old Havana, Cuba bar — colorful weathered colonial facades, vintage hand-painted signage, pastel peeling paint, warm Caribbean afternoon light. Authentic, sun-soaked, joyful Cuban atmosphere.
 
-**Status:** 🟡 Optional — current image is a beautiful but *generic* tropical bar. Regen with the Havana wording above to nail the drink's Cuban home.
+**Status:** ✅ Regenerated — now set at La Bodeguita del Medio, the legendary Havana bar credited with popularizing the Mojito.
 
 ## Raspberry Mojito — Tropical party bar 🇨🇺 → `raspberry-mojito.png`
 
@@ -92,4 +92,4 @@ Save each output as `images/<name>.png`.
 
 > A vertical 9:16 portrait, high-quality, professional, photorealistic image of a classic Gin & Tonic — crystal-clear and effervescent, over plenty of ice in an elegant highball glass, garnished with a lime wedge, a few juniper berries, and a sprig of rosemary. Clustered tightly directly behind the glass, slightly out of focus, are a bottle of "Bombay Sapphire" gin and a bottle of "Fever-Tree" tonic water. The background features a sun-drenched Spanish terrace bar in Andalusia — whitewashed walls, warm Mediterranean afternoon light, potted greenery and bougainvillea. Crisp, refreshing, premium atmosphere.
 
-**Status:** 🔴 Generate — no image exists yet; card shows a broken image until added.
+**Status:** ✅ Generated — Andalusian terrace, matches the prompt exactly.
