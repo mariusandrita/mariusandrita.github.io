@@ -3,6 +3,7 @@ const recipes = [
     name: "Aperol Spritz",
     tagline: "Amar, efervescent, italian",
     iba: true,
+    spirits: ["prosecco", "aperol"],
     image: "images/aperol-spritz.png",
     theme: "#ff6a00", // Orange
     glass: Categories.Glasses.BALLOON,
@@ -36,6 +37,7 @@ const recipes = [
     name: "Hugo",
     tagline: "Floral, ușor, răcoritor",
     cat: "modern",
+    spirits: ["prosecco"],
     image: "images/hugo.png",
     theme: "#87d656", // Elderflower green
     glass: Categories.Glasses.BALLOON,
@@ -71,6 +73,7 @@ const recipes = [
     name: "Bumbo",
     tagline: "Băutura Piraților",
     cat: "historic",
+    spirits: ["rom"],
     image: "images/bumbo.png",
     theme: "#a85d20", // Amber rum
     glass: Categories.Glasses.ROCKS_OR_MUG,
@@ -104,6 +107,7 @@ const recipes = [
     name: "Grog",
     tagline: "Băutura Marinei Britanice",
     cat: "historic",
+    spirits: ["rom"],
     image: "images/grog.png",
     theme: "#7a491e", // Dark rum brown
     glass: Categories.Glasses.MUG,
@@ -134,6 +138,7 @@ const recipes = [
     name: "Classic Margarita",
     tagline: "Rețeta originală cu Don Julio",
     iba: true,
+    spirits: ["tequila", "triple_sec"],
     image: "images/margarita.png",
     theme: "#a8e036", // Lime green
     glass: Categories.Glasses.MARTINI,
@@ -164,6 +169,7 @@ const recipes = [
     name: "Blue Margarita",
     tagline: "Vibrantă, exotică, albastră",
     cat: "twist",
+    spirits: ["tequila", "blue_curacao"],
     image: "images/blue-margarita.png",
     theme: "#00a8e8", // Bright Ocean Blue
     glass: Categories.Glasses.MARTINI,
@@ -194,6 +200,7 @@ const recipes = [
     name: "Piña Colada",
     tagline: "Tropical, dulce, cremos",
     iba: true,
+    spirits: ["rom"],
     image: "images/pina-colada.png",
     theme: "#fced95", // Pineapple yellow
     glass: Categories.Glasses.HIGHBALL,
@@ -223,6 +230,7 @@ const recipes = [
     name: "Mojito",
     tagline: "Răcoritor, mentolat, energizant",
     iba: true,
+    spirits: ["rom"],
     image: "images/mojito.png",
     theme: "#00b551", // Mint green
     glass: Categories.Glasses.HIGHBALL,
@@ -258,6 +266,7 @@ const recipes = [
     name: "Raspberry Mojito",
     tagline: "Fructat, răcoritor, vibrant",
     cat: "twist",
+    spirits: ["rom"],
     image: "images/raspberry-mojito.png",
     theme: "#e30b5d", // Raspberry red
     glass: Categories.Glasses.HIGHBALL,
@@ -295,6 +304,7 @@ const recipes = [
     name: "Negroni Sbagliato",
     tagline: "Amar, efervescent, „greșit\"",
     cat: "modern",
+    spirits: ["campari", "vermut", "prosecco"],
     image: "images/negroni-sbagliato.png",
     theme: "#c8102e", // Campari red
     glass: Categories.Glasses.ROCKS,
@@ -330,6 +340,7 @@ const recipes = [
     image: "images/gin-tonic.png",
     theme: "#3fa9d6", // Cool tonic blue
     cat: "classic",
+    spirits: ["gin"],
     glass: Categories.Glasses.HIGHBALL,
     tools: [Categories.Tools.BAR_SPOON, Categories.Tools.CITRUS_KNIFE],
     ingredients: {
@@ -360,6 +371,7 @@ const recipes = [
     image: "images/cuba-libre.png",
     theme: "#9c4a2e", // Cola-rum amber-brown
     iba: true,
+    spirits: ["rom"],
     glass: Categories.Glasses.HIGHBALL,
     tools: [Categories.Tools.BAR_SPOON, Categories.Tools.CITRUS_KNIFE],
     ingredients: {

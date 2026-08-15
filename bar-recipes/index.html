@@ -25,6 +25,12 @@
     </div>
   </header>
 
+  <section class="spirit-filter">
+    <p class="spirit-filter-label">Ce ai la bar?</p>
+    <div id="spirit-chips" class="spirit-chips"></div>
+    <p id="spirit-count" class="spirit-count"></p>
+  </section>
+
   <main id="cards" class="grid"></main>
 
   <section class="syrups">
@@ -69,11 +75,47 @@
   <script>
     const grid = document.getElementById('cards');
     const toggle = document.getElementById('unit-toggle');
+    const chipsEl = document.getElementById('spirit-chips');
+    const countEl = document.getElementById('spirit-count');
     const CAT_LABELS = { modern: 'Clasic Modern', historic: 'Tradițional', twist: 'Variantă', classic: 'Clasic' };
+    const SPIRIT_LABELS = {
+      rom: 'Rom', gin: 'Gin', tequila: 'Tequila', prosecco: 'Prosecco',
+      aperol: 'Aperol', triple_sec: 'Triple Sec', blue_curacao: 'Blue Curaçao',
+      campari: 'Campari', vermut: 'Vermut roșu'
+    };
+    const SPIRIT_ORDER = ['rom', 'gin', 'tequila', 'prosecco', 'aperol', 'triple_sec', 'blue_curacao', 'campari', 'vermut'];
+    const activeSpirits = new Set();
+
+    // Build filter chips from whatever spirits actually appear in the recipes
+    const spiritsInUse = SPIRIT_ORDER.filter(s => recipes.some(r => (r.spirits || []).includes(s)));
+    chipsEl.innerHTML = spiritsInUse.map(s =>
+      `<button type="button" class="spirit-chip" data-spirit="${s}">${SPIRIT_LABELS[s]}</button>`
+    ).join('');
+    chipsEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.spirit-chip');
+      if (!btn) return;
+      const s = btn.dataset.spirit;
+      activeSpirits.has(s) ? activeSpirits.delete(s) : activeSpirits.add(s);
+      btn.classList.toggle('active');
+      renderRecipes(toggle.checked);
+    });
 
     function renderRecipes(useMl) {
       grid.innerHTML = '';
-      recipes.forEach((r, i) => {
+      const visible = activeSpirits.size === 0
+        ? recipes
+        : recipes.filter(r => (r.spirits || []).every(s => activeSpirits.has(s)));
+
+      countEl.textContent = activeSpirits.size === 0
+        ? `${recipes.length} cocktailuri disponibile`
+        : `${visible.length} din ${recipes.length} cocktailuri poți face acum`;
+
+      if (!visible.length) {
+        grid.innerHTML = '<p class="empty-state">Nicio rețetă cu ce ai selectat — mai adaugă o sticlă 🍸</p>';
+        return;
+      }
+
+      visible.forEach((r, i) => {
         const card = document.createElement('article');
         card.className = 'card';
         card.style.animationDelay = `${i * 0.1}s`;
