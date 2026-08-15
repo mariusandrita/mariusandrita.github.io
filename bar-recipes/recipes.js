@@ -1,7 +1,7 @@
 const recipes = [
   {
     name: "Aperol Spritz",
-    tagline: "Amar, efervescent, italian",
+    tagline: "Amar-dulce și vesel — perfect la apus, pe o terasă însorită",
     iba: true,
     spirits: ["prosecco", "aperol"],
     image: "images/aperol-spritz.png",
@@ -35,7 +35,7 @@ const recipes = [
   },
   {
     name: "Hugo",
-    tagline: "Floral, ușor, răcoritor",
+    tagline: "Floral și ușor, ca o adiere răcoroasă de vară montană",
     cat: "modern",
     spirits: ["prosecco"],
     image: "images/hugo.png",
@@ -71,7 +71,7 @@ const recipes = [
   },
   {
     name: "Bumbo",
-    tagline: "Băutura Piraților",
+    tagline: "Cald, dulce-picant — pentru seri de poveste la lumina lumânării",
     cat: "historic",
     spirits: ["rom"],
     image: "images/bumbo.png",
@@ -105,7 +105,7 @@ const recipes = [
   },
   {
     name: "Grog",
-    tagline: "Băutura Marinei Britanice",
+    tagline: "Robust și reconfortant — pentru nopți reci și povești de mare",
     cat: "historic",
     spirits: ["rom"],
     image: "images/grog.png",
@@ -136,7 +136,7 @@ const recipes = [
   },
   {
     name: "Classic Margarita",
-    tagline: "Rețeta originală cu Don Julio",
+    tagline: "Acidulată, sărată, îndrăzneață — când vrei ceva cu caracter",
     iba: true,
     spirits: ["tequila", "triple_sec"],
     image: "images/margarita.png",
@@ -167,7 +167,7 @@ const recipes = [
   },
   {
     name: "Blue Margarita",
-    tagline: "Vibrantă, exotică, albastră",
+    tagline: "La fel de sec și acidulat, dar jucăuș și electrizant",
     cat: "twist",
     spirits: ["tequila", "blue_curacao"],
     image: "images/blue-margarita.png",
@@ -198,7 +198,7 @@ const recipes = [
   },
   {
     name: "Piña Colada",
-    tagline: "Tropical, dulce, cremos",
+    tagline: "Cremoasă, dulce, tropicală — o vacanță pe plajă într-un pahar",
     iba: true,
     spirits: ["rom"],
     image: "images/pina-colada.png",
@@ -228,7 +228,7 @@ const recipes = [
   },
   {
     name: "Mojito",
-    tagline: "Răcoritor, mentolat, energizant",
+    tagline: "Răcoritor și mentolat — pentru zile toride și seri lungi",
     iba: true,
     spirits: ["rom"],
     image: "images/mojito.png",
@@ -264,7 +264,7 @@ const recipes = [
   },
   {
     name: "Raspberry Mojito",
-    tagline: "Fructat, răcoritor, vibrant",
+    tagline: "Răcoritor și fructat, cu o notă dulce-acrișoară jucăușă",
     cat: "twist",
     spirits: ["rom"],
     image: "images/raspberry-mojito.png",
@@ -302,7 +302,7 @@ const recipes = [
   },
   {
     name: "Negroni Sbagliato",
-    tagline: "Amar, efervescent, „greșit\"",
+    tagline: "Amar, elegant, efervescent — pentru un aperitiv sofisticat",
     cat: "modern",
     spirits: ["campari", "vermut", "prosecco"],
     image: "images/negroni-sbagliato.png",
@@ -336,7 +336,7 @@ const recipes = [
   },
   {
     name: "Gin Tonic",
-    tagline: "Răcoritor, botanic, efervescent",
+    tagline: "Sec, botanic, cristalin — simplu, rafinat, mereu potrivit",
     image: "images/gin-tonic.png",
     theme: "#3fa9d6", // Cool tonic blue
     cat: "classic",
@@ -367,7 +367,7 @@ const recipes = [
   },
   {
     name: "Cuba Libre",
-    tagline: "Rom, cola, lime — „Cuba liberă”",
+    tagline: "Dulce-acrișor și energic — nostalgic, ca o seară în Havana",
     image: "images/cuba-libre.png",
     theme: "#9c4a2e", // Cola-rum amber-brown
     iba: true,
