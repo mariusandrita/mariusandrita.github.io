@@ -19,6 +19,7 @@ Save each output as `images/<name>.png`.
 | Raspberry Mojito | ✅ keep |
 | Negroni Sbagliato | ✅ keep |
 | Gin Tonic | ✅ generated — Andalusian terrace |
+| Cuba Libre | ✅ generated — Malecón at sunset |
 
 ---
 
@@ -93,3 +94,9 @@ Save each output as `images/<name>.png`.
 > A vertical 9:16 portrait, high-quality, professional, photorealistic image of a classic Gin & Tonic — crystal-clear and effervescent, over plenty of ice in an elegant highball glass, garnished with a lime wedge, a few juniper berries, and a sprig of rosemary. Clustered tightly directly behind the glass, slightly out of focus, are a bottle of "Bombay Sapphire" gin and a bottle of "Fever-Tree" tonic water. The background features a sun-drenched Spanish terrace bar in Andalusia — whitewashed walls, warm Mediterranean afternoon light, potted greenery and bougainvillea. Crisp, refreshing, premium atmosphere.
 
 **Status:** ✅ Generated — Andalusian terrace, matches the prompt exactly.
+
+## Cuba Libre — Havana Malecón at sunset 🇨🇺 → `cuba-libre.png`
+
+> A vertical 9:16 portrait, high-quality, professional, photorealistic image of a classic Cuba Libre — dark cola over ice in a tall highball glass, garnished with a lime wedge, fine effervescent bubbles visible. Clustered tightly directly behind the glass, slightly out of focus, is a bottle of white rum and a classic glass Coca-Cola bottle. The background features Havana's iconic Malecón seafront at golden-hour sunset — the seawall, crashing waves, and a row of colorful vintage 1950s American cars parked along the boulevard. Nostalgic, vibrant, quintessentially Cuban atmosphere.
+
+**Status:** ✅ Generated — Havana Club + Coca-Cola, Malecón sunset with vintage cars. Distinct from the Mojito's La Bodeguita del Medio scene, as intended.

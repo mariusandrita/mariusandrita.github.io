@@ -353,5 +353,37 @@ const recipes = [
       "Amestecă o singură dată, delicat, cu lingura de bar.",
       "Garnisește cu o felie de lime (sau, opțional, boabe de ienupăr, castravete și o rămurică de rozmarin)."
     ]
+  },
+  {
+    name: "Cuba Libre",
+    tagline: "Rom, cola, lime — „Cuba liberă”",
+    image: "images/cuba-libre.png",
+    theme: "#9c4a2e", // Cola-rum amber-brown
+    iba: true,
+    glass: Categories.Glasses.HIGHBALL,
+    tools: [Categories.Tools.BAR_SPOON, Categories.Tools.CITRUS_KNIFE],
+    ingredients: {
+      ml: [
+        "50 ml Rom alb",
+        "120 ml Cola",
+        "10 ml Zeamă proaspătă de lime",
+        Categories.Ice.STANDARD,
+        "1 felie de lime (garnitură)"
+      ],
+      parts: [
+        "5 părți Rom alb",
+        "12 părți Cola",
+        "1 parte Zeamă proaspătă de lime",
+        Categories.Ice.STANDARD,
+        "1 felie de lime (garnitură)"
+      ]
+    },
+    method: [
+      "Umple paharul highball cu gheață.",
+      "Toarnă zeama de lime, apoi romul alb peste gheață.",
+      "Completează cu cola.",
+      "Amestecă ușor cu lingura de bar.",
+      "Garnisește cu o felie de lime."
+    ]
   }
 ];
