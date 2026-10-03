@@ -57,7 +57,7 @@ const fmt = (s) => {
 async function openRecipe(r) {
   current = r;
   const file = `recipes/${r.slug}${lang() === 'ro' ? '.ro' : ''}.md`;
-  const md = (await (await fetch(file)).text()).replace(/^---[\s\S]*?---\n/, '');
+  const md = (await (await fetch(file, { cache: 'no-cache' })).text()).replace(/^---[\s\S]*?---\n/, '');
   body.innerHTML = marked.parse(md)
     .replace(/(src=")images\//g, '$1recipes/images/')
     .replace(/<a /g, '<a target="_blank" rel="noopener" ')
@@ -134,4 +134,4 @@ $('reader-reset').addEventListener('click', () => {
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !reader.hidden) closeRecipe(); });
 toggle.addEventListener('change', () => { closeRecipe(); renderUI(); });
 
-fetch('recipes/index.json').then((r) => r.json()).then((j) => { index = j; renderUI(); });
+fetch('recipes/index.json', { cache: 'no-cache' }).then((r) => r.json()).then((j) => { index = j; renderUI(); });
