@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rețetar Autentic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p class="eyebrow" id="t-eyebrow"></p>
+    <h1 id="t-title"></h1>
+    <p class="subtitle" id="t-sub"></p>
+    <div class="toggle-container">
+      <span>English</span>
+      <label class="switch">
+        <input type="checkbox" id="lang-toggle" checked>
+        <span class="slider round"></span>
+      </label>
+      <span>Română</span>
+    </div>
+  </header>
+
+  <main id="cards" class="grid"></main>
+
+  <footer id="t-footer"></footer>
+
+  <div id="reader" class="reader" hidden>
+    <div class="reader-bar">
+      <button id="reader-close" type="button" aria-label="Close">←</button>
+      <button id="reader-reset" type="button"></button>
+    </div>
+    <article id="reader-body" class="reader-body"></article>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

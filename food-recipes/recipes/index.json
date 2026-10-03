@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "crepes",
+    "image": "recipes/images/crepes/finished.jpg",
+    "theme": "#ffb800",
+    "origin": "🇫🇷",
+    "time": "1 h 40",
+    "title": { "en": "Crêpes", "ro": "Clătite franțuzești" },
+    "tagline": {
+      "en": "Thin, golden Breton pancakes — rest the batter, flip when lacy",
+      "ro": "Clătite subțiri și aurii din Bretania — lasă aluatul să se odihnească"
+    }
+  }
+]
