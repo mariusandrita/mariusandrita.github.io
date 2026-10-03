@@ -16,6 +16,19 @@ sources:
 ![Finished crêpes](images/crepes/finished.jpg)
 *Photo: [Meilleur du Chef](https://meilleurduchef.com/fr/dossier/pate-a-crepe.html)*
 
+## The story
+- **Origins:** Flat cakes of grain and water are ancient: Greeks and Romans cooked wheat, barley and millet cakes with honey or fresh cheese. The crêpe as we know it shows up in Brittany around the 13th century, after buckwheat, brought back from Asia by the Crusaders, took to the poor Breton soil. The buckwheat *galette* fed Bretons for centuries ([Dubocalalassiette](https://dubocalalassiette.fr/blog/le-roi-de-la-crepe/); dates vary by source).
+- **How it evolved:** In Upper Brittany the split became the rule: **salty buckwheat = *galette*, thin sweet wheat = *crêpe***. The sweet crêpe became the festive one, tied to **La Chandeleur** (2 Feb, 40 days after Christmas), a Christian feast that landed on top of older Roman February celebrations where crêpes were already eaten.
+- **Fun fact:** Tradition says to flip the crêpe with a gold coin (*louis d'or*) in your other hand to bring a year of prosperity ([La Libre](https://www.lalibre.be/lifestyle/food/2003/01/31/un-louis-dor-en-main-6L7JYLZXEVELDEPQEUL4RK4RQ4/)).
+
+## Grandma's tips 👵
+- **Eggs make them crisp and golden.** Annette, a Breton *mamie*, uses 250 g wheat + 50 g buckwheat flour, 125 g sugar and six eggs: three whole and three yolks. *Tradition* ([Brut](https://www.brut.media/fr/videos/la-recette-des-crepes-d-annette-mamie-bretonne-brut-food)). Want it richer? Add 1 extra yolk to this recipe.
+- **Salted butter under the crêpe.** Slip a small piece under the crêpe at the end of cooking: *croustillant dehors, fondant au milieu*. *Tradition*, reported for one Breton grandmother (search summary; I didn't open the page).
+- **Beurre noisette.** Brown the butter until it smells of hazelnuts, then whisk it into the batter. *Tradition.*
+- **Beer in the batter.** An old regional habit, gives a light malty taste. *Myth:* it does **not** make the batter rise ([Démotivateur](https://www.demotivateur.fr/food/chandeleur-peut-on-ajouter-de-la-biere-dans-la-pate-a-crepes-23881)).
+- **Ultra-fresh eggs, whole milk (even raw), T45/T55 flour.** *Confirmed by several sources.*
+- **Water-drop test.** A drop that sizzles and evaporates means the pan is right, around 210 °C. *Confirmed.*
+
 **Serves** 4 (~12 crêpes) · **Prep** 10 min · **Rest** 1 h · **Cook** 20 min · **Easy**
 
 > **Before you start:** take the pan out, melt the butter, and (if cooking in the morning) take the batter out of the fridge.
@@ -85,11 +98,9 @@ Lemon + sugar, Nutella, jam, honey, salted-butter caramel. Batter keeps 3–4 da
 - [ ] **Pantry:** flour (250 g), sugar, salt, vanilla/rum (optional)
 - [ ] **Toppings:** lemon, Nutella, jam, honey
 
-## A little history
-Crêpes come from Brittany, where they were cooked in the hearth from the Middle Ages, first with buckwheat (the savoury *galette*). The sweet wheat crêpe is tied to **La Chandeleur** (2 Feb); its round golden shape is said to recall the returning sun. Tradition says to flip with a coin in the other hand for a prosperous year (folklore).
-
 ## Sources compared
 Morbihan Tourisme (Breton, 1 h rest), Dubocalalassiette (4-3-2-1 ratio, hot pan), Meilleur du Chef (melted butter, blender for lumps), 24matins (snippet). Marmiton/Vikidia/750g not fetchable. Egg count differed (Meilleur du Chef: 6); I used the common ~2 per 250 g flour.
+Also used for story & grandma's tips: Dubocalalassiette (history), La Libre (coin tradition), Brut Food (Annette), Démotivateur (beer myth).
 
 ## Variants
 Breton galette (buckwheat, savoury); cider or rum in the batter.

@@ -16,6 +16,19 @@ sources:
 ![Clătite gata](images/crepes/finished.jpg)
 *Photo: [Meilleur du Chef](https://meilleurduchef.com/fr/dossier/pate-a-crepe.html)*
 
+## Povestea
+- **Originile:** Turtele din cereale și apă sunt străvechi: grecii și romanii coceau turte din grâu, orz și mei, cu miere sau brânză proaspătă. Clătita așa cum o știm apare în Bretania pe la secolul al XIII-lea, după ce hrișca, adusă din Asia de cruciați, s-a prins pe pământul sărac al Bretaniei. *Galette*-ul de hrișcă a hrănit bretonii secole întregi ([Dubocalalassiette](https://dubocalalassiette.fr/blog/le-roi-de-la-crepe/); datele diferă între surse).
+- **Cum a evoluat:** În Bretania de Sus regula a devenit: **hrișcă sărată = *galette*, grâu subțire și dulce = *crêpe***. Clătita dulce a devenit cea de sărbătoare, legată de **La Chandeleur** (2 februarie, la 40 de zile după Crăciun), o sărbătoare creștină ce s-a suprapus peste vechi sărbători romane din februarie, când se mâncau deja clătite.
+- **Curiozitate:** Tradiția spune să întorci clătita cu o monedă de aur (*louis d'or*) în cealaltă mână, pentru un an prosper ([La Libre](https://www.lalibre.be/lifestyle/food/2003/01/31/un-louis-dor-en-main-6L7JYLZXEVELDEPQEUL4RK4RQ4/)).
+
+## Sfaturile bunicii 👵
+- **Ouăle le fac crocante și aurii.** Annette, o *mamie* bretonă, folosește 250 g făină de grâu + 50 g de hrișcă, 125 g zahăr și șase ouă: trei întregi și trei gălbenușuri. *Tradiție* ([Brut](https://www.brut.media/fr/videos/la-recette-des-crepes-d-annette-mamie-bretonne-brut-food)). Vrei mai bogate? Adaugă 1 gălbenuș în plus la rețeta asta.
+- **Unt sărat sub clătită.** Strecoară un cubuleț la sfârșitul coacerii: *croustillant dehors, fondant au milieu* (crocant pe-afară, topit la mijloc). *Tradiție*, raportată pentru o bunică bretonă (rezumat din căutare; nu am deschis pagina).
+- **Beurre noisette (unt de alună).** Rumenește untul până miroase a alune, apoi amestecă-l în aluat. *Tradiție.*
+- **Bere în aluat.** Obicei regional vechi, dă un gust ușor de malț. *Mit:* **nu** face aluatul să crească ([Démotivateur](https://www.demotivateur.fr/food/chandeleur-peut-on-ajouter-de-la-biere-dans-la-pate-a-crepes-23881)).
+- **Ouă foarte proaspete, lapte integral (chiar crud), făină T45/T55.** *Confirmat de mai multe surse.*
+- **Testul picăturii de apă.** Dacă sfârâie și se evaporă, tigaia e bună, cam 210 °C. *Confirmat.*
+
 **Porții** 4 (~12 clătite) · **Pregătire** 10 min · **Odihnă** 1 h · **Gătire** 20 min · **Ușor**
 
 > **Înainte să începi:** scoate tigaia, topește untul și (dacă gătești dimineața) scoate aluatul din frigider.
@@ -85,11 +98,9 @@ Cu lămâie și zahăr, Nutella, dulceață, miere sau caramel sărat cu unt. Al
 - [ ] **Cămară:** făină (250 g), zahăr, sare, vanilie/rom (opțional)
 - [ ] **Topping:** lămâie, Nutella, dulceață, miere
 
-## Puțină istorie
-Clătitele *crêpes* vin din Bretania, unde se coceau pe vatră încă din Evul Mediu, la început din făină de hrișcă (*galette*-ul sărat). Clătita dulce din făină de grâu e legată de **La Chandeleur** (2 februarie); forma rotundă și aurie ar aminti de soarele care se întoarce după iarnă. Tradiția spune să întorci clătita ținând o monedă în cealaltă mână, pentru un an prosper (folclor).
-
 ## Surse comparate
 Morbihan Tourisme (bretonă, odihnă 1 h), Dubocalalassiette (raport 4-3-2-1, tigaie fierbinte), Meilleur du Chef (unt topit, blender pentru cocoloașe), 24matins (doar fragment din căutare). Marmiton/Vikidia/750g nu au putut fi accesate. Numărul de ouă diferă (Meilleur du Chef: 6); am folosit raportul comun, ~2 ouă la 250 g făină.
+Folosite și pentru poveste și sfaturile bunicii: Dubocalalassiette (istorie), La Libre (moneda), Brut Food (Annette), Démotivateur (mitul cu berea).
 
 ## Variante
 *Galette* bretonă (hrișcă, umplutură sărată); cidru sau rom în aluat.
