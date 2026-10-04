@@ -8,6 +8,8 @@ sources:
   - https://morbihan.com/decouvrir/gastronomie-bretonne/carnet-des-recettes/recette-de-la-pate-a-crepes/
   - https://dubocalalassiette.fr/blog/apprendre-a-faire-des-crepes/
   - https://meilleurduchef.com/fr/dossier/pate-a-crepe.html
+  - https://www.marmiton.org/recettes/recette_pate-a-crepes_12372.aspx
+  - https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html
   - https://www.24matins.fr/la-recette-pour-des-crepes-bretonnes-parfaites-1387763
 ---
 
@@ -41,48 +43,62 @@ sources:
 
 ## Ingrediente
 - [ ] 250 g făină albă
-- [ ] 2 ouă
+- [ ] 3 ouă
 - [ ] 500 ml lapte integral
 - [ ] 50 g unt topit (sau 1 lingură ulei neutru)
 - [ ] 40–60 g zahăr
 - [ ] 1 praf de sare
-- [ ] Opțional: 1 lingură rom, 1 linguriță vanilie sau apă de flori de portocal
+- [ ] Aromă, **alege una**: 1 lingură rom **sau** 1 linguriță extract de vanilie (sau sari peste)
 - [ ] Unt/ulei suplimentar pentru tigaie
 
 ## Pași
-1. [ ] Amestecă făina, zahărul și sarea. Fă o **adâncitură** în mijloc.
-2. [ ] Sparge **cele 2 ouă** în adâncitură. Amestecă cu telul dinspre centru spre margini, adăugând **100 ml lapte**.
-3. [ ] Adaugă **restul de lapte** treptat, amestecând până se omogenizează. *Au rămas cocoloașe? Dă scurt cu un blender vertical.*
-4. [ ] Adaugă untul topit și aromele.
-   ⏱ **Odihnă 1 h** (la temperatura camerei) sau peste noapte la frigider. *Aluatul trebuie să fie subțire ca smântâna lichidă.*
+1. [ ] Într-un bol mare amestecă **250 g făină**, **40–60 g zahăr** și **1 praf de sare**. Fă o **adâncitură** în mijloc.
+2. [ ] Sparge **3 ouă** în adâncitură. Amestecă cu telul dinspre centru spre margini, adăugând **100 ml lapte** (din cei 500 ml).
+3. [ ] Adaugă **restul de 400 ml lapte** puțin câte puțin, amestecând până se omogenizează. *Prea mult lapte deodată face cocoloașe. Tot ai cocoloașe? Strecoară printr-o sită fină sau dă scurt cu blenderul.*
+4. [ ] Adaugă **50 g unt topit** și aroma: **1 lingură rom SAU 1 linguriță extract de vanilie**. *Alege una, nu amândouă, sau sari peste.*
+   ⏱ **Odihnă 1 h** (la temperatura camerei) sau peste noapte la frigider. *Aluatul trebuie să fie fluid ca smântâna lichidă.*
 
-   ![Consistența aluatului: omogen, subțire, cu câteva bule](images/crepes/step-batter.jpg)
-   *Așa trebuie să arate aluatul · Photo: [Food Faith Fitness](https://www.foodfaithfitness.com/wprm_print/how-to-make-crepes)*
+   ![Consistența aluatului: omogen și fluid](images/crepes/step-batter.jpg)
+   *Așa trebuie să arate aluatul · Foto: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
 
-5. [ ] Încinge tigaia la **foc mediu-iute**. *E gata când o picătură de apă sfârâie și dansează.*
+5. [ ] Încinge tigaia la **foc mediu** și topește un cubuleț de unt. *E gata când o picătură de apă sfârâie și dansează.*
 
-   ![Tigaie unsă ușor cu unt](images/crepes/step-pan.jpg)
-   *Tigaia gata: o peliculă subțire de unt topit · Photo: [Food Faith Fitness](https://www.foodfaithfitness.com/wprm_print/how-to-make-crepes)*
+   ![Un cubuleț de unt se topește în tigaia fierbinte](images/crepes/step-butter.jpg)
+   *Topește puțin unt · Foto: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
 
-6. [ ] Unge ușor tigaia. Toarnă **1 polonic** de aluat și învârte tigaia ca să se întindă subțire.
-   ⏱ **~1 min** — *marginile aurii și se desprind, clătita alunecă liber.*
+6. [ ] Șterge excesul de unt cu un șervet de hârtie (păstrează hârtia ca să ungi tigaia din nou la fiecare 2–3 clătite).
 
-   ![Prima parte gătită: model auriu ca dantela](images/crepes/step-side1.jpg)
-   *Întoarce când arată așa · Photo: [Food Faith Fitness](https://www.foodfaithfitness.com/wprm_print/how-to-make-crepes)*
+   ![Ștergerea tigăii cu șervet de hârtie](images/crepes/step-wipe.jpg)
+   *Las-o doar cu o peliculă subțire · Foto: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
 
-7. [ ] Întoarce clătita.
-   ⏱ **20–30 s**
-8. [ ] Așază clătitele pe o farfurie deasupra unei oale cu apă fierbinte sau ține-le în cuptor la **80 °C**. Repetă; unge tigaia din nou la fiecare 2–3 clătite.
+7. [ ] Toarnă **cam 70 ml (1 polonic)** de aluat dintr-o dată și învârte tigaia ca să se întindă subțire.
+
+   ![Turnarea unui polonic de aluat în tigaie](images/crepes/step-pour.jpg)
+   *Un polonic, turnat odată · Foto: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
+
+   ⏱ **90 s** (1 min 30) — *suprafața mată, marginile se desprind; strecoară o spatulă pe sub margine.*
+
+   ![Ridicarea marginii clătitei cu spatula](images/crepes/step-flip.jpg)
+   *Întoarce acum · Foto: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
+
+8. [ ] Întoarce clătita.
+   ⏱ **30 s** — *doar până apar pete aurii.*
+
+   ![Pete aurii pe clătita gătită](images/crepes/step-golden.jpg)
+   *Gata când arată așa · Foto: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
+
+9. [ ] Așază clătitele pe o farfurie deasupra unei oale cu apă fierbinte sau ține-le în cuptor la **80 °C**. Repetă cu restul aluatului (cam 12 clătite); unge tigaia din nou la fiecare 2–3 clătite.
 
 ## Cronometre – pe scurt
 | Pas | Timp | Ce urmărești |
 |---|---|---|
 | Odihnă | 1 h+ | Subțire ca smântâna |
-| Prima parte | ~1 min | Margini aurii, alunecă |
-| A doua parte | 20–30 s | Pete ușor aurii |
+| Prima parte | 90 s | Suprafață mată, margini desprinse |
+| A doua parte | 30 s | Pete aurii |
 
 ## Dacă ceva nu merge
 - **Se rup:** aluat prea subțire → adaugă 1 ou și o lingură de făină.
+- **Cocoloașe:** adaugă laptele treptat sau strecoară printr-o sită fină ([Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html), un profesor de gastronomie).
 - **Gumoase:** tigaia e prea rece → mărește focul.
 - **Se ard înainte să se întindă:** tigaia e prea fierbinte → micșorează focul.
 - **Aluat prea gros:** adaugă puțin lapte.
@@ -94,12 +110,12 @@ Cu lămâie și zahăr, Nutella, dulceață, miere sau caramel sărat cu unt. Al
 ---
 
 ## Listă de cumpărături
-- [ ] **Lactate:** lapte (500 ml), unt (~80 g), ouă (2)
-- [ ] **Cămară:** făină (250 g), zahăr, sare, vanilie/rom (opțional)
+- [ ] **Lactate:** lapte (500 ml), unt (~80 g), ouă (3)
+- [ ] **Cămară:** făină (250 g), zahăr, sare, rom sau vanilie (la alegere)
 - [ ] **Topping:** lămâie, Nutella, dulceață, miere
 
 ## Surse comparate
-Morbihan Tourisme (bretonă, odihnă 1 h), Dubocalalassiette (raport 4-3-2-1, tigaie fierbinte), Meilleur du Chef (unt topit, blender pentru cocoloașe), 24matins (doar fragment din căutare). Marmiton/Vikidia/750g nu au putut fi accesate. Numărul de ouă diferă (Meilleur du Chef: 6); am folosit raportul comun, ~2 ouă la 250 g făină.
+[Marmiton](https://www.marmiton.org/recettes/recette_pate-a-crepes_12372.aspx) (cel mai evaluat aluat francez: 1.017 recenzii, 4,3/5; 300 g făină, 3 ouă, 600 ml lapte, rom, 1 min 30 + 30 s), [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html) (profesor de gastronomie: făină T55, 3 ouă, 500 ml lapte, odihnă 30 min, poze pas cu pas), Morbihan Tourisme (bretonă, odihnă 1 h), Dubocalalassiette (raport 4-3-2-1, tigaie fierbinte), Meilleur du Chef (unt topit, blender pentru cocoloașe), 24matins (doar fragment din căutare). Vikidia și 750g nu au putut fi accesate. Numărul de ouă variază (de la 1,75 la 6 la 250 g făină); mediana e cam 2,5, deci folosesc 3. Toate sursele și pozele sunt în limba franceză.
 Folosite și pentru poveste și sfaturile bunicii: Dubocalalassiette (istorie), La Libre (moneda), Brut Food (Annette), Démotivateur (mitul cu berea).
 
 ## Variante

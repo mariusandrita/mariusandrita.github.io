@@ -8,6 +8,8 @@ sources:
   - https://morbihan.com/decouvrir/gastronomie-bretonne/carnet-des-recettes/recette-de-la-pate-a-crepes/
   - https://dubocalalassiette.fr/blog/apprendre-a-faire-des-crepes/
   - https://meilleurduchef.com/fr/dossier/pate-a-crepe.html
+  - https://www.marmiton.org/recettes/recette_pate-a-crepes_12372.aspx
+  - https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html
   - https://www.24matins.fr/la-recette-pour-des-crepes-bretonnes-parfaites-1387763
 ---
 
@@ -41,48 +43,62 @@ sources:
 
 ## Ingredients
 - [ ] 250 g plain flour
-- [ ] 2 eggs
+- [ ] 3 eggs
 - [ ] 500 ml whole milk
 - [ ] 50 g butter, melted (or 1 tbsp neutral oil)
 - [ ] 40–60 g sugar
 - [ ] 1 pinch salt
-- [ ] Optional: 1 tbsp rum, 1 tsp vanilla, or orange blossom water
+- [ ] Flavouring, **choose one**: 1 tbsp rum **or** 1 tsp vanilla extract (or skip)
 - [ ] Extra butter/oil for the pan
 
 ## Steps
-1. [ ] Whisk flour, sugar and salt. Make a **well** in the middle.
-2. [ ] Crack in the **2 eggs**. Whisk from the centre outward, adding **100 ml milk**.
-3. [ ] Add the **rest of the milk** gradually, whisking until smooth. *Lumps? Blitz briefly with a blender.*
-4. [ ] Stir in the melted butter and flavouring.
-   ⏱ **Rest 1 h** (room temp) or overnight in the fridge. *Batter should be as thin as single cream.*
+1. [ ] In a large bowl whisk **250 g flour**, **40–60 g sugar** and **1 pinch of salt**. Make a **well** in the middle.
+2. [ ] Crack **3 eggs** into the well. Whisk from the centre outward, adding **100 ml milk** (from the 500 ml).
+3. [ ] Add the **remaining 400 ml milk** a little at a time, whisking until smooth. *Too much milk at once makes lumps. Lumps anyway? Strain through a fine sieve or blitz briefly.*
+4. [ ] Stir in **50 g melted butter** and the flavouring: **1 tbsp rum OR 1 tsp vanilla extract**. *Pick one, not both, or skip it.*
+   ⏱ **Rest 1 h** (room temp) or overnight in the fridge. *Batter should be as fluid as single cream.*
 
-   ![Batter consistency: smooth, thin, a few bubbles](images/crepes/step-batter.jpg)
-   *Batter should look like this · Photo: [Food Faith Fitness](https://www.foodfaithfitness.com/wprm_print/how-to-make-crepes)*
+   ![Batter consistency: smooth and fluid](images/crepes/step-batter.jpg)
+   *Batter should look like this · Photo: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
 
-5. [ ] Heat the pan on **medium-high**. *Ready when a water drop sizzles and dances.*
+5. [ ] Heat the pan on **medium heat** and melt a small knob of butter. *Ready when a water drop sizzles and dances.*
 
-   ![Pan lightly greased with butter](images/crepes/step-pan.jpg)
-   *Pan ready: thin film of melted butter · Photo: [Food Faith Fitness](https://www.foodfaithfitness.com/wprm_print/how-to-make-crepes)*
+   ![A knob of butter melting in the hot pan](images/crepes/step-butter.jpg)
+   *Melt a little butter · Photo: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
 
-6. [ ] Grease lightly. Pour **1 ladle**, tilt the pan to spread thin.
-   ⏱ **~1 min** — *edges golden and lifting, crêpe slides freely.*
+6. [ ] Wipe off the excess butter with paper towel (keep the paper to re-grease every 2–3 crêpes).
 
-   ![First side done: golden lacy pattern](images/crepes/step-side1.jpg)
-   *Flip when it looks like this · Photo: [Food Faith Fitness](https://www.foodfaithfitness.com/wprm_print/how-to-make-crepes)*
+   ![Wiping the pan with paper towel](images/crepes/step-wipe.jpg)
+   *Leave only a thin film · Photo: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
 
-7. [ ] Flip.
-   ⏱ **20–30 s**
-8. [ ] Stack on a plate over a pan of simmering water, or keep in an **80 °C oven**. Repeat; re-grease every 2–3 crêpes.
+7. [ ] Pour **about 70 ml (1 ladle)** of batter in one go and tilt the pan to spread it thin.
+
+   ![Pouring a ladle of batter into the pan](images/crepes/step-pour.jpg)
+   *One ladle, poured at once · Photo: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
+
+   ⏱ **90 s** (1 min 30) — *surface matt, edges lifting; slide a spatula under the edge.*
+
+   ![Lifting the edge of the crêpe with a spatula](images/crepes/step-flip.jpg)
+   *Flip now · Photo: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
+
+8. [ ] Flip the crêpe.
+   ⏱ **30 s** — *just until golden spots appear.*
+
+   ![Golden spots on the cooked crêpe](images/crepes/step-golden.jpg)
+   *Done when it looks like this · Photo: [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html)*
+
+9. [ ] Stack on a plate over a pan of simmering water, or keep in an **80 °C oven**. Repeat with the rest of the batter (about 12 crêpes); re-grease every 2–3 crêpes.
 
 ## Timer cheat-sheet
 | Step | Time | Look for |
 |---|---|---|
 | Rest | 1 h+ | Thin as cream |
-| Side 1 | ~1 min | Golden edges, slides |
-| Side 2 | 20–30 s | Light spots |
+| Side 1 | 90 s | Matt surface, edges lifting |
+| Side 2 | 30 s | Golden spots |
 
 ## If it goes wrong
 - **Tears:** batter too thin → add 1 egg + a spoonful of flour.
+- **Lumps:** add the milk gradually, or strain through a fine sieve ([Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html), a cooking teacher).
 - **Rubbery:** pan too cool → raise the heat.
 - **Burns before spreading:** pan too hot → lower the heat.
 - **Too thick:** splash of milk.
@@ -94,12 +110,12 @@ Lemon + sugar, Nutella, jam, honey, salted-butter caramel. Batter keeps 3–4 da
 ---
 
 ## Grocery list
-- [ ] **Dairy:** milk (500 ml), butter (~80 g), eggs (2)
-- [ ] **Pantry:** flour (250 g), sugar, salt, vanilla/rum (optional)
+- [ ] **Dairy:** milk (500 ml), butter (~80 g), eggs (3)
+- [ ] **Pantry:** flour (250 g), sugar, salt, rum or vanilla (your choice)
 - [ ] **Toppings:** lemon, Nutella, jam, honey
 
 ## Sources compared
-Morbihan Tourisme (Breton, 1 h rest), Dubocalalassiette (4-3-2-1 ratio, hot pan), Meilleur du Chef (melted butter, blender for lumps), 24matins (snippet). Marmiton/Vikidia/750g not fetchable. Egg count differed (Meilleur du Chef: 6); I used the common ~2 per 250 g flour.
+[Marmiton](https://www.marmiton.org/recettes/recette_pate-a-crepes_12372.aspx) (most-reviewed French batter: 1,017 reviews, 4.3/5; 300 g flour, 3 eggs, 600 ml milk, rum, 1 min 30 + 30 s), [Le Sot L'y Laisse](https://lesotlylaisse.over-blog.com/article-realiser-une-pate-a-crepes-et-cuire-des-crepes-en-images-60285226.html) (cooking teacher: T55 flour, 3 eggs, 500 ml milk, 30 min rest, step photos), Morbihan Tourisme (Breton, 1 h rest), Dubocalalassiette (4-3-2-1 ratio, hot pan), Meilleur du Chef (melted butter, blender for lumps), 24matins (snippet). Vikidia and 750g were not fetchable. Egg count varied (1.75 to 6 per 250 g flour); the median is about 2.5, so I use 3. All sources and photos are French-language.
 Also used for story & grandma's tips: Dubocalalassiette (history), La Libre (coin tradition), Brut Food (Annette), Démotivateur (beer myth).
 
 ## Variants
