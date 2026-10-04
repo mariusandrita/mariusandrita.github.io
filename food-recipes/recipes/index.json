@@ -497,9 +497,9 @@
       "url": "https://www.instagram.com/p/DRkLgnYiN5_/"
     },
     "country": {
-      "key": "ro-lang",
-      "en": "Romanian-language",
-      "ro": "Limba română"
+      "key": "ro",
+      "en": "🇷🇴 Romania",
+      "ro": "🇷🇴 România"
     },
     "course": [
       "main"
