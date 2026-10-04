@@ -566,5 +566,127 @@
         "unit": ""
       }
     ]
+  },
+  {
+    "slug": "salata-de-vinete-cu-maioneza",
+    "image": "recipes/images/salata-de-vinete/finished.jpg",
+    "theme": "#8e6bbf",
+    "origin": "🇷🇴",
+    "time": "4 h",
+    "title": {
+      "en": "Eggplant Salad with Mayonnaise",
+      "ro": "Salată de vinete cu maioneză"
+    },
+    "tagline": {
+      "en": "Smoky baked eggplant, whipped with yolks and oil into a white, creamy spread",
+      "ro": "Vinete coapte pe flacără, mixate cu gălbenușuri și ulei într-o cremă albă"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 5 Romanian sources",
+        "ro": "🌐 5 surse românești"
+      },
+      "label": {
+        "en": "Based on Savori Urbane, cross-checked with Jamila Cuisine, Laura Laurențiu, Gustos and Adevărul",
+        "ro": "Pe baza Savori Urbane, verificată cu Jamila Cuisine, Laura Laurențiu, Gustos și Adevărul"
+      },
+      "url": "https://savoriurbane.com/salata-de-vinete-cu-maioneza-reteta-romaneasca-traditionala/"
+    },
+    "country": {
+      "key": "ro",
+      "en": "🇷🇴 Romania",
+      "ro": "🇷🇴 România"
+    },
+    "course": [
+      "appetizer"
+    ],
+    "grocery": [
+      {
+        "aisle": "produce",
+        "key": "eggplant",
+        "name": {
+          "en": "Eggplants",
+          "ro": "Vinete"
+        },
+        "qty": 1600,
+        "unit": "g"
+      },
+      {
+        "aisle": "dairy",
+        "key": "eggs",
+        "name": {
+          "en": "Eggs (3, for the yolks)",
+          "ro": "Ouă (3, pentru gălbenușuri)"
+        },
+        "qty": 3,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "sunflower-oil",
+        "name": {
+          "en": "Sunflower oil",
+          "ro": "Ulei de floarea-soarelui"
+        },
+        "qty": 200,
+        "unit": "ml"
+      },
+      {
+        "aisle": "produce",
+        "key": "lemon",
+        "name": {
+          "en": "Lemon",
+          "ro": "Lămâie"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "onion",
+        "name": {
+          "en": "Onion (small)",
+          "ro": "Ceapă (mică)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "other",
+        "key": "bread",
+        "name": {
+          "en": "Bread, to serve",
+          "ro": "Pâine, pentru servire"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      },
+      {
+        "aisle": "produce",
+        "key": "tomato",
+        "name": {
+          "en": "Tomatoes, to serve",
+          "ro": "Roșii, pentru servire"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      }
+    ]
   }
 ]
