@@ -283,5 +283,187 @@
       "soup",
       "main"
     ]
+  },
+  {
+    "slug": "patates-salatasi",
+    "image": "recipes/images/patates-salatasi/finished.jpg",
+    "theme": "#e23d3d",
+    "origin": "🇹🇷",
+    "time": "1 h 10",
+    "title": {
+      "en": "Turkish-Style Potato Salad",
+      "ro": "Salată turcească de cartofi"
+    },
+    "tagline": {
+      "en": "Potatoes, eggs, peppers, sumac and pomegranate molasses",
+      "ro": "Cartofi, ouă, ardei, sumac și melasă de rodie"
+    },
+    "source": {
+      "kind": "reel",
+      "tags": [
+        "social",
+        "facebook"
+      ],
+      "badge": {
+        "en": "▶ Reel · Facebook",
+        "ro": "▶ Reel · Facebook"
+      },
+      "label": {
+        "en": "Saved from a reel by Neris Kitchen on Facebook (German caption), cross-checked on Turkish sites",
+        "ro": "Salvată dintr-un reel al Neris Kitchen de pe Facebook (în germană), verificată pe site-uri turcești"
+      },
+      "url": "https://www.facebook.com/share/r/1GKsyh4AtA/"
+    },
+    "country": {
+      "key": "tr",
+      "en": "🇹🇷 Turkey",
+      "ro": "🇹🇷 Turcia"
+    },
+    "course": [
+      "salad",
+      "side"
+    ],
+    "grocery": [
+      {
+        "aisle": "produce",
+        "key": "potato",
+        "name": {
+          "en": "Potatoes",
+          "ro": "Cartofi"
+        },
+        "qty": 1500,
+        "unit": "g"
+      },
+      {
+        "aisle": "dairy",
+        "key": "eggs",
+        "name": {
+          "en": "Eggs",
+          "ro": "Ouă"
+        },
+        "qty": 6,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "red-onion",
+        "name": {
+          "en": "Onions (red)",
+          "ro": "Cepe (roșii)"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "spring-onion",
+        "name": {
+          "en": "Spring onions",
+          "ro": "Ceapă verde"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "red-pepper",
+        "name": {
+          "en": "Red bell peppers",
+          "ro": "Ardei grași roșii"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "tomato",
+        "name": {
+          "en": "Tomato",
+          "ro": "Roșie"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "cherry-tomato",
+        "name": {
+          "en": "Cherry tomatoes (a handful)",
+          "ro": "Roșii cherry (un pumn)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "parsley",
+        "name": {
+          "en": "Parsley",
+          "ro": "Pătrunjel"
+        },
+        "qty": 1,
+        "unit": "bunch"
+      },
+      {
+        "aisle": "produce",
+        "key": "lemon",
+        "name": {
+          "en": "Lemons",
+          "ro": "Lămâi"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "olive-oil",
+        "name": {
+          "en": "Olive oil",
+          "ro": "Ulei de măsline"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "pepper",
+        "name": {
+          "en": "Black pepper",
+          "ro": "Piper negru"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "other",
+        "key": "sumac",
+        "name": {
+          "en": "Sumac",
+          "ro": "Sumac"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "other",
+        "key": "pomegranate-molasses",
+        "name": {
+          "en": "Pomegranate molasses",
+          "ro": "Melasă de rodie"
+        },
+        "qty": 0,
+        "unit": ""
+      }
+    ]
   }
 ]
