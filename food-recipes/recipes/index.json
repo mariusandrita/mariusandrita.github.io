@@ -688,5 +688,341 @@
         "optional": true
       }
     ]
+  },
+  {
+    "slug": "kaiserschmarrn",
+    "image": "recipes/images/kaiserschmarrn/finished.jpg",
+    "theme": "#d9a441",
+    "origin": "🇦🇹",
+    "time": "50 min",
+    "title": {
+      "en": "Kaiserschmarrn",
+      "ro": "Kaiserschmarrn"
+    },
+    "tagline": {
+      "en": "Fluffy shredded Austrian pancake with raisins and warm plum compote",
+      "ro": "Clătită austriacă pufoasă ruptă în bucăți, cu stafide și compot de prune"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 6 Austrian/German sources",
+        "ro": "🌐 6 surse austriece/germane"
+      },
+      "label": {
+        "en": "Based on Gute Küche and Servus, cross-checked with kochrezepte.at, Essen & Trinken and the Wien Geschichte Wiki",
+        "ro": "Pe baza Gute Küche și Servus, verificată cu kochrezepte.at, Essen & Trinken și Wien Geschichte Wiki"
+      },
+      "url": "https://www.gutekueche.at/oesterreichischer-kaiserschmarrn-rezept-4326"
+    },
+    "country": {
+      "key": "at",
+      "en": "🇦🇹 Austria",
+      "ro": "🇦🇹 Austria"
+    },
+    "course": [
+      "dessert",
+      "main"
+    ],
+    "grocery": [
+      {
+        "aisle": "dairy",
+        "key": "eggs",
+        "name": {
+          "en": "Eggs",
+          "ro": "Ouă"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "dairy",
+        "key": "milk",
+        "name": {
+          "en": "Milk",
+          "ro": "Lapte"
+        },
+        "qty": 250,
+        "unit": "ml"
+      },
+      {
+        "aisle": "dairy",
+        "key": "butter",
+        "name": {
+          "en": "Butter",
+          "ro": "Unt"
+        },
+        "qty": 40,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "flour",
+        "name": {
+          "en": "Plain flour",
+          "ro": "Făină albă"
+        },
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "sugar",
+        "name": {
+          "en": "Sugar",
+          "ro": "Zahăr"
+        },
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "vanilla-sugar",
+        "name": {
+          "en": "Vanilla sugar",
+          "ro": "Zahăr vanilat"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "raisins",
+        "name": {
+          "en": "Raisins",
+          "ro": "Stafide"
+        },
+        "qty": 40,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "rum",
+        "name": {
+          "en": "Rum (3 tbsp, or use water)",
+          "ro": "Rom (3 linguri, sau apă)"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "icing-sugar",
+        "name": {
+          "en": "Icing sugar",
+          "ro": "Zahăr pudră"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      },
+      {
+        "aisle": "produce",
+        "key": "plum",
+        "name": {
+          "en": "Plums (Zwetschken)",
+          "ro": "Prune"
+        },
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "aisle": "produce",
+        "key": "lemon",
+        "name": {
+          "en": "Lemon (1 slice)",
+          "ro": "Lămâie (o felie)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "cinnamon-stick",
+        "name": {
+          "en": "Cinnamon stick",
+          "ro": "Baton de scorțișoară"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "cloves",
+        "name": {
+          "en": "Cloves",
+          "ro": "Cuișoare"
+        },
+        "qty": 3,
+        "unit": "pcs"
+      }
+    ]
+  },
+  {
+    "slug": "erdaepfelsalat",
+    "image": "recipes/images/erdaepfelsalat/finished.jpg",
+    "theme": "#c9b03a",
+    "origin": "🇦🇹",
+    "time": "1 h 45",
+    "title": {
+      "en": "Viennese Potato Salad",
+      "ro": "Salată vieneză de cartofi"
+    },
+    "tagline": {
+      "en": "Warm potatoes in a hot beef-broth marinade, the classic Schnitzel side",
+      "ro": "Cartofi calzi într-o marinadă fierbinte de supă de vită, garnitura clasică a șnițelului"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 5 Austrian sources",
+        "ro": "🌐 5 surse austriece"
+      },
+      "label": {
+        "en": "Median of Servus, kochrezepte.at and Gute Küche, with tips from ichkoche and history from derStandard",
+        "ro": "Mediana Servus, kochrezepte.at și Gute Küche, cu sfaturi de la ichkoche și istorie de la derStandard"
+      },
+      "url": "https://www.servus.com/r/erdaepfelsalat"
+    },
+    "country": {
+      "key": "at",
+      "en": "🇦🇹 Austria",
+      "ro": "🇦🇹 Austria"
+    },
+    "course": [
+      "salad",
+      "side"
+    ],
+    "grocery": [
+      {
+        "aisle": "produce",
+        "key": "potato",
+        "name": {
+          "en": "Waxy potatoes",
+          "ro": "Cartofi cu pulpă fermă"
+        },
+        "qty": 800,
+        "unit": "g"
+      },
+      {
+        "aisle": "produce",
+        "key": "onion",
+        "name": {
+          "en": "Onion",
+          "ro": "Ceapă"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "beef-broth",
+        "name": {
+          "en": "Clear beef broth (250 ml)",
+          "ro": "Supă clară de vită (250 ml)"
+        },
+        "qty": 250,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "vinegar",
+        "name": {
+          "en": "White wine vinegar",
+          "ro": "Oțet de vin alb"
+        },
+        "qty": 60,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "sunflower-oil",
+        "name": {
+          "en": "Sunflower oil",
+          "ro": "Ulei de floarea-soarelui"
+        },
+        "qty": 60,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "tarragon-mustard",
+        "name": {
+          "en": "Tarragon mustard (2 tsp)",
+          "ro": "Muștar cu tarhon (2 lingurițe)"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "sugar",
+        "name": {
+          "en": "Sugar",
+          "ro": "Zahăr"
+        },
+        "qty": 5,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "pepper",
+        "name": {
+          "en": "Pepper",
+          "ro": "Piper"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "produce",
+        "key": "chives",
+        "name": {
+          "en": "Chives",
+          "ro": "Arpagic"
+        },
+        "qty": 1,
+        "unit": "bunch",
+        "optional": true
+      },
+      {
+        "aisle": "produce",
+        "key": "lamb-lettuce",
+        "name": {
+          "en": "Corn salad (Vogerlsalat)",
+          "ro": "Valeriană (Vogerlsalat)"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      }
+    ]
   }
 ]
