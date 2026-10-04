@@ -1024,5 +1024,135 @@
         "optional": true
       }
     ]
+  },
+  {
+    "slug": "sachertorte",
+    "image": "recipes/images/sachertorte/finished.jpg",
+    "theme": "#5a2d1d",
+    "origin": "🇦🇹",
+    "time": "7 h",
+    "title": {
+      "en": "Sachertorte",
+      "ro": "Sachertorte"
+    },
+    "tagline": {
+      "en": "Vienna's chocolate cake with apricot jam, from the Hotel Sacher's own home recipe",
+      "ro": "Tortul vienez de ciocolată cu gem de caise, din rețeta de casă a Hotel Sacher"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 Hotel Sacher + 4 Austrian sources",
+        "ro": "🌐 Hotel Sacher + 4 surse austriece"
+      },
+      "label": {
+        "en": "The Hotel Sacher's published home recipe (German page), cross-checked with Servus, kochrezepte.at, Gute Küche and the Wien Geschichte Wiki",
+        "ro": "Rețeta de casă publicată de Hotel Sacher (pagina în germană), verificată cu Servus, kochrezepte.at, Gute Küche și Wien Geschichte Wiki"
+      },
+      "url": "https://www.sacher.com/de/original-sacher-torte/rezept/"
+    },
+    "country": {
+      "key": "at",
+      "en": "🇦🇹 Austria",
+      "ro": "🇦🇹 Austria"
+    },
+    "course": [
+      "dessert"
+    ],
+    "grocery": [
+      {
+        "aisle": "pantry",
+        "key": "dark-chocolate",
+        "name": {
+          "en": "Dark couverture chocolate (55%+)",
+          "ro": "Ciocolată couverture neagră (55%+)"
+        },
+        "qty": 280,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "vanilla-pod",
+        "name": {
+          "en": "Vanilla pod",
+          "ro": "Păstaie de vanilie"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "dairy",
+        "key": "butter",
+        "name": {
+          "en": "Butter",
+          "ro": "Unt"
+        },
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "icing-sugar-g",
+        "name": {
+          "en": "Icing sugar",
+          "ro": "Zahăr pudră"
+        },
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "sugar",
+        "name": {
+          "en": "Sugar",
+          "ro": "Zahăr"
+        },
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "aisle": "dairy",
+        "key": "eggs",
+        "name": {
+          "en": "Eggs",
+          "ro": "Ouă"
+        },
+        "qty": 6,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "flour",
+        "name": {
+          "en": "Plain flour",
+          "ro": "Făină albă"
+        },
+        "qty": 140,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "apricot-jam",
+        "name": {
+          "en": "Apricot jam (smooth)",
+          "ro": "Gem de caise (fin)"
+        },
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "aisle": "dairy",
+        "key": "cream",
+        "name": {
+          "en": "Whipping cream, to serve (unsweetened)",
+          "ro": "Frișcă lichidă, pentru servire (nezaharată)"
+        },
+        "qty": 250,
+        "unit": "ml"
+      }
+    ]
   }
 ]
