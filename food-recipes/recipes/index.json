@@ -465,5 +465,106 @@
         "unit": ""
       }
     ]
+  },
+  {
+    "slug": "antricot-la-tigaie",
+    "image": "recipes/images/antricot-la-tigaie/finished.jpg",
+    "theme": "#c0392b",
+    "origin": "🥩",
+    "time": "40 min + 6 h",
+    "title": {
+      "en": "Pan-Seared Ribeye",
+      "ro": "Antricot la tigaie"
+    },
+    "tagline": {
+      "en": "Dry-brined, pressed, butter-basted, cooked by core temperature",
+      "ro": "Sărat la sec, presat, cu basting în unt, gătit după temperatura din interior"
+    },
+    "source": {
+      "kind": "reel",
+      "tags": [
+        "social",
+        "instagram"
+      ],
+      "badge": {
+        "en": "▶ Reel · Instagram",
+        "ro": "▶ Reel · Instagram"
+      },
+      "label": {
+        "en": "Saved from an Instagram reel by Grill Mind: method taken from the video's speech and frames, gaps filled from Romanian sites",
+        "ro": "Salvată dintr-un reel Instagram al Grill Mind: metoda luată din vorbirea și cadrele videoclipului, golurile completate de pe site-uri românești"
+      },
+      "url": "https://www.instagram.com/p/DRkLgnYiN5_/"
+    },
+    "country": {
+      "key": "ro-lang",
+      "en": "Romanian-language",
+      "ro": "Limba română"
+    },
+    "course": [
+      "main"
+    ],
+    "grocery": [
+      {
+        "aisle": "meat",
+        "key": "ribeye",
+        "name": {
+          "en": "Thick ribeye (antricot), about 450 g",
+          "ro": "Antricot gros, cam 450 g"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "asparagus",
+        "name": {
+          "en": "Asparagus (about 200 g)",
+          "ro": "Sparanghel (cam 200 g)"
+        },
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "aisle": "produce",
+        "key": "garlic",
+        "name": {
+          "en": "Garlic",
+          "ro": "Usturoi"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "rosemary",
+        "name": {
+          "en": "Rosemary",
+          "ro": "Rozmarin"
+        },
+        "qty": 1,
+        "unit": "bunch"
+      },
+      {
+        "aisle": "dairy",
+        "key": "butter",
+        "name": {
+          "en": "Butter",
+          "ro": "Unt"
+        },
+        "qty": 50,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "coarse-salt",
+        "name": {
+          "en": "Coarse salt",
+          "ro": "Sare grosieră"
+        },
+        "qty": 0,
+        "unit": ""
+      }
+    ]
   }
 ]
