@@ -5,22 +5,13 @@
     "theme": "#ffb800",
     "origin": "🇫🇷",
     "time": "1 h 40",
-    "title": { "en": "Crêpes", "ro": "Clătite franțuzești" },
+    "title": {
+      "en": "Crêpes",
+      "ro": "Clătite franțuzești"
+    },
     "tagline": {
       "en": "Thin, golden Breton pancakes — rest the batter, flip when lacy",
       "ro": "Clătite subțiri și aurii din Bretania — lasă aluatul să se odihnească"
-    }
-  },
-  {
-    "slug": "ramen",
-    "image": "recipes/images/ramen/finished.jpg",
-    "theme": "#e8553d",
-    "origin": "🇯🇵",
-    "time": "4 h",
-    "title": { "en": "Shoyu Ramen", "ro": "Ramen cu shoyu" },
-    "tagline": {
-      "en": "Tokyo-style clear soy broth, 3-hour stock, jammy eggs",
-      "ro": "Supă clară cu soia în stil Tokyo, supă de 3 ore, ouă cu gălbenuș cremos"
     }
   }
 ]
