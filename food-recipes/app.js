@@ -6,7 +6,8 @@ const UI = {
     start: 'Pornește', stop: 'Oprește', done: 'Gata!',
     shop: 'Listă de cumpărături', addList: '＋ Listă', inList: '✓ În listă', copy: 'Copiază', copied: 'Copiat!', clear: 'Șterge bifele',
     pick: 'Alege rețetele', empty: 'Alege cel puțin o rețetă ca să vezi lista.', optional: 'opțional', toTaste: 'după gust',
-    openSource: 'Deschide originalul', fab: 'Cumpărături', allDone: 'Totul bifat 🎉'
+    openSource: 'Deschide originalul', fab: 'Cumpărături', allDone: 'Totul bifat 🎉',
+    search: 'Caută o rețetă…', recipes: 'rețete', noMatch: 'Nicio rețetă cu aceste filtre.', clearFilters: 'Șterge filtrele'
   },
   en: {
     eyebrow: 'Authentic recipes', title: 'Authentic Recipes',
@@ -15,7 +16,8 @@ const UI = {
     start: 'Start', stop: 'Stop', done: 'Done!',
     shop: 'Shopping list', addList: '＋ List', inList: '✓ In list', copy: 'Copy', copied: 'Copied!', clear: 'Clear ticks',
     pick: 'Pick recipes', empty: 'Pick at least one recipe to see the list.', optional: 'optional', toTaste: 'to taste',
-    openSource: 'Open original', fab: 'Shopping', allDone: 'All ticked 🎉'
+    openSource: 'Open original', fab: 'Shopping', allDone: 'All ticked 🎉',
+    search: 'Search a recipe…', recipes: 'recipes', noMatch: 'No recipes match these filters.', clearFilters: 'Clear filters'
   }
 };
 const AISLES = ['produce', 'meat', 'dairy', 'pantry', 'other'];
@@ -45,19 +47,41 @@ const saveList = () => store.set('list', JSON.stringify(list));
 const saveGot = () => store.set('got', JSON.stringify(got));
 
 // --- home ---------------------------------------------------------------
-function renderUI() {
+const SRC = { web: '🌐 Web', social: '▶ Social media', facebook: 'Facebook', instagram: 'Instagram', tiktok: 'TikTok', youtube: 'YouTube' };
+const COURSE = {
+  breakfast: { en: 'Breakfast', ro: 'Mic dejun' }, dessert: { en: 'Dessert', ro: 'Desert' }, soup: { en: 'Soup', ro: 'Supă' },
+  main: { en: 'Main course', ro: 'Fel principal' }, snack: { en: 'Snack', ro: 'Gustare' }
+};
+const GROUPS = [
+  { id: 'source', title: { en: 'Source', ro: 'Sursă' }, vals: (r) => r.source?.tags || [], label: (k) => SRC[k] || k },
+  { id: 'country', title: { en: 'Country / language', ro: 'Țară / limbă' }, vals: (r) => (r.country ? [r.country.key] : []),
+    label: (k) => index.find((r) => r.country?.key === k).country[lang()] },
+  { id: 'course', title: { en: 'Type', ro: 'Tip' }, vals: (r) => r.course || [], label: (k) => (COURSE[k] ? COURSE[k][lang()] : k) }
+];
+const active = { source: new Set(), country: new Set(), course: new Set() };
+let query = '';
+const norm = (x) => x.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+
+const visible = () => index.filter((r) =>
+  GROUPS.every((g) => !active[g.id].size || g.vals(r).some((v) => active[g.id].has(v))) &&
+  (!query || norm(`${r.title.en} ${r.title.ro} ${r.tagline.en} ${r.tagline.ro}`).includes(query)));
+
+function renderChips() {
   const t = UI[lang()];
-  document.documentElement.lang = lang();
-  $('t-eyebrow').textContent = t.eyebrow;
-  $('t-title').textContent = t.title;
-  document.title = t.title;
-  $('t-sub').textContent = t.sub;
-  $('t-footer').textContent = t.footer;
-  $('reader-reset').textContent = t.reset;
-  $('shop-copy').textContent = t.copy;
-  $('shop-clear').textContent = t.clear;
-  grid.innerHTML = '';
-  index.forEach((r, i) => {
+  $('chips').innerHTML = GROUPS.map((g) => {
+    const vals = [...new Set(index.flatMap(g.vals))];
+    if (vals.length < 2) return '';
+    return `<div class="chip-group"><h3>${g.title[lang()]}</h3><div class="chip-row">` +
+      vals.map((v) => `<button type="button" class="chip${active[g.id].has(v) ? ' active' : ''}" data-g="${g.id}" data-v="${v}">${g.label(v)}</button>`).join('') +
+      '</div></div>';
+  }).join('') + (Object.values(active).some((s) => s.size) || query ? `<div class="chip-group"><button type="button" class="chip reset" data-reset="1">${t.clearFilters}</button></div>` : '');
+}
+
+function renderCards() {
+  const t = UI[lang()], list_ = visible();
+  $('count').textContent = `${list_.length} / ${index.length} ${t.recipes}`;
+  grid.innerHTML = list_.length ? '' : `<p class="empty">${t.noMatch}</p>`;
+  list_.forEach((r, i) => {
     const card = document.createElement('article');
     card.className = 'card';
     card.style.animationDelay = `${i * 0.1}s`;
@@ -75,8 +99,33 @@ function renderUI() {
     card.addEventListener('click', () => openRecipe(r));
     grid.appendChild(card);
   });
+}
+
+function renderUI() {
+  const t = UI[lang()];
+  document.documentElement.lang = lang();
+  $('t-eyebrow').textContent = t.eyebrow;
+  $('t-title').textContent = t.title;
+  document.title = t.title;
+  $('t-sub').textContent = t.sub;
+  $('t-footer').textContent = t.footer;
+  $('reader-reset').textContent = t.reset;
+  $('shop-copy').textContent = t.copy;
+  $('shop-clear').textContent = t.clear;
+  $('q').placeholder = t.search;
+  renderChips();
+  renderCards();
   updateFab();
 }
+
+$('chips').addEventListener('click', (e) => {
+  const b = e.target.closest('.chip');
+  if (!b) return;
+  if (b.dataset.reset) { Object.values(active).forEach((s) => s.clear()); query = ''; $('q').value = ''; }
+  else { const s = active[b.dataset.g]; s.has(b.dataset.v) ? s.delete(b.dataset.v) : s.add(b.dataset.v); }
+  renderChips(); renderCards();
+});
+$('q').addEventListener('input', (e) => { query = norm(e.target.value.trim()); renderChips(); renderCards(); });
 
 // --- recipe reader ------------------------------------------------------
 const toSeconds = (txt) => {

@@ -22,7 +22,10 @@
       "label": {
         "en": "Compiled from 6 French-language sources (Marmiton, Morbihan Tourisme, Meilleur du Chef and more)",
         "ro": "Compilat din 6 surse în limba franceză (Marmiton, Morbihan Tourisme, Meilleur du Chef și altele)"
-      }
+      },
+      "tags": [
+        "web"
+      ]
     },
     "grocery": [
       {
@@ -118,6 +121,15 @@
         "unit": "",
         "optional": true
       }
+    ],
+    "country": {
+      "key": "fr",
+      "en": "🇫🇷 France",
+      "ro": "🇫🇷 Franța"
+    },
+    "course": [
+      "breakfast",
+      "dessert"
     ]
   },
   {
@@ -144,7 +156,11 @@
         "en": "Saved from a reel by Shabnami Rustam on Facebook, amounts cross-checked on Russian sites",
         "ro": "Salvată dintr-un reel al lui Shabnami Rustam de pe Facebook; cantitățile verificate pe site-uri rusești"
       },
-      "url": "https://www.facebook.com/share/r/18Y59L8VxM/"
+      "url": "https://www.facebook.com/share/r/18Y59L8VxM/",
+      "tags": [
+        "social",
+        "facebook"
+      ]
     },
     "grocery": [
       {
@@ -257,6 +273,15 @@
         "qty": 0,
         "unit": ""
       }
+    ],
+    "country": {
+      "key": "ru",
+      "en": "Russian-language",
+      "ro": "Limba rusă"
+    },
+    "course": [
+      "soup",
+      "main"
     ]
   }
 ]
