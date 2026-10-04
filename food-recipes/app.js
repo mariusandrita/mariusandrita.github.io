@@ -257,7 +257,7 @@ function fmtQty(o) {
   if ((u === 'g' || u === 'ml') && q >= 1000) { q /= 1000; u = u === 'g' ? 'kg' : 'L'; }
   q = (u === 'pcs' || u === 'bunch') ? Math.ceil(q - 1e-9) : Math.round(q * 100) / 100;
   const label = UNIT[u] ? UNIT[u][lang()] : u;
-  return `${q}${label ? ' ' + label : ''}`;
+  return `${q.toLocaleString(lang() === 'ro' ? 'ro-RO' : 'en')}${label ? ' ' + label : ''}`;
 }
 
 function updateFab() {
