@@ -13,5 +13,20 @@
       "en": "Thin, golden Breton pancakes — rest the batter, flip when lacy",
       "ro": "Clătite subțiri și aurii din Bretania — lasă aluatul să se odihnească"
     }
+  },
+  {
+    "slug": "kurinyj-supchik",
+    "image": "recipes/images/kurinyj-supchik/finished.jpg",
+    "theme": "#ff8a2b",
+    "origin": "🍲",
+    "time": "55 min",
+    "title": {
+      "en": "Quick Chicken Soup",
+      "ro": "Supă rapidă de pui"
+    },
+    "tagline": {
+      "en": "Chicken, vegetables blended into the broth, a squeeze of lemon",
+      "ro": "Pui, legume mixate în supă și un strop de lămâie"
+    }
   }
 ]
