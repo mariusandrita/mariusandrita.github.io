@@ -1,10 +1,34 @@
 const UI = {
-  ro: { eyebrow: 'Rețete autentice', title: 'Rețetar Autentic', sub: 'Rețete din țara de origine — comparate din mai multe surse, cu pași, timere și poze.', open: 'Click pentru rețetă', reset: 'Resetează', footer: 'Gătit cu răbdare și surse verificate · 2026', start: 'Pornește', stop: 'Oprește', done: 'Gata!' },
-  en: { eyebrow: 'Authentic recipes', title: 'Authentic Recipes', sub: 'Recipes from their country of origin — compared across sources, with steps, timers and photos.', open: 'Tap for recipe', reset: 'Reset', footer: 'Cooked with patience and checked sources · 2026', start: 'Start', stop: 'Stop', done: 'Done!' }
+  ro: {
+    eyebrow: 'Rețete autentice', title: 'Rețetar Autentic',
+    sub: 'Rețete din țara de origine — comparate din mai multe surse, cu pași, timere și poze.',
+    open: 'Click pentru rețetă', reset: 'Resetează', footer: 'Gătit cu răbdare și surse verificate · 2026',
+    start: 'Pornește', stop: 'Oprește', done: 'Gata!',
+    shop: 'Listă de cumpărături', addList: '＋ Listă', inList: '✓ În listă', copy: 'Copiază', copied: 'Copiat!', clear: 'Șterge bifele',
+    pick: 'Alege rețetele', empty: 'Alege cel puțin o rețetă ca să vezi lista.', optional: 'opțional', toTaste: 'după gust',
+    openSource: 'Deschide originalul', fab: 'Cumpărături', allDone: 'Totul bifat 🎉'
+  },
+  en: {
+    eyebrow: 'Authentic recipes', title: 'Authentic Recipes',
+    sub: 'Recipes from their country of origin — compared across sources, with steps, timers and photos.',
+    open: 'Tap for recipe', reset: 'Reset', footer: 'Cooked with patience and checked sources · 2026',
+    start: 'Start', stop: 'Stop', done: 'Done!',
+    shop: 'Shopping list', addList: '＋ List', inList: '✓ In list', copy: 'Copy', copied: 'Copied!', clear: 'Clear ticks',
+    pick: 'Pick recipes', empty: 'Pick at least one recipe to see the list.', optional: 'optional', toTaste: 'to taste',
+    openSource: 'Open original', fab: 'Shopping', allDone: 'All ticked 🎉'
+  }
 };
+const AISLES = ['produce', 'meat', 'dairy', 'pantry', 'other'];
+const AISLE = {
+  produce: { en: 'Produce', ro: 'Legume și fructe' }, meat: { en: 'Meat', ro: 'Carne' },
+  dairy: { en: 'Dairy & eggs', ro: 'Lactate și ouă' }, pantry: { en: 'Pantry', ro: 'Cămară' }, other: { en: 'Other', ro: 'Altele' }
+};
+const UNIT = { g: { en: 'g', ro: 'g' }, ml: { en: 'ml', ro: 'ml' }, pcs: { en: '', ro: '' }, bunch: { en: 'bunch', ro: 'legătură' } };
+const STEPS = [0.5, 1, 2, 3, 4];
 
 const $ = (id) => document.getElementById(id);
-const toggle = $('lang-toggle'), grid = $('cards'), reader = $('reader'), body = $('reader-body');
+const toggle = $('lang-toggle'), grid = $('cards'), reader = $('reader'), body = $('reader-body'),
+  shop = $('shop'), shopBody = $('shop-body'), fab = $('shop-fab');
 let index = [], current = null, wakeLock = null;
 const timers = new Set();
 
@@ -14,7 +38,13 @@ const store = {
   set: (k, v) => { try { localStorage.setItem(k, v); } catch {} },
   del: (k) => { try { localStorage.removeItem(k); } catch {} }
 };
+const load = (k) => { try { return JSON.parse(store.get(k) || '{}'); } catch { return {}; } };
+let list = load('list'); // { slug: servings multiplier }
+let got = load('got');   // { itemKey: true }
+const saveList = () => store.set('list', JSON.stringify(list));
+const saveGot = () => store.set('got', JSON.stringify(got));
 
+// --- home ---------------------------------------------------------------
 function renderUI() {
   const t = UI[lang()];
   document.documentElement.lang = lang();
@@ -24,15 +54,19 @@ function renderUI() {
   $('t-sub').textContent = t.sub;
   $('t-footer').textContent = t.footer;
   $('reader-reset').textContent = t.reset;
+  $('shop-copy').textContent = t.copy;
+  $('shop-clear').textContent = t.clear;
   grid.innerHTML = '';
   index.forEach((r, i) => {
     const card = document.createElement('article');
     card.className = 'card';
     card.style.animationDelay = `${i * 0.1}s`;
     card.style.setProperty('--card-theme', r.theme);
+    const s = r.source;
     card.innerHTML = `
       <div class="card-img"><img src="${r.image}" alt="${r.title[lang()]}" loading="lazy"></div>
       <span class="card-tag">${r.origin} · ${r.time}</span>
+      ${s ? `<span class="card-source ${s.kind}">${s.badge[lang()]}</span>` : ''}
       <div class="card-front-overlay">
         <h2>${r.title[lang()]}</h2>
         <p class="tagline">${r.tagline[lang()]}</p>
@@ -41,9 +75,10 @@ function renderUI() {
     card.addEventListener('click', () => openRecipe(r));
     grid.appendChild(card);
   });
+  updateFab();
 }
 
-// --- reader -------------------------------------------------------------
+// --- recipe reader ------------------------------------------------------
 const toSeconds = (txt) => {
   const m = txt.match(/(\d+)(?:\s*[–-]\s*(\d+))?\s*(h|min|s)\b/i);
   if (!m) return 0;
@@ -54,23 +89,36 @@ const fmt = (s) => {
   return (h ? `${h}:${p(m)}` : m) + `:${p(s % 60)}`;
 };
 
+function banner(r) {
+  const s = r.source;
+  if (!s) return '';
+  return `<div class="source-banner ${s.kind}"><span>${s.kind === 'reel' ? '▶' : '🌐'}</span><span>${s.label[lang()]}</span>` +
+    (s.url ? `<a href="${s.url}" target="_blank" rel="noopener">${UI[lang()].openSource} ↗</a>` : '') + '</div>';
+}
+
+function updateAddBtn() {
+  const b = $('reader-add'), on = current && list[current.slug];
+  b.textContent = UI[lang()][on ? 'inList' : 'addList'];
+  b.classList.toggle('on', !!on);
+}
+
 async function openRecipe(r) {
   current = r;
   const file = `recipes/${r.slug}${lang() === 'ro' ? '.ro' : ''}.md`;
   const md = (await (await fetch(file, { cache: 'no-cache' })).text()).replace(/^---[\s\S]*?---\n/, '');
-  body.innerHTML = marked.parse(md)
+  body.innerHTML = banner(r) + marked.parse(md)
     .replace(/(src=")images\//g, '$1recipes/images/')
     .replace(/<a /g, '<a target="_blank" rel="noopener" ')
     .replace(/⏱ <strong>(.*?)<\/strong>/g, (_, t) => {
       const s = toSeconds(t);
       return s ? `<button type="button" class="timer" data-s="${s}">⏱ ${t} · <span>${UI[lang()].start} ${fmt(s)}</span></button>` : `⏱ <strong>${t}</strong>`;
     });
-  const boxes = body.querySelectorAll('input[type=checkbox]');
-  boxes.forEach((b, i) => {
+  body.querySelectorAll('input[type=checkbox]').forEach((b, i) => {
     b.disabled = false;
     b.checked = store.get(key(i)) === '1';
     b.dataset.i = i;
   });
+  updateAddBtn();
   reader.hidden = false;
   document.body.classList.add('no-scroll');
   reader.scrollTop = 0;
@@ -79,12 +127,14 @@ async function openRecipe(r) {
 
 const key = (i) => `chk:${current.slug}:${lang()}:${i}`;
 
-function closeRecipe() {
+function closeAll() {
   reader.hidden = true;
+  shop.hidden = true;
   document.body.classList.remove('no-scroll');
   timers.forEach(clearInterval);
   timers.clear();
   wakeLock?.release?.();
+  updateFab();
 }
 
 function beep() {
@@ -127,11 +177,117 @@ body.addEventListener('change', (e) => {
     e.target.checked ? store.set(key(e.target.dataset.i), '1') : store.del(key(e.target.dataset.i));
   }
 });
-$('reader-close').addEventListener('click', closeRecipe);
 $('reader-reset').addEventListener('click', () => {
   body.querySelectorAll('input[type=checkbox]').forEach((b) => { b.checked = false; store.del(key(b.dataset.i)); });
 });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !reader.hidden) closeRecipe(); });
-toggle.addEventListener('change', () => { closeRecipe(); renderUI(); });
+$('reader-add').addEventListener('click', () => {
+  list[current.slug] ? delete list[current.slug] : (list[current.slug] = 1);
+  saveList(); updateAddBtn();
+});
+
+// --- shopping list ------------------------------------------------------
+function aggregate() {
+  const map = {};
+  for (const r of index) {
+    const m = list[r.slug];
+    if (!m) continue;
+    for (const g of r.grocery || []) {
+      const k = `${g.aisle}|${g.key}|${g.unit || ''}`;
+      const o = map[k] ||= { k, aisle: g.aisle, name: g.name, unit: g.unit || '', qty: 0, opt: true, from: [] };
+      o.qty += (g.qty || 0) * m;
+      o.opt = o.opt && !!g.optional;
+      if (!o.from.includes(r.title[lang()])) o.from.push(r.title[lang()]);
+    }
+  }
+  return Object.values(map);
+}
+
+function fmtQty(o) {
+  if (!o.qty) return UI[lang()].toTaste;
+  let q = o.qty, u = o.unit;
+  if ((u === 'g' || u === 'ml') && q >= 1000) { q /= 1000; u = u === 'g' ? 'kg' : 'L'; }
+  q = (u === 'pcs' || u === 'bunch') ? Math.ceil(q - 1e-9) : Math.round(q * 100) / 100;
+  const label = UNIT[u] ? UNIT[u][lang()] : u;
+  return `${q}${label ? ' ' + label : ''}`;
+}
+
+function updateFab() {
+  const t = UI[lang()], items = aggregate(), left = items.filter((i) => !got[i.k]).length;
+  fab.textContent = `🛒 ${t.fab}${items.length ? ` (${left})` : ''}`;
+  fab.hidden = !reader.hidden || !shop.hidden;
+}
+
+function renderShop() {
+  const t = UI[lang()], items = aggregate();
+  const rows = index.map((r) => {
+    const m = list[r.slug];
+    return `<div class="recipe-row"><input type="checkbox" id="sr-${r.slug}" data-slug="${r.slug}" ${m ? 'checked' : ''}>` +
+      `<label for="sr-${r.slug}">${r.title[lang()]}</label>` +
+      (m ? `<span class="stepper" data-slug="${r.slug}"><button type="button" data-d="-1" aria-label="−">−</button><span>×${m}</span><button type="button" data-d="1" aria-label="+">+</button></span>` : '') + '</div>';
+  }).join('');
+  let html = `<h1>${t.shop}</h1><h2>${t.pick}</h2>${rows}`;
+  if (!items.length) html += `<p class="empty">${t.empty}</p>`;
+  else if (items.every((i) => got[i.k])) html += `<p class="empty">${t.allDone}</p>`;
+  for (const a of AISLES) {
+    const its = items.filter((i) => i.aisle === a).sort((x, y) => x.name[lang()].localeCompare(y.name[lang()]));
+    if (!its.length) continue;
+    html += `<section class="aisle"><h2>${AISLE[a][lang()]}</h2><ul class="shop-list">` + its.map((i) =>
+      `<li class="shop-item${i.opt ? ' opt' : ''}${got[i.k] ? ' done' : ''}" data-k="${i.k}"><label>` +
+      `<input type="checkbox" ${got[i.k] ? 'checked' : ''}><span><span class="qty">${fmtQty(i)}</span> ` +
+      `<span class="nm">${i.name[lang()]}${i.opt ? ` (${t.optional})` : ''}</span>` +
+      (i.from.length > 1 ? `<span class="from">${i.from.join(' + ')}</span>` : '') + '</span></label></li>').join('') + '</ul></section>';
+  }
+  shopBody.innerHTML = html;
+  updateFab();
+}
+
+function openShop() {
+  renderShop();
+  shop.hidden = false;
+  document.body.classList.add('no-scroll');
+  shop.scrollTop = 0;
+  fab.hidden = true;
+}
+
+shopBody.addEventListener('change', (e) => {
+  const li = e.target.closest('.shop-item');
+  if (li) {
+    e.target.checked ? (got[li.dataset.k] = true) : delete got[li.dataset.k];
+    saveGot();
+    li.classList.toggle('done', e.target.checked);
+    updateFab(); fab.hidden = true;
+    return;
+  }
+  const slug = e.target.dataset.slug;
+  if (slug) { e.target.checked ? (list[slug] = 1) : delete list[slug]; saveList(); renderShop(); }
+});
+shopBody.addEventListener('click', (e) => {
+  const b = e.target.closest('.stepper button');
+  if (!b) return;
+  const slug = b.parentElement.dataset.slug, i = STEPS.indexOf(list[slug]);
+  list[slug] = STEPS[Math.max(0, Math.min(STEPS.length - 1, i + +b.dataset.d))];
+  saveList(); renderShop();
+});
+$('shop-clear').addEventListener('click', () => { got = {}; saveGot(); renderShop(); });
+$('shop-copy').addEventListener('click', async () => {
+  const t = UI[lang()], items = aggregate();
+  const text = [t.shop, ...AISLES.flatMap((a) => {
+    const its = items.filter((i) => i.aisle === a);
+    return its.length ? ['', AISLE[a][lang()], ...its.map((i) => `${got[i.k] ? '[x]' : '[ ]'} ${fmtQty(i)} ${i.name[lang()]}`)] : [];
+  })].join('\n');
+  try {
+    if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) await navigator.share({ text });
+    else await navigator.clipboard.writeText(text);
+    $('shop-copy').textContent = t.copied;
+    setTimeout(() => { $('shop-copy').textContent = t.copy; }, 1500);
+  } catch {}
+});
+fab.addEventListener('click', openShop);
+
+// --- wiring -------------------------------------------------------------
+$('reader-close').addEventListener('click', closeAll);
+$('shop-close').addEventListener('click', closeAll);
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && (!reader.hidden || !shop.hidden)) closeAll(); });
+toggle.addEventListener('change', () => { closeAll(); renderUI(); });
 
 fetch('recipes/index.json', { cache: 'no-cache' }).then((r) => r.json()).then((j) => { index = j; renderUI(); });

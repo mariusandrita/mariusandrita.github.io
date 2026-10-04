@@ -28,12 +28,28 @@
 
   <footer id="t-footer"></footer>
 
+  <button id="shop-fab" class="fab" type="button"></button>
+
   <div id="reader" class="reader" hidden>
     <div class="reader-bar">
       <button id="reader-close" type="button" aria-label="Close">←</button>
-      <button id="reader-reset" type="button"></button>
+      <div class="bar-actions">
+        <button id="reader-add" type="button"></button>
+        <button id="reader-reset" type="button"></button>
+      </div>
     </div>
     <article id="reader-body" class="reader-body"></article>
+  </div>
+
+  <div id="shop" class="reader" hidden>
+    <div class="reader-bar">
+      <button id="shop-close" type="button" aria-label="Close">←</button>
+      <div class="bar-actions">
+        <button id="shop-copy" type="button"></button>
+        <button id="shop-clear" type="button"></button>
+      </div>
+    </div>
+    <article id="shop-body" class="reader-body"></article>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>

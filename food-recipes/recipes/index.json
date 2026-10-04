@@ -12,7 +12,113 @@
     "tagline": {
       "en": "Thin, golden Breton pancakes — rest the batter, flip when lacy",
       "ro": "Clătite subțiri și aurii din Bretania — lasă aluatul să se odihnească"
-    }
+    },
+    "source": {
+      "kind": "web",
+      "badge": {
+        "en": "🌐 6 French sources",
+        "ro": "🌐 6 surse franceze"
+      },
+      "label": {
+        "en": "Compiled from 6 French-language sources (Marmiton, Morbihan Tourisme, Meilleur du Chef and more)",
+        "ro": "Compilat din 6 surse în limba franceză (Marmiton, Morbihan Tourisme, Meilleur du Chef și altele)"
+      }
+    },
+    "grocery": [
+      {
+        "aisle": "dairy",
+        "key": "milk",
+        "name": {
+          "en": "Whole milk",
+          "ro": "Lapte integral"
+        },
+        "qty": 500,
+        "unit": "ml"
+      },
+      {
+        "aisle": "dairy",
+        "key": "butter",
+        "name": {
+          "en": "Butter",
+          "ro": "Unt"
+        },
+        "qty": 80,
+        "unit": "g"
+      },
+      {
+        "aisle": "dairy",
+        "key": "eggs",
+        "name": {
+          "en": "Eggs",
+          "ro": "Ouă"
+        },
+        "qty": 3,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "flour",
+        "name": {
+          "en": "Plain flour",
+          "ro": "Făină albă"
+        },
+        "qty": 250,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "sugar",
+        "name": {
+          "en": "Sugar",
+          "ro": "Zahăr"
+        },
+        "qty": 50,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "rum-vanilla",
+        "name": {
+          "en": "Rum or vanilla extract (choose one)",
+          "ro": "Rom sau extract de vanilie (alege una)"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      },
+      {
+        "aisle": "produce",
+        "key": "lemon",
+        "name": {
+          "en": "Lemon",
+          "ro": "Lămâie"
+        },
+        "qty": 1,
+        "unit": "pcs",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "spread",
+        "name": {
+          "en": "Chocolate spread, jam or honey",
+          "ro": "Cremă de ciocolată, dulceață sau miere"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      }
+    ]
   },
   {
     "slug": "kurinyj-supchik",
@@ -27,6 +133,130 @@
     "tagline": {
       "en": "Chicken, vegetables blended into the broth, a squeeze of lemon",
       "ro": "Pui, legume mixate în supă și un strop de lămâie"
-    }
+    },
+    "source": {
+      "kind": "reel",
+      "badge": {
+        "en": "▶ Reel · Facebook",
+        "ro": "▶ Reel · Facebook"
+      },
+      "label": {
+        "en": "Saved from a reel by Shabnami Rustam on Facebook, amounts cross-checked on Russian sites",
+        "ro": "Salvată dintr-un reel al lui Shabnami Rustam de pe Facebook; cantitățile verificate pe site-uri rusești"
+      },
+      "url": "https://www.facebook.com/share/r/18Y59L8VxM/"
+    },
+    "grocery": [
+      {
+        "aisle": "meat",
+        "key": "chicken-breast",
+        "name": {
+          "en": "Chicken breasts",
+          "ro": "Piepți de pui"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "potato",
+        "name": {
+          "en": "Potatoes",
+          "ro": "Cartofi"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "carrot",
+        "name": {
+          "en": "Carrots",
+          "ro": "Morcovi"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "onion",
+        "name": {
+          "en": "Onion",
+          "ro": "Ceapă"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "bell-pepper",
+        "name": {
+          "en": "Bell pepper",
+          "ro": "Ardei gras"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "tomato",
+        "name": {
+          "en": "Tomato",
+          "ro": "Roșie"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "garlic",
+        "name": {
+          "en": "Garlic (1 clove)",
+          "ro": "Usturoi (1 cățel)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "dill",
+        "name": {
+          "en": "Dill or parsley",
+          "ro": "Mărar sau pătrunjel"
+        },
+        "qty": 1,
+        "unit": "bunch"
+      },
+      {
+        "aisle": "produce",
+        "key": "lemon",
+        "name": {
+          "en": "Lemon",
+          "ro": "Lămâie"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "pasta",
+        "name": {
+          "en": "Fine pasta or vermicelli",
+          "ro": "Paste fine sau fidea"
+        },
+        "qty": 80,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 0,
+        "unit": ""
+      }
+    ]
   }
 ]
