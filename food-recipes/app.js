@@ -6,7 +6,7 @@ const UI = {
     start: 'Pornește', stop: 'Oprește', done: 'Gata!',
     shop: 'Listă de cumpărături', addList: '＋ Listă', inList: '✓ În listă', copy: 'Copiază', copied: 'Copiat!', clear: 'Șterge bifele',
     pick: 'Alege rețetele', empty: 'Alege cel puțin o rețetă ca să vezi lista.', optional: 'opțional', toTaste: 'după gust',
-    openSource: 'Deschide originalul', fab: 'Cumpărături', allDone: 'Totul bifat 🎉',
+    openSource: 'Deschide originalul', fab: 'Cumpărături', allDone: 'Totul bifat 🎉', refs: 'Site-uri de referință', refsTop: '📚 Site-uri de referință', visit: 'Deschide site-ul',
     search: 'Caută o rețetă…', recipes: 'rețete', noMatch: 'Nicio rețetă cu aceste filtre.', clearFilters: 'Șterge filtrele'
   },
   en: {
@@ -16,7 +16,7 @@ const UI = {
     start: 'Start', stop: 'Stop', done: 'Done!',
     shop: 'Shopping list', addList: '＋ List', inList: '✓ In list', copy: 'Copy', copied: 'Copied!', clear: 'Clear ticks',
     pick: 'Pick recipes', empty: 'Pick at least one recipe to see the list.', optional: 'optional', toTaste: 'to taste',
-    openSource: 'Open original', fab: 'Shopping', allDone: 'All ticked 🎉',
+    openSource: 'Open original', fab: 'Shopping', allDone: 'All ticked 🎉', refs: 'Reference sites', refsTop: '📚 Reference sites', visit: 'Open site',
     search: 'Search a recipe…', recipes: 'recipes', noMatch: 'No recipes match these filters.', clearFilters: 'Clear filters'
   }
 };
@@ -31,7 +31,7 @@ const STEPS = [0.5, 1, 2, 3, 4];
 const $ = (id) => document.getElementById(id);
 const toggle = $('lang-toggle'), grid = $('cards'), reader = $('reader'), body = $('reader-body'),
   shop = $('shop'), shopBody = $('shop-body'), fab = $('shop-fab');
-let index = [], current = null, wakeLock = null;
+let index = [], refs = [], current = null, wakeLock = null;
 const timers = new Set();
 
 const lang = () => (toggle.checked ? 'ro' : 'en');
@@ -113,6 +113,11 @@ function renderUI() {
   $('shop-copy').textContent = t.copy;
   $('shop-clear').textContent = t.clear;
   $('q').placeholder = t.search;
+  $('t-refs').textContent = t.refs;
+  $('refs-top').textContent = t.refsTop;
+  $('refs-top').parentElement.hidden = !refs.length;
+  $('refs').hidden = !refs.length;
+  $('refs-list').innerHTML = refs.map((r) => `<a class="ref-card" href="${r.url}" target="_blank" rel="noopener"><strong>${r.title}</strong><span>${r.description[lang()]}</span><em>${t.visit} ↗</em></a>`).join('');
   renderChips();
   renderCards();
   updateFab();
@@ -339,4 +344,7 @@ $('shop-close').addEventListener('click', closeAll);
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && (!reader.hidden || !shop.hidden)) closeAll(); });
 toggle.addEventListener('change', () => { closeAll(); renderUI(); });
 
-fetch('recipes/index.json', { cache: 'no-cache' }).then((r) => r.json()).then((j) => { index = j; renderUI(); });
+Promise.all([
+  fetch('recipes/index.json', { cache: 'no-cache' }).then((r) => r.json()),
+  fetch('references.json', { cache: 'no-cache' }).then((r) => r.json()).catch(() => [])
+]).then(([j, r]) => { index = j; refs = r; renderUI(); });

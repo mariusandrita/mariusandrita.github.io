@@ -190,3 +190,19 @@ footer { text-align: center; padding: 2rem 1rem 3rem; color: var(--text-dim); fo
 .chip.reset { border-style: dashed; color: var(--text-dim); }
 .count { margin: .9rem 0 0; font-size: .85rem; color: var(--text-dim); }
 .grid .empty { grid-column: 1 / -1; }
+
+/* reference sites */
+.refs-link { margin: 1.1rem 0 0; }
+.refs-link a { display: inline-block; padding: .55rem 1.1rem; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text); font-size: .88rem; font-weight: 600; text-decoration: none; }
+.refs-link a:active { transform: scale(.96); }
+.refs { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 3rem; }
+.refs[hidden], .refs-link[hidden] { display: none; }
+.refs h2 { font-family: "Playfair Display", serif; font-size: 1.6rem; text-align: center; margin: 0 0 1.2rem; }
+.refs-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+.ref-card { display: flex; flex-direction: column; gap: .4rem; padding: 1.2rem 1.3rem; border: 1px solid var(--border); border-radius: 16px; background: var(--bg-card); color: var(--text); text-decoration: none; transition: transform .2s, border-color .2s; }
+.ref-card:hover { transform: translateY(-3px); border-color: var(--accent-3); }
+.ref-card strong { font-family: "Playfair Display", serif; font-size: 1.2rem; color: var(--accent-3); }
+.ref-card span { color: var(--text-dim); font-size: .92rem; line-height: 1.5; }
+.ref-card em { margin-top: .3rem; color: var(--accent-2); font-size: .8rem; font-style: normal; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+
+footer { padding-bottom: 6rem; }
