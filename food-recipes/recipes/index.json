@@ -1154,5 +1154,147 @@
         "unit": "ml"
       }
     ]
+  },
+  {
+    "slug": "supa-de-pui-cu-fidea",
+    "image": "recipes/images/supa-de-pui-cu-fidea/finished.jpg",
+    "theme": "#f0a030",
+    "origin": "🇷🇴",
+    "time": "1 h 40",
+    "title": {
+      "en": "Chicken Soup with Vermicelli",
+      "ro": "Supă de pui cu fidea"
+    },
+    "tagline": {
+      "en": "The soup she makes when colds arrive: sautéed vegetables, a little flour, shredded chicken",
+      "ro": "Supa pe care o face când vin virozele: legume călite, puțină făină, pui desfăcut"
+    },
+    "source": {
+      "kind": "reel",
+      "tags": [
+        "social",
+        "facebook"
+      ],
+      "badge": {
+        "en": "▶ Reel · Facebook",
+        "ro": "▶ Reel · Facebook"
+      },
+      "label": {
+        "en": "Method read from the frames of a wordless Facebook reel by Monica Boicu; amounts are typical values from Romanian sites",
+        "ro": "Metoda citită din cadrele unui reel Facebook fără cuvinte al Monicăi Boicu; cantitățile sunt valori obișnuite de pe site-uri românești"
+      },
+      "url": "https://www.facebook.com/reel/1790438665338604"
+    },
+    "country": {
+      "key": "ro",
+      "en": "🇷🇴 Romania",
+      "ro": "🇷🇴 România"
+    },
+    "course": [
+      "soup",
+      "main"
+    ],
+    "grocery": [
+      {
+        "aisle": "meat",
+        "key": "chicken",
+        "name": {
+          "en": "Chicken pieces, bone-in",
+          "ro": "Bucăți de pui, cu os"
+        },
+        "qty": 1000,
+        "unit": "g"
+      },
+      {
+        "aisle": "produce",
+        "key": "onion",
+        "name": {
+          "en": "Onion",
+          "ro": "Ceapă"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "red-pepper",
+        "name": {
+          "en": "Small red bell pepper",
+          "ro": "Ardei gras roșu mic"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "carrot",
+        "name": {
+          "en": "Carrots",
+          "ro": "Morcovi"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "parsley",
+        "name": {
+          "en": "Parsley",
+          "ro": "Pătrunjel"
+        },
+        "qty": 1,
+        "unit": "bunch"
+      },
+      {
+        "aisle": "pantry",
+        "key": "olive-oil",
+        "name": {
+          "en": "Olive oil",
+          "ro": "Ulei de măsline"
+        },
+        "qty": 45,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "flour",
+        "name": {
+          "en": "Plain flour",
+          "ro": "Făină albă"
+        },
+        "qty": 20,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "vermicelli",
+        "name": {
+          "en": "Fine vermicelli (fidea)",
+          "ro": "Fidea fină"
+        },
+        "qty": 70,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "pepper",
+        "name": {
+          "en": "Pepper",
+          "ro": "Piper"
+        },
+        "qty": 0,
+        "unit": ""
+      }
+    ]
   }
 ]
