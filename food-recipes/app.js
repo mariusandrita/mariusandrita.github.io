@@ -1,6 +1,11 @@
+// Every relative URL (recipes/, images/) resolves against the app root, even while the
+// address bar shows a share path like r/<slug>/.
+const ROOT = new URL('.', document.currentScript.src).href;
+document.head.prepend(Object.assign(document.createElement('base'), { href: ROOT }));
+
 const UI = {
   ro: {
-    eyebrow: 'Rețete autentice', title: 'Rețetar Autentic',
+    eyebrow: 'Rețete autentice', title: 'Marius Food Collection',
     sub: 'Rețete din țara de origine — comparate din mai multe surse, cu pași, timere și poze.',
     open: 'Click pentru rețetă', reset: 'Resetează', footer: 'Gătit cu răbdare și surse verificate · 2026',
     start: 'Pornește', stop: 'Oprește', done: 'Gata!',
@@ -10,7 +15,7 @@ const UI = {
     search: 'Caută o rețetă…', recipes: 'rețete', noMatch: 'Nicio rețetă cu aceste filtre.', clearFilters: 'Șterge filtrele'
   },
   en: {
-    eyebrow: 'Authentic recipes', title: 'Authentic Recipes',
+    eyebrow: 'Authentic recipes', title: 'Marius Food Collection',
     sub: 'Recipes from their country of origin — compared across sources, with steps, timers and photos.',
     open: 'Tap for recipe', reset: 'Reset', footer: 'Cooked with patience and checked sources · 2026',
     start: 'Start', stop: 'Stop', done: 'Done!',
@@ -96,7 +101,7 @@ function renderCards() {
         <p class="tagline">${r.tagline[lang()]}</p>
         <div class="flip-hint">${t.open}</div>
       </div>`;
-    card.addEventListener('click', () => { location.hash = hashFor(r); });
+    card.addEventListener('click', () => goTo(r.slug));
     grid.appendChild(card);
   });
 }
@@ -183,7 +188,7 @@ async function openRecipe(r) {
 const key = (i) => `chk:${current.slug}:${lang()}:${i}`;
 
 function closeAll(keepHash) {
-  if (!keepHash && location.hash) history.replaceState(null, '', location.pathname + location.search);
+  if (!keepHash && (location.hash || /\/r\//.test(location.pathname))) history.replaceState(null, '', ROOT);
   reader.hidden = true;
   shop.hidden = true;
   document.body.classList.remove('no-scroll');
@@ -341,20 +346,25 @@ $('shop-copy').addEventListener('click', async () => {
 fab.addEventListener('click', openShop);
 
 // --- deep links: #/<slug>/<ro|en>, and share pages at r/<slug>/ ---------------
-const hashFor = (r) => `#/${r.slug}/${lang()}`;
-const shareUrl = (r) => new URL(`r/${r.slug}/?lang=${lang()}`, location.href).href;
+const urlFor = (r) => new URL(`r/${r.slug}/${lang() === 'en' ? '?lang=en' : ''}`, ROOT).href;
+const goTo = (slug) => { history.pushState(null, '', new URL(`r/${slug}/${lang() === 'en' ? '?lang=en' : ''}`, ROOT).href); route(); };
 
 function route() {
-  const m = location.hash.match(/^#\/([a-z0-9-]+)(?:\/(en|ro))?$/);
-  const r = m && index.find((x) => x.slug === m[1]);
+  const pm = location.pathname.match(/\/r\/([a-z0-9-]+)\/?$/);
+  const hm = location.hash.match(/^#\/([a-z0-9-]+)(?:\/(en|ro))?$/);
+  const slug = pm ? pm[1] : hm && hm[1];
+  const r = slug && index.find((x) => x.slug === slug);
   if (!r) { if (!reader.hidden) closeAll(true); return; }
-  if (m[2] && (m[2] === 'ro') !== toggle.checked) { toggle.checked = m[2] === 'ro'; renderUI(); }
+  const want = pm ? (new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'ro') : (hm[2] || lang());
+  if ((want === 'ro') !== toggle.checked) { toggle.checked = want === 'ro'; renderUI(); }
   if (reader.hidden || !current || current.slug !== r.slug) openRecipe(r);
+  if (!pm) history.replaceState(null, '', urlFor(r)); // old #/slug links get the preview-friendly address
 }
 window.addEventListener('hashchange', route);
+window.addEventListener('popstate', route);
 
 $('reader-share').addEventListener('click', async () => {
-  const url = shareUrl(current), t = UI[lang()];
+  const url = urlFor(current), t = UI[lang()];
   try {
     if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) await navigator.share({ title: current.title[lang()], url });
     else {
@@ -366,7 +376,7 @@ $('reader-share').addEventListener('click', async () => {
 });
 body.addEventListener('click', (e) => {
   const a = e.target.closest('a[href^="recipe:"]');
-  if (a) { e.preventDefault(); location.hash = `#/${a.getAttribute('href').slice(7)}/${lang()}`; }
+  if (a) { e.preventDefault(); goTo(a.getAttribute('href').slice(7)); }
 });
 
 // --- wiring -------------------------------------------------------------
@@ -377,7 +387,7 @@ toggle.addEventListener('change', () => {
   const r = reader.hidden ? null : current;
   closeAll(true);
   renderUI();
-  if (r) { history.replaceState(null, '', hashFor(r)); openRecipe(r); } else closeAll();
+  if (r) { history.replaceState(null, '', urlFor(r)); openRecipe(r); } else closeAll();
 });
 
 Promise.all([
