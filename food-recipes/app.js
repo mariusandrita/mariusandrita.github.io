@@ -50,7 +50,7 @@ const saveGot = () => store.set('got', JSON.stringify(got));
 const SRC = { web: '🌐 Web', social: '▶ Social media', facebook: 'Facebook', instagram: 'Instagram', tiktok: 'TikTok', youtube: 'YouTube' };
 const COURSE = {
   breakfast: { en: 'Breakfast', ro: 'Mic dejun' }, dessert: { en: 'Dessert', ro: 'Desert' }, soup: { en: 'Soup', ro: 'Supă' },
-  main: { en: 'Main course', ro: 'Fel principal' }, snack: { en: 'Snack', ro: 'Gustare' }, salad: { en: 'Salad', ro: 'Salată' }, appetizer: { en: 'Appetizer', ro: 'Aperitiv' }, side: { en: 'Side dish', ro: 'Garnitură' }
+  main: { en: 'Main course', ro: 'Fel principal' }, snack: { en: 'Snack', ro: 'Gustare' }, salad: { en: 'Salad', ro: 'Salată' }, appetizer: { en: 'Appetizer', ro: 'Aperitiv' }, sauce: { en: 'Sauce', ro: 'Sos' }, side: { en: 'Side dish', ro: 'Garnitură' }
 };
 const GROUPS = [
   { id: 'source', title: { en: 'Source', ro: 'Sursă' }, vals: (r) => r.source?.tags || [], label: (k) => SRC[k] || k },

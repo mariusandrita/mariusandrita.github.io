@@ -1296,5 +1296,144 @@
         "unit": ""
       }
     ]
+  },
+  {
+    "slug": "burger-sauce",
+    "image": "recipes/images/burger-sauce/finished.jpg",
+    "theme": "#e8806a",
+    "origin": "🇺🇸",
+    "time": "1 h 5",
+    "title": {
+      "en": "Burger Sauce",
+      "ro": "Sos de burger"
+    },
+    "tagline": {
+      "en": "The creamy pink \"special sauce\": mayo, ketchup, relish, a little mustard and paprika",
+      "ro": "Sosul special cremos și roz: maioneză, ketchup, relish, puțin muștar și boia"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 5 US sources",
+        "ro": "🌐 5 surse americane"
+      },
+      "label": {
+        "en": "Median of Taste of Home, Tasty and The Kitchn, with history from Wikipedia",
+        "ro": "Mediana Taste of Home, Tasty și The Kitchn, cu istorie de la Wikipedia"
+      }
+    },
+    "country": {
+      "key": "us",
+      "en": "🇺🇸 United States",
+      "ro": "🇺🇸 Statele Unite"
+    },
+    "course": [
+      "sauce"
+    ],
+    "grocery": [
+      {
+        "aisle": "pantry",
+        "key": "mayonnaise",
+        "name": {
+          "en": "Mayonnaise",
+          "ro": "Maioneză"
+        },
+        "qty": 120,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "ketchup",
+        "name": {
+          "en": "Ketchup",
+          "ro": "Ketchup"
+        },
+        "qty": 45,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "sweet-relish",
+        "name": {
+          "en": "Sweet pickle relish",
+          "ro": "Sweet pickle relish"
+        },
+        "qty": 30,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "yellow-mustard",
+        "name": {
+          "en": "Yellow mustard (2 tsp)",
+          "ro": "Muștar galben (2 lingurițe)"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "white-vinegar",
+        "name": {
+          "en": "White vinegar (1 tsp)",
+          "ro": "Oțet alb (1 linguriță)"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "sugar",
+        "name": {
+          "en": "Sugar",
+          "ro": "Zahăr"
+        },
+        "qty": 4,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "paprika",
+        "name": {
+          "en": "Paprika",
+          "ro": "Boia"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "garlic-powder",
+        "name": {
+          "en": "Garlic powder",
+          "ro": "Usturoi praf"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "onion-powder",
+        "name": {
+          "en": "Onion powder",
+          "ro": "Ceapă praf"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "pepper",
+        "name": {
+          "en": "Black pepper",
+          "ro": "Piper negru"
+        },
+        "qty": 0,
+        "unit": ""
+      }
+    ]
   }
 ]
