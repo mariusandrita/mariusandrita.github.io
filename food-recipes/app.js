@@ -6,7 +6,7 @@ const UI = {
     start: 'Pornește', stop: 'Oprește', done: 'Gata!',
     shop: 'Listă de cumpărături', addList: '＋ Listă', inList: '✓ În listă', copy: 'Copiază', copied: 'Copiat!', clear: 'Șterge bifele',
     pick: 'Alege rețetele', empty: 'Alege cel puțin o rețetă ca să vezi lista.', optional: 'opțional', toTaste: 'după gust',
-    openSource: 'Deschide originalul', fab: 'Cumpărături', allDone: 'Totul bifat 🎉', refs: 'Site-uri de referință', refsTop: '📚 Site-uri de referință', visit: 'Deschide site-ul',
+    openSource: 'Deschide originalul', fab: 'Cumpărături', allDone: 'Totul bifat 🎉', refs: 'Site-uri de referință', share: '🔗 Link', linkCopied: 'Link copiat!', refsTop: '📚 Site-uri de referință', visit: 'Deschide site-ul',
     search: 'Caută o rețetă…', recipes: 'rețete', noMatch: 'Nicio rețetă cu aceste filtre.', clearFilters: 'Șterge filtrele'
   },
   en: {
@@ -16,7 +16,7 @@ const UI = {
     start: 'Start', stop: 'Stop', done: 'Done!',
     shop: 'Shopping list', addList: '＋ List', inList: '✓ In list', copy: 'Copy', copied: 'Copied!', clear: 'Clear ticks',
     pick: 'Pick recipes', empty: 'Pick at least one recipe to see the list.', optional: 'optional', toTaste: 'to taste',
-    openSource: 'Open original', fab: 'Shopping', allDone: 'All ticked 🎉', refs: 'Reference sites', refsTop: '📚 Reference sites', visit: 'Open site',
+    openSource: 'Open original', fab: 'Shopping', allDone: 'All ticked 🎉', refs: 'Reference sites', share: '🔗 Link', linkCopied: 'Link copied!', refsTop: '📚 Reference sites', visit: 'Open site',
     search: 'Search a recipe…', recipes: 'recipes', noMatch: 'No recipes match these filters.', clearFilters: 'Clear filters'
   }
 };
@@ -96,7 +96,7 @@ function renderCards() {
         <p class="tagline">${r.tagline[lang()]}</p>
         <div class="flip-hint">${t.open}</div>
       </div>`;
-    card.addEventListener('click', () => openRecipe(r));
+    card.addEventListener('click', () => { location.hash = hashFor(r); });
     grid.appendChild(card);
   });
 }
@@ -110,6 +110,7 @@ function renderUI() {
   $('t-sub').textContent = t.sub;
   $('t-footer').textContent = t.footer;
   $('reader-reset').textContent = t.reset;
+  $('reader-share').textContent = t.share;
   $('shop-copy').textContent = t.copy;
   $('shop-clear').textContent = t.clear;
   $('q').placeholder = t.search;
@@ -162,7 +163,7 @@ async function openRecipe(r) {
   const md = (await (await fetch(file, { cache: 'no-cache' })).text()).replace(/^---[\s\S]*?---\n/, '');
   body.innerHTML = banner(r) + marked.parse(md)
     .replace(/(src=")images\//g, '$1recipes/images/')
-    .replace(/<a /g, '<a target="_blank" rel="noopener" ')
+    .replace(/<a href="(https?:)/g, '<a target="_blank" rel="noopener" href="$1')
     .replace(/⏱ <strong>(.*?)<\/strong>/g, (_, t) => {
       const s = toSeconds(t);
       return s ? `<button type="button" class="timer" data-s="${s}">⏱ ${t} · <span>${UI[lang()].start} ${fmt(s)}</span></button>` : `⏱ <strong>${t}</strong>`;
@@ -181,7 +182,8 @@ async function openRecipe(r) {
 
 const key = (i) => `chk:${current.slug}:${lang()}:${i}`;
 
-function closeAll() {
+function closeAll(keepHash) {
+  if (!keepHash && location.hash) history.replaceState(null, '', location.pathname + location.search);
   reader.hidden = true;
   shop.hidden = true;
   document.body.classList.remove('no-scroll');
@@ -338,13 +340,47 @@ $('shop-copy').addEventListener('click', async () => {
 });
 fab.addEventListener('click', openShop);
 
+// --- deep links: #/<slug>/<ro|en>, and share pages at r/<slug>/ ---------------
+const hashFor = (r) => `#/${r.slug}/${lang()}`;
+const shareUrl = (r) => new URL(`r/${r.slug}/?lang=${lang()}`, location.href).href;
+
+function route() {
+  const m = location.hash.match(/^#\/([a-z0-9-]+)(?:\/(en|ro))?$/);
+  const r = m && index.find((x) => x.slug === m[1]);
+  if (!r) { if (!reader.hidden) closeAll(true); return; }
+  if (m[2] && (m[2] === 'ro') !== toggle.checked) { toggle.checked = m[2] === 'ro'; renderUI(); }
+  if (reader.hidden || !current || current.slug !== r.slug) openRecipe(r);
+}
+window.addEventListener('hashchange', route);
+
+$('reader-share').addEventListener('click', async () => {
+  const url = shareUrl(current), t = UI[lang()];
+  try {
+    if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) await navigator.share({ title: current.title[lang()], url });
+    else {
+      await navigator.clipboard.writeText(url);
+      $('reader-share').textContent = t.linkCopied;
+      setTimeout(() => { $('reader-share').textContent = t.share; }, 1500);
+    }
+  } catch {}
+});
+body.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href^="recipe:"]');
+  if (a) { e.preventDefault(); location.hash = `#/${a.getAttribute('href').slice(7)}/${lang()}`; }
+});
+
 // --- wiring -------------------------------------------------------------
-$('reader-close').addEventListener('click', closeAll);
-$('shop-close').addEventListener('click', closeAll);
+$('reader-close').addEventListener('click', () => closeAll());
+$('shop-close').addEventListener('click', () => closeAll());
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && (!reader.hidden || !shop.hidden)) closeAll(); });
-toggle.addEventListener('change', () => { closeAll(); renderUI(); });
+toggle.addEventListener('change', () => {
+  const r = reader.hidden ? null : current;
+  closeAll(true);
+  renderUI();
+  if (r) { history.replaceState(null, '', hashFor(r)); openRecipe(r); } else closeAll();
+});
 
 Promise.all([
   fetch('recipes/index.json', { cache: 'no-cache' }).then((r) => r.json()),
   fetch('references.json', { cache: 'no-cache' }).then((r) => r.json()).catch(() => [])
-]).then(([j, r]) => { index = j; refs = r; renderUI(); });
+]).then(([j, r]) => { index = j; refs = r; renderUI(); route(); });

@@ -1435,5 +1435,146 @@
         "unit": ""
       }
     ]
+  },
+  {
+    "slug": "big-mac-style-burger",
+    "image": "recipes/images/big-mac-style-burger/finished.jpg",
+    "theme": "#d9a02b",
+    "origin": "🇺🇸",
+    "time": "1 h 40",
+    "title": {
+      "en": "Big Mac–Style Burger",
+      "ro": "Burger în stil Big Mac"
+    },
+    "tagline": {
+      "en": "Two thin patties, a three-part bun, special sauce and finely minced onion",
+      "ro": "Două chiftele subțiri, chiflă cu trei părți, sos special și ceapă tocată mărunt"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 3 US sources + McDonald's",
+        "ro": "🌐 3 surse americane + McDonald's"
+      },
+      "label": {
+        "en": "Based on CopyKat (4.99 from 52 votes), cross-checked with An Affair from the Heart and Six Sisters' Stuff; build checked on McDonald's own page",
+        "ro": "Pe baza CopyKat (4,99 din 52 de voturi), verificată cu An Affair from the Heart și Six Sisters' Stuff; structura verificată pe pagina McDonald's"
+      },
+      "url": "https://copykat.com/copycat-mcdonalds-big-mac-recipe/"
+    },
+    "country": {
+      "key": "us",
+      "en": "🇺🇸 United States",
+      "ro": "🇺🇸 Statele Unite"
+    },
+    "course": [
+      "main"
+    ],
+    "grocery": [
+      {
+        "aisle": "meat",
+        "key": "ground-chuck",
+        "name": {
+          "en": "Ground beef chuck",
+          "ro": "Carne tocată de vită (chuck)"
+        },
+        "qty": 545,
+        "unit": "g"
+      },
+      {
+        "aisle": "other",
+        "key": "sesame-buns",
+        "name": {
+          "en": "Sesame seed hamburger buns",
+          "ro": "Chifle de burger cu susan"
+        },
+        "qty": 8,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "onion",
+        "name": {
+          "en": "White onion (small)",
+          "ro": "Ceapă albă (mică)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "iceberg",
+        "name": {
+          "en": "Iceberg lettuce (1 small head)",
+          "ro": "Salată iceberg (un cap mic)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "pickle-slices",
+        "name": {
+          "en": "Dill pickle slices (1 jar)",
+          "ro": "Felii de castraveți murați cu mărar (1 borcan)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "dairy",
+        "key": "american-cheese",
+        "name": {
+          "en": "American cheese slices",
+          "ro": "Felii de cașcaval american"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "dairy",
+        "key": "butter",
+        "name": {
+          "en": "Butter",
+          "ro": "Unt"
+        },
+        "qty": 15,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "pepper",
+        "name": {
+          "en": "Black pepper",
+          "ro": "Piper negru"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "burger-sauce-ingredients",
+        "name": {
+          "en": "Burger Sauce ingredients (see the Burger Sauce recipe)",
+          "ro": "Ingredientele sosului de burger (vezi rețeta de Sos de burger)"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      }
+    ]
   }
 ]
