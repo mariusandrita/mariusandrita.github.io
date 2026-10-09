@@ -1,5 +1,14 @@
 [
   {
+    "title": "Rețetar Băuturi (Bar Recipes)",
+    "url": "https://mariusandrita.github.io/bar-recipes/",
+    "lang": "ro",
+    "description": {
+      "en": "My cocktail recipes: classic drinks explained step by step, from the glass to the garnish (in Romanian).",
+      "ro": "Rețetele mele de cocktailuri: băuturi clasice, explicate pas cu pas, de la pahar la garnitură."
+    }
+  },
+  {
     "title": "Colecția Ximenei",
     "url": "https://ximenaene.github.io/site-retete/index.html",
     "lang": "ro",
