@@ -18,7 +18,7 @@ sources:
 ![Un burger în stil Big Mac cu două chiftele și chiflă la mijloc, ținut în mână, cu cartofi wedges în spate](images/big-mac-style-burger/finished.jpg)
 *Foto: [An Affair from the Heart](https://anaffairfromtheheart.com/copycat-mcdonalds-big-mac/)*
 
-> **Sosul:** acest burger folosește propria noastră rețetă de [Sos de burger](recipe:burger-sauce). Fă-l mai întâi (are nevoie de o oră la frigider) și folosește **varianta lui în stil Big Mac (fără ketchup)**.
+> **Sosul:** acest burger folosește propria noastră rețetă de [Sos de burger](recipe:burger-sauce), care are nevoie de sweet pickle relish: dacă nu îl găsești, fă [Sweet Pickle Relish](recipe:sweet-pickle-relish)-ul nostru cu câteva zile înainte. Fă-l mai întâi (are nevoie de o oră la frigider) și folosește **varianta lui în stil Big Mac (fără ketchup)**.
 
 ## Povestea
 - **Originile:** Big Mac-ul a fost creat de Jim Delligatti, un francizat McDonald's de lângă Pittsburgh. A debutat pe **22 aprilie 1967** în restaurantul lui din Uniontown, Pennsylvania, la 45 de cenți, și a ajuns în meniurile McDonald's din toată America în 1968. El a spus mai târziu că a copiat ideea cu două etaje de la burgerul Big Boy, vândut încă din anii 1940 ([Wikipedia](https://en.wikipedia.org/wiki/Big_Mac)).

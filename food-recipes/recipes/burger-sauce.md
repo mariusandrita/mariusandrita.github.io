@@ -37,12 +37,12 @@ sources:
 
 **Makes** about ¾ cup (180 ml) · **Prep** 5 min · **Chill** 1 h · **Easy**
 
-> **Before you start:** the sauce needs an hour in the fridge, so make it before you start the burgers.
+> **Before you start:** the sauce needs an hour in the fridge, so make it before you start the burgers. No sweet pickle relish at home? Make our [Sweet Pickle Relish](recipe:sweet-pickle-relish) first (3 days ahead gives the best flavour).
 
 ## Mise en place
 - [ ] ½ cup (120 ml) mayonnaise, full-fat
 - [ ] 3 tbsp (45 ml) ketchup
-- [ ] 2 tbsp (30 ml) sweet pickle relish
+- [ ] 2 tbsp (30 ml) sweet pickle relish (can't find it? [make your own](recipe:sweet-pickle-relish))
 - [ ] 2 tsp yellow mustard
 - [ ] 1 tsp white vinegar and 1 tsp sugar
 - [ ] ½ tsp paprika, ¼ tsp garlic powder, ¼ tsp onion powder
@@ -51,7 +51,7 @@ sources:
 ## Ingredients (about ¾ cup)
 - [ ] ½ cup (120 ml, about 115 g) mayonnaise
 - [ ] 3 tbsp (45 ml) ketchup
-- [ ] 2 tbsp (30 ml) sweet pickle relish
+- [ ] 2 tbsp (30 ml) sweet pickle relish (can't find it? [make your own](recipe:sweet-pickle-relish))
 - [ ] 2 tsp yellow mustard
 - [ ] 1 tsp white vinegar
 - [ ] 1 tsp sugar

@@ -37,12 +37,12 @@ sources:
 
 **Iese** cam ¾ cană (180 ml) · **Pregătire** 5 min · **La rece** 1 h · **Ușor**
 
-> **Înainte să începi:** sosul are nevoie de o oră la frigider, așa că fă-l înainte să începi burgerii.
+> **Înainte să începi:** sosul are nevoie de o oră la frigider, așa că fă-l înainte să începi burgerii. Nu ai sweet pickle relish acasă? Fă mai întâi [Sweet Pickle Relish](recipe:sweet-pickle-relish)-ul nostru (cu 3 zile înainte are cel mai bun gust).
 
 ## Pregătirea ingredientelor
 - [ ] ½ cană (120 ml) maioneză grasă
 - [ ] 3 linguri (45 ml) ketchup
-- [ ] 2 linguri (30 ml) sweet pickle relish (relish de castraveți murați dulci)
+- [ ] 2 linguri (30 ml) sweet pickle relish (relish de castraveți murați dulci; nu-l găsești? [fă-l singur](recipe:sweet-pickle-relish))
 - [ ] 2 lingurițe muștar galben
 - [ ] 1 linguriță oțet alb și 1 linguriță zahăr
 - [ ] ½ linguriță boia, ¼ linguriță usturoi praf, ¼ linguriță ceapă praf
@@ -51,7 +51,7 @@ sources:
 ## Ingrediente (cam ¾ cană)
 - [ ] ½ cană (120 ml, cam 115 g) maioneză
 - [ ] 3 linguri (45 ml) ketchup
-- [ ] 2 linguri (30 ml) sweet pickle relish
+- [ ] 2 linguri (30 ml) sweet pickle relish ([fă-l singur](recipe:sweet-pickle-relish))
 - [ ] 2 lingurițe muștar galben
 - [ ] 1 linguriță oțet alb
 - [ ] 1 linguriță zahăr

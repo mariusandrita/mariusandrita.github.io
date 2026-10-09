@@ -18,7 +18,7 @@ sources:
 ![A Big Mac–style burger with two patties and a middle bun, held in a hand, wedges behind](images/big-mac-style-burger/finished.jpg)
 *Photo: [An Affair from the Heart](https://anaffairfromtheheart.com/copycat-mcdonalds-big-mac/)*
 
-> **The sauce:** this burger uses our own [Burger Sauce](recipe:burger-sauce). Make it first (it needs an hour in the fridge) and use its **Big Mac–style variant (no ketchup)**.
+> **The sauce:** this burger uses our own [Burger Sauce](recipe:burger-sauce), which needs sweet pickle relish: if you can't buy it, make our [Sweet Pickle Relish](recipe:sweet-pickle-relish) a few days ahead. Make it first (it needs an hour in the fridge) and use its **Big Mac–style variant (no ketchup)**.
 
 ## The story
 - **Origins:** The Big Mac was created by Jim Delligatti, a McDonald's franchisee near Pittsburgh. It debuted on **April 22, 1967** at his Uniontown, Pennsylvania restaurant for 45 cents and went on McDonald's menus across the US in 1968. He later said he copied the double-decker idea from the Big Boy burger, sold since the 1940s ([Wikipedia](https://en.wikipedia.org/wiki/Big_Mac)).

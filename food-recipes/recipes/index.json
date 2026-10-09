@@ -1576,5 +1576,146 @@
         "optional": true
       }
     ]
+  },
+  {
+    "slug": "sweet-pickle-relish",
+    "image": "recipes/images/sweet-pickle-relish/finished.jpg",
+    "theme": "#c8b43a",
+    "origin": "🇺🇸",
+    "time": "5 h 30",
+    "title": {
+      "en": "Sweet Pickle Relish",
+      "ro": "Sweet pickle relish"
+    },
+    "tagline": {
+      "en": "Finely chopped sweet-and-sour cucumber relish for burger sauce and hot dogs, small fridge batch",
+      "ro": "Relish dulce-acrișor de castraveți, pentru sos de burger și hot dog, porție mică la frigider"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 3 US sources + NCHFP",
+        "ro": "🌐 3 surse americane + NCHFP"
+      },
+      "label": {
+        "en": "Scaled from Savoring The Good, Sustainable Cooks and the NCHFP's tested canning recipe (linked for shelf-stable jars)",
+        "ro": "Redus din Savoring The Good, Sustainable Cooks și rețeta testată NCHFP (linkată pentru borcane de conservare)"
+      },
+      "url": "https://nchfp.uga.edu/how/pickle/relishes/pickle-relish/"
+    },
+    "country": {
+      "key": "us",
+      "en": "🇺🇸 United States",
+      "ro": "🇺🇸 Statele Unite"
+    },
+    "course": [
+      "sauce"
+    ],
+    "grocery": [
+      {
+        "aisle": "produce",
+        "key": "pickling-cucumber",
+        "name": {
+          "en": "Pickling cucumbers",
+          "ro": "Castraveți pentru murat"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "bell-pepper",
+        "name": {
+          "en": "Bell pepper (½ red + ½ green)",
+          "ro": "Ardei gras (½ roșu + ½ verde)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "onion",
+        "name": {
+          "en": "White onion (½ large)",
+          "ro": "Ceapă albă (½ mare)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "pickling-salt",
+        "name": {
+          "en": "Pickling salt",
+          "ro": "Sare de murat"
+        },
+        "qty": 45,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "apple-cider-vinegar",
+        "name": {
+          "en": "Apple cider vinegar (5%)",
+          "ro": "Oțet de mere (5%)"
+        },
+        "qty": 300,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "sugar",
+        "name": {
+          "en": "Sugar",
+          "ro": "Zahăr"
+        },
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "mustard-seed",
+        "name": {
+          "en": "Mustard seeds",
+          "ro": "Semințe de muștar"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "celery-seed",
+        "name": {
+          "en": "Celery seeds",
+          "ro": "Semințe de țelină"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "turmeric",
+        "name": {
+          "en": "Ground turmeric",
+          "ro": "Turmeric pudră"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "whole-spices",
+        "name": {
+          "en": "Whole cloves and allspice",
+          "ro": "Cuișoare și ienibahar întregi"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      }
+    ]
   }
 ]
