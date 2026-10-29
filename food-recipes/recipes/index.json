@@ -1961,8 +1961,8 @@
         "web"
       ],
       "badge": {
-        "en": "🌐 7 US sources",
-        "ro": "🌐 7 surse americane"
+        "en": "🌐 11 US sources",
+        "ro": "🌐 11 surse americane"
       },
       "label": {
         "en": "Compared from Powell Family Cooking, The Splendid Table, She's Not Cookin', Beach House Kitchen, Spices Inc. and What's Mom Cookin'; history from Wikipedia",
@@ -2055,7 +2055,7 @@
           "en": "Black pepper",
           "ro": "Piper negru"
         },
-        "qty": 1,
+        "qty": 2,
         "unit": "tsp"
       },
       {
@@ -2075,7 +2075,7 @@
           "en": "Ground cumin",
           "ro": "Chimion măcinat"
         },
-        "qty": 1,
+        "qty": 2,
         "unit": "tsp"
       },
       {
@@ -2175,6 +2175,17 @@
         },
         "qty": 0,
         "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "cayenne",
+        "name": {
+          "en": "Cayenne (optional heat)",
+          "ro": "Cayenne (opțional, pentru iuțeală)"
+        },
+        "qty": 0.5,
+        "unit": "tsp",
+        "optional": true
       }
     ]
   }
