@@ -139,11 +139,9 @@ $('chips').addEventListener('click', (e) => {
 $('q').addEventListener('input', (e) => { query = norm(e.target.value.trim()); renderChips(); renderCards(); });
 
 // --- recipe reader ------------------------------------------------------
-const toSeconds = (txt) => {
-  const m = txt.match(/(\d+)(?:\s*[–-]\s*(\d+))?\s*(h|min|s)\b/i);
-  if (!m) return 0;
-  return +(m[2] || m[1]) * { h: 3600, min: 60, s: 1 }[m[3].toLowerCase()];
-};
+// sums every "N unit" (so "2 h 30 min" = 9000); a range like "4–5 min" counts its upper end
+const toSeconds = (txt) => [...txt.matchAll(/(\d+)(?:\s*[–-]\s*(\d+))?\s*(h|min|s)\b/gi)]
+  .reduce((n, m) => n + +(m[2] || m[1]) * { h: 3600, min: 60, s: 1 }[m[3].toLowerCase()], 0);
 const fmt = (s) => {
   const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), p = (n) => String(n).padStart(2, '0');
   return (h ? `${h}:${p(m)}` : m) + `:${p(s % 60)}`;

@@ -1946,7 +1946,7 @@
     "image": "recipes/images/oven-bbq-ribs/finished.jpg",
     "theme": "#a63a1c",
     "origin": "🇺🇸",
-    "time": "3 h 50",
+    "time": "4 h",
     "title": {
       "en": "Oven BBQ Ribs (American)",
       "ro": "Coaste BBQ la cuptor (stil american)"
@@ -1961,8 +1961,8 @@
         "web"
       ],
       "badge": {
-        "en": "🌐 11 US sources",
-        "ro": "🌐 11 surse americane"
+        "en": "🌐 10 US sources",
+        "ro": "🌐 10 surse americane"
       },
       "label": {
         "en": "Compared from Powell Family Cooking, The Splendid Table, She's Not Cookin', Beach House Kitchen, Spices Inc. and What's Mom Cookin'; history from Wikipedia",
