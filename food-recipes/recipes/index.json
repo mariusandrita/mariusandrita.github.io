@@ -1717,5 +1717,402 @@
         "optional": true
       }
     ]
+  },
+  {
+    "slug": "schweinshaxe",
+    "image": "recipes/images/schweinshaxe/finished.jpg",
+    "theme": "#8a4b1f",
+    "origin": "🇦🇹",
+    "time": "3 h 20",
+    "title": {
+      "en": "Schweinshaxe (Austrian pork knuckle)",
+      "ro": "Ciolan de porc stil austriac (Schweinshaxe)"
+    },
+    "tagline": {
+      "en": "Simmered gently, then roasted in dark beer until the rind crackles",
+      "ro": "Fiert domol, apoi copt în bere neagră până pielea trosnește"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 5 Austrian sources",
+        "ro": "🌐 5 surse austriece"
+      },
+      "label": {
+        "en": "Compared from 3 Servus recipes, kochrezepte.at and Gute Küche, with the Wien Geschichte Wiki for the history",
+        "ro": "Comparat din 3 rețete Servus, kochrezepte.at și Gute Küche, cu Wien Geschichte Wiki pentru istorie"
+      }
+    },
+    "country": {
+      "key": "at",
+      "en": "🇦🇹 Austria",
+      "ro": "🇦🇹 Austria"
+    },
+    "course": [
+      "main"
+    ],
+    "grocery": [
+      {
+        "aisle": "meat",
+        "key": "pork-knuckle",
+        "name": {
+          "en": "Pork knuckles, fresh, 1.2–1.5 kg each",
+          "ro": "Ciolane de porc proaspete, 1,2–1,5 kg bucata"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "onion",
+        "name": {
+          "en": "Onions (2 + 80 g for the salad)",
+          "ro": "Ceapă (2 + 80 g pentru salată)"
+        },
+        "qty": 3,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "garlic",
+        "name": {
+          "en": "Garlic cloves",
+          "ro": "Căței de usturoi"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "cabbage",
+        "name": {
+          "en": "Early cabbage, small head (about 700 g)",
+          "ro": "Varză timpurie, căpățână mică (cam 700 g)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "dark-beer",
+        "name": {
+          "en": "Dark beer",
+          "ro": "Bere neagră"
+        },
+        "qty": 250,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "broth",
+        "name": {
+          "en": "Clear vegetable or meat broth",
+          "ro": "Supă limpede de legume sau de carne"
+        },
+        "qty": 150,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "bay-leaf",
+        "name": {
+          "en": "Bay leaves",
+          "ro": "Foi de dafin"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "caraway",
+        "name": {
+          "en": "Caraway seeds (2 tsp + 1 tsp)",
+          "ro": "Semințe de chimen (2 + 1 lingurițe)"
+        },
+        "qty": 3,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "black-pepper-corns",
+        "name": {
+          "en": "Black peppercorns",
+          "ro": "Boabe de piper negru"
+        },
+        "qty": 2,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "sugar",
+        "name": {
+          "en": "Sugar",
+          "ro": "Zahăr"
+        },
+        "qty": 2,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "cornstarch",
+        "name": {
+          "en": "Cornstarch",
+          "ro": "Amidon de porumb"
+        },
+        "qty": 1,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "sunflower-oil",
+        "name": {
+          "en": "Sunflower oil",
+          "ro": "Ulei de floarea-soarelui"
+        },
+        "qty": 4,
+        "unit": "tbsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "vinegar",
+        "name": {
+          "en": "Apple or wine vinegar",
+          "ro": "Oțet de mere sau de vin"
+        },
+        "qty": 50,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "mustard",
+        "name": {
+          "en": "Mustard",
+          "ro": "Muștar"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "horseradish",
+        "name": {
+          "en": "Grated horseradish (Kren)",
+          "ro": "Hrean ras (Kren)"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "pickled-peppers",
+        "name": {
+          "en": "Pickled peppers (Pfefferoni)",
+          "ro": "Ardei murați (Pfefferoni)"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      },
+      {
+        "aisle": "other",
+        "key": "bread-pretzel",
+        "name": {
+          "en": "Farmhouse bread, pretzels or potato dumplings",
+          "ro": "Pâine țărănească, covrigei sau găluște de cartofi"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      }
+    ]
+  },
+  {
+    "slug": "schweinsripperl",
+    "image": "recipes/images/schweinsripperl/finished.jpg",
+    "theme": "#a8472a",
+    "origin": "🇦🇹",
+    "time": "1 h 25",
+    "title": {
+      "en": "Schweinsripperl (Austrian oven ribs)",
+      "ro": "Coaste de porc la cuptor stil austriac (Schweinsripperl)"
+    },
+    "tagline": {
+      "en": "Pork ribs rubbed with caraway and garlic, roasted until crisp",
+      "ro": "Coaste de porc frecate cu chimen și usturoi, coapte până se rumenesc"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 6 Austrian sources",
+        "ro": "🌐 6 surse austriece"
+      },
+      "label": {
+        "en": "Compared from kochrezepte.at, Gute Küche (3 recipes), Servus and ichkoche",
+        "ro": "Comparat din kochrezepte.at, Gute Küche (3 rețete), Servus și ichkoche"
+      }
+    },
+    "country": {
+      "key": "at",
+      "en": "🇦🇹 Austria",
+      "ro": "🇦🇹 Austria"
+    },
+    "course": [
+      "main"
+    ],
+    "grocery": [
+      {
+        "aisle": "meat",
+        "key": "pork-ribs",
+        "name": {
+          "en": "Pork ribs (Schweinsripperl)",
+          "ro": "Coaste de porc (Schweinsripperl)"
+        },
+        "qty": 2000,
+        "unit": "g"
+      },
+      {
+        "aisle": "produce",
+        "key": "garlic",
+        "name": {
+          "en": "Garlic cloves",
+          "ro": "Căței de usturoi"
+        },
+        "qty": 5,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "caraway",
+        "name": {
+          "en": "Caraway seeds",
+          "ro": "Semințe de chimen"
+        },
+        "qty": 1,
+        "unit": "tbsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "paprika",
+        "name": {
+          "en": "Sweet paprika",
+          "ro": "Boia dulce"
+        },
+        "qty": 1,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "mustard",
+        "name": {
+          "en": "Mustard",
+          "ro": "Muștar"
+        },
+        "qty": 1,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "oil",
+        "name": {
+          "en": "Oil",
+          "ro": "Ulei"
+        },
+        "qty": 3,
+        "unit": "tbsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 3,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "black-pepper",
+        "name": {
+          "en": "Ground black pepper",
+          "ro": "Piper negru măcinat"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "ketchup",
+        "name": {
+          "en": "Hot ketchup",
+          "ro": "Ketchup iute"
+        },
+        "qty": 2,
+        "unit": "tsp",
+        "optional": true
+      },
+      {
+        "aisle": "produce",
+        "key": "potato",
+        "name": {
+          "en": "Potatoes (oven potatoes side)",
+          "ro": "Cartofi (garnitură la cuptor)"
+        },
+        "qty": 1000,
+        "unit": "g",
+        "optional": true
+      },
+      {
+        "aisle": "produce",
+        "key": "chives",
+        "name": {
+          "en": "Chives (sauce)",
+          "ro": "Arpagic (sos)"
+        },
+        "qty": 1,
+        "unit": "bunch",
+        "optional": true
+      },
+      {
+        "aisle": "dairy",
+        "key": "sour-cream",
+        "name": {
+          "en": "Sour cream (sauce)",
+          "ro": "Smântână (sos)"
+        },
+        "qty": 200,
+        "unit": "g",
+        "optional": true
+      },
+      {
+        "aisle": "dairy",
+        "key": "yogurt",
+        "name": {
+          "en": "Yogurt (sauce)",
+          "ro": "Iaurt (sos)"
+        },
+        "qty": 200,
+        "unit": "g",
+        "optional": true
+      }
+    ]
   }
 ]
