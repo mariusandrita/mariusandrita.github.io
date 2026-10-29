@@ -2,7 +2,7 @@
 dish: Oven BBQ Ribs (coaste de porc BBQ la cuptor, stil american, metoda cu folie)
 origin: Statele Unite
 servings: 4
-total_time: aproximativ 3 h 50 min (20 min pregătire, 3 h cuptor, 10 min grill, 10 min odihnă)
+total_time: aproximativ 3 h 50 min de lucru (+ 8–24 h la frigider cu condimentele, recomandat)
 date: 2026-10-29
 sources:
   - https://www.powellfamilycooking.com/oven-baked-ribs/
@@ -30,6 +30,7 @@ sources:
 ## Sfaturile bucătarilor 👵
 *Nu am găsit o bunică anume. Sfaturile vin de la autori culinari și bloguri americane, deci niciunul nu e o replică „de bunică”.*
 - **Trage pielița subțire de pe partea cu os.** Este tare și împiedică condimentele să intre. Strecoară un cuțit fără vârf sub ea și trage cu un șervețel de hârtie pentru priză. **[confirmat de toate cele 6 rețete care o menționează]**
+- **Condimentează-le cu o zi înainte** și ține-le la frigider 8–24 de ore; câteva pagini spun minimum 4 ore. (Mai multe pagini americane dintr-o căutare; nu le-am deschis, iar cele 7 pagini citite integral coc în aceeași zi.) **[practică obișnuită, nu din sursele mele principale]**
 - **Șterge coastele foarte bine** înainte de condimentat (Splendid Table). **[tradiție]**
 - **Muștar galben ca liant:** un strat subțire ajută condimentele să se lipească, iar „nu se simte muștarul” (Beach House Kitchen). Uleiul face același lucru (What's Mom Cookin'). **[tradiție, 2 surse]**
 - **Înfășoară strâns, în două straturi dacă folia e subțire,** ca să nu scape aburul (What's Mom Cookin', Powell). **[confirmat de 2 surse]**
@@ -40,10 +41,10 @@ sources:
 
 **Porții** 4 · **Pregătire** 20 min · **Gătire** 3 h 15 min · **Total** aproximativ 3 h 50 min · **Dificultate** ușoară
 
-> **Înainte să începi:** ai nevoie de o tavă cu margini, folie rezistentă și un cuptor cu grill care funcționează. Scoate coastele din frigider cu **30 de minute** înainte.
+> **Înainte să începi:** **condimentează coastele cu o zi înainte** și ține-le la frigider **8–24 de ore** (pasul 3). Ai nevoie de o tavă cu margini, folie rezistentă și un cuptor cu grill care funcționează. În ziua gătitului scoate coastele din frigider cu **30 de minute** înainte de copt.
 
 ## Mise en place
-- [ ] Încălzește cuptorul la **275 °F (135 °C)**, grătarul la mijloc (un al doilea grătar aproape de grill)
+- [ ] Cu o zi înainte: pașii 1–3 (curățat, condimentat, înfășurat). În ziua gătitului: coastele scoase din frigider, cuptorul încălzit la **275 °F (135 °C)**, grătarul la mijloc (un al doilea grătar aproape de grill)
 - [ ] Taie două foi de **folie rezistentă**, fiecare cam de două ori cât lungimea coastelor
 - [ ] Amestecă **condimentele** (mai jos) într-un bol mic
 - [ ] Șervețele de hârtie și un cuțit fără vârf pentru pielița de pe os
@@ -75,6 +76,7 @@ sources:
 1. [ ] **Curăță:** șterge grătarul de coaste. Pe partea cu os, ridică pielița subțire la un capăt cu un cuțit fără vârf, prinde-o cu un șervețel și **trage-o dintr-o dată**. Dacă grătarul are o bucată de carne tare sus, taie-o.
 2. [ ] **Condimentează:** unge ambele părți cu **2 linguri de muștar** (opțional) și apasă **tot amestecul de condimente** pe ambele părți, acoperind toată suprafața.
 3. [ ] **Înfășoară:** pune grătarul cu **carnea în sus** pe folie, îndoaie marginile de două ori și strânge, apoi înfășoară în a doua foaie. Așază-l pe o tavă cu margini.
+   ⏱ **Timer: 8–24 h la frigider** — *recomandat; condimentele pătrund în carne. Dacă te grăbești, coace imediat (niciuna din cele 6 rețete deschise de mine nu cere odihnă).*
 4. [ ] **Coace încet** la **275 °F (135 °C)**.
    ⏱ **Timer: 3 h** — *la 2½ h verifică: osul se mișcă liber, carnea se retrage de la capetele oaselor.*
    Cât se coace → fă sosul B din pasul 5, dacă îl folosești.
@@ -101,7 +103,7 @@ sources:
 - **Încă tari:** închide din nou folia și coace încă **30 min**; verifică din nou mișcând un os.
 - **Moi, se desfac în bucăți:** s-au copt prea mult. Ridică-le cu grijă, iar data viitoare verifică la 2½ h.
 - **Sos ars:** grillul a fost prea aproape sau prea mult. Folosește un grătar mai jos și 3 minute pe parte.
-- **Folia a curs:** folosește folie rezistentă, în două straturi, și coace mereu pe o tavă cu margini.
+- **Folia a curs:** folosește folie rezistentă, în două straturi, și ține-le la frigider și coace-le mereu pe o tavă cu margini.
 - **Prea puțină crustă:** folia fierbe condimentele la abur; crusta o dă grillul. Mai dă un minut la grill, urmărind atent.
 
 ## Servire, păstrare, reîncălzire

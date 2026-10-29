@@ -2,7 +2,7 @@
 dish: Oven BBQ Ribs (American low-and-slow, foil method)
 origin: United States
 servings: 4
-total_time: about 3 h 50 min (20 min prep, 3 h oven, 10 min broil, 10 min rest)
+total_time: about 3 h 50 min of work (+ 8–24 h rub in the fridge, recommended)
 date: 2026-10-29
 sources:
   - https://www.powellfamilycooking.com/oven-baked-ribs/
@@ -30,6 +30,7 @@ sources:
 ## Cooks' tips 👵
 *No named grandmother found. These tips come from US food writers and home-cook blogs, so none is a "grandma" quote.*
 - **Pull off the thin membrane on the bone side.** It is tough and stops the rub getting in. Slide a butter knife under it and pull with a paper towel for grip. **[confirmed by all 6 recipes that mention it]**
+- **Rub them the day before** and chill 8–24 hours; a few pages say a minimum of 4 hours. (Several US recipe pages in a search result; I did not open them, and the 7 pages I read in full bake the same day.) **[common practice, not in my main sources]**
 - **Pat the ribs very dry** before rubbing (Splendid Table). **[tradition]**
 - **Yellow mustard as a binder:** a thin coat helps the rub stick, and "you won't taste the mustard" (Beach House Kitchen). Oil does the same job (What's Mom Cookin'). **[tradition, 2 sources]**
 - **Wrap tightly, double layer if the foil is thin,** so no steam escapes (What's Mom Cookin', Powell). **[confirmed by 2 sources]**
@@ -40,10 +41,10 @@ sources:
 
 **Serves** 4 · **Prep** 20 min · **Cook** 3 h 15 min · **Total** about 3 h 50 min · **Difficulty** easy
 
-> **Before you start:** you need a baking sheet with a rim, heavy-duty foil, and an oven with a working broiler. Take the ribs out of the fridge **30 minutes** before.
+> **Before you start:** **rub the ribs the day before** and chill them **8–24 hours** (step 3). You need a baking sheet with a rim, heavy-duty foil, and an oven with a working broiler. On cooking day take the ribs out of the fridge **30 minutes** before baking.
 
 ## Mise en place
-- [ ] Preheat the oven to **275 °F (135 °C)**, rack in the middle (a second rack close to the broiler)
+- [ ] Day before: steps 1–3 (trim, rub, wrap). On cooking day: ribs out of the fridge, preheat the oven to **275 °F (135 °C)**, rack in the middle (a second rack close to the broiler)
 - [ ] Tear off two sheets of **heavy-duty foil**, each about twice as long as the rack
 - [ ] Mix the **rub** (below) in a small bowl
 - [ ] Paper towels and a butter knife for the membrane
@@ -75,6 +76,7 @@ sources:
 1. [ ] **Trim:** pat the rack dry. On the bone side, lift the thin membrane at one end with a butter knife, grab it with a paper towel and **pull it off in one go**. If the rack has a flap of tough meat at the top, cut it off.
 2. [ ] **Season:** brush both sides with **2 tbsp mustard** (optional) and press the **whole rub** onto both sides, covering every surface.
 3. [ ] **Wrap:** put the rack **meat side up** on the foil, fold the edges over twice and crimp to seal, then wrap in the second sheet. Set it on a rimmed baking sheet.
+   ⏱ **Timer: 8–24 h in the fridge** — *recommended; the rub works into the meat. In a hurry, bake straight away (none of the 6 recipe pages I opened asks for a rest).*
 4. [ ] **Bake low and slow** at **275 °F (135 °C)**.
    ⏱ **Timer: 3 h** — *at 2½ h, test: bone wiggles freely, meat pulling back from the bone ends.*
    While this bakes → make sauce B in step 5 if you use it.
@@ -101,7 +103,7 @@ sources:
 - **Still tough:** reseal in foil and bake another **30 min**; test again by wiggling a bone.
 - **Mushy, falling to pieces:** it baked too long. Lift it gently, and next time check at 2½ h.
 - **Burnt sauce:** the broiler was too close or too long. Use a lower rack and 3 minutes per side.
-- **Foil leaked:** use heavy-duty foil, double-wrap, and always bake on a rimmed sheet.
+- **Foil leaked:** use heavy-duty foil, double-wrap, and always chill and bake on a rimmed sheet.
 - **Not enough crust:** the foil steams the rub; the broiler gives the crust. Broil a minute longer, watching closely.
 
 ## Serve, store, reheat
