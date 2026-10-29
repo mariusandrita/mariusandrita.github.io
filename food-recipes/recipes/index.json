@@ -2188,5 +2188,188 @@
         "optional": true
       }
     ]
+  },
+  {
+    "slug": "oua-in-sos-de-rosii-cherry",
+    "image": "recipes/images/oua-in-sos-de-rosii-cherry/finished.jpg",
+    "theme": "#c8341e",
+    "origin": "🇷🇴",
+    "time": "35 min",
+    "title": {
+      "en": "Eggs in tomato sauce (from a jar of cherry tomatoes)",
+      "ro": "Ouă în sos de roșii cherry din borcan"
+    },
+    "tagline": {
+      "en": "Onion, pepper and jarred cherry tomatoes with their juice, eggs cooked right in the pan",
+      "ro": "Ceapă, ardei și roșii cherry din borcan cu zeama lor, ouă gătite chiar în tigaie"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 8 Romanian sources",
+        "ro": "🌐 8 surse românești"
+      },
+      "label": {
+        "en": "Compared from Bucătaras (3 recipes), Gustos, BZI, Jamila Cuisine and Laura Laurențiu; adapted by us for a jar of cherry tomatoes in tomato juice",
+        "ro": "Comparat din Bucătaras (3 rețete), Gustos, BZI, Jamila Cuisine și Laura Laurențiu; adaptat de noi pentru un borcan de roșii cherry în suc de roșii"
+      }
+    },
+    "country": {
+      "key": "ro",
+      "en": "🇷🇴 Romania",
+      "ro": "🇷🇴 România"
+    },
+    "course": [
+      "breakfast",
+      "main"
+    ],
+    "grocery": [
+      {
+        "aisle": "pantry",
+        "key": "jar-cherry-tomatoes",
+        "name": {
+          "en": "Jar of cherry tomatoes in tomato juice (about 450 g tomatoes + 100 ml juice)",
+          "ro": "Borcan de roșii cherry în suc de roșii (cam 450 g roșii + 100 ml suc)"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "dairy",
+        "key": "eggs",
+        "name": {
+          "en": "Eggs, very fresh",
+          "ro": "Ouă foarte proaspete"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "onion",
+        "name": {
+          "en": "Onion",
+          "ro": "Ceapă"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "red-bell-pepper",
+        "name": {
+          "en": "Red bell pepper",
+          "ro": "Ardei gras roșu"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "garlic",
+        "name": {
+          "en": "Garlic cloves",
+          "ro": "Căței de usturoi"
+        },
+        "qty": 3,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "parsley",
+        "name": {
+          "en": "Parsley",
+          "ro": "Pătrunjel"
+        },
+        "qty": 1,
+        "unit": "bunch"
+      },
+      {
+        "aisle": "pantry",
+        "key": "oil",
+        "name": {
+          "en": "Oil",
+          "ro": "Ulei"
+        },
+        "qty": 2,
+        "unit": "tbsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "paprika",
+        "name": {
+          "en": "Sweet paprika",
+          "ro": "Boia dulce"
+        },
+        "qty": 1,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "cumin",
+        "name": {
+          "en": "Ground cumin",
+          "ro": "Chimen măcinat"
+        },
+        "qty": 0.5,
+        "unit": "tsp",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Salt",
+          "ro": "Sare"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "black-pepper",
+        "name": {
+          "en": "Black pepper",
+          "ro": "Piper negru"
+        },
+        "qty": 0,
+        "unit": ""
+      },
+      {
+        "aisle": "pantry",
+        "key": "sugar",
+        "name": {
+          "en": "Sugar (a pinch)",
+          "ro": "Zahăr (un praf)"
+        },
+        "qty": 0,
+        "unit": "",
+        "optional": true
+      },
+      {
+        "aisle": "dairy",
+        "key": "feta",
+        "name": {
+          "en": "Feta",
+          "ro": "Feta"
+        },
+        "qty": 50,
+        "unit": "g",
+        "optional": true
+      },
+      {
+        "aisle": "other",
+        "key": "bread",
+        "name": {
+          "en": "Bread to dip",
+          "ro": "Pâine pentru înmuiat"
+        },
+        "qty": 0,
+        "unit": ""
+      }
+    ]
   }
 ]
