@@ -1942,18 +1942,18 @@
     ]
   },
   {
-    "slug": "schweinsripperl",
-    "image": "recipes/images/schweinsripperl/finished.jpg",
-    "theme": "#a8472a",
-    "origin": "🇦🇹",
-    "time": "1 h 25",
+    "slug": "oven-bbq-ribs",
+    "image": "recipes/images/oven-bbq-ribs/finished.jpg",
+    "theme": "#a63a1c",
+    "origin": "🇺🇸",
+    "time": "3 h 50",
     "title": {
-      "en": "Schweinsripperl (Austrian oven ribs)",
-      "ro": "Coaste de porc la cuptor stil austriac (Schweinsripperl)"
+      "en": "Oven BBQ Ribs (American)",
+      "ro": "Coaste BBQ la cuptor (stil american)"
     },
     "tagline": {
-      "en": "Pork ribs rubbed with caraway and garlic, roasted until crisp",
-      "ro": "Coaste de porc frecate cu chimen și usturoi, coapte până se rumenesc"
+      "en": "Dry-rubbed, foil-wrapped, baked low and slow, then glazed under the broiler",
+      "ro": "Frecate cu condimente, în folie, coapte încet, apoi glazurate sub grill"
     },
     "source": {
       "kind": "web",
@@ -1961,18 +1961,18 @@
         "web"
       ],
       "badge": {
-        "en": "🌐 6 Austrian sources",
-        "ro": "🌐 6 surse austriece"
+        "en": "🌐 7 US sources",
+        "ro": "🌐 7 surse americane"
       },
       "label": {
-        "en": "Compared from kochrezepte.at, Gute Küche (3 recipes), Servus and ichkoche",
-        "ro": "Comparat din kochrezepte.at, Gute Küche (3 rețete), Servus și ichkoche"
+        "en": "Compared from Powell Family Cooking, The Splendid Table, She's Not Cookin', Beach House Kitchen, Spices Inc. and What's Mom Cookin'; history from Wikipedia",
+        "ro": "Comparat din Powell Family Cooking, The Splendid Table, She's Not Cookin', Beach House Kitchen, Spices Inc. și What's Mom Cookin'; istorie din Wikipedia"
       }
     },
     "country": {
-      "key": "at",
-      "en": "🇦🇹 Austria",
-      "ro": "🇦🇹 Austria"
+      "key": "us",
+      "en": "🇺🇸 United States",
+      "ro": "🇺🇸 Statele Unite"
     },
     "course": [
       "main"
@@ -1982,136 +1982,199 @@
         "aisle": "meat",
         "key": "pork-ribs",
         "name": {
-          "en": "Pork ribs (Schweinsripperl)",
-          "ro": "Coaste de porc (Schweinsripperl)"
+          "en": "Pork ribs, 1 large rack (baby back or St. Louis)",
+          "ro": "Coaste de porc, 1 grătar mare (baby back sau St. Louis)"
         },
-        "qty": 2000,
+        "qty": 1400,
         "unit": "g"
       },
       {
-        "aisle": "produce",
-        "key": "garlic",
+        "aisle": "pantry",
+        "key": "brown-sugar",
         "name": {
-          "en": "Garlic cloves",
-          "ro": "Căței de usturoi"
+          "en": "Dark brown sugar",
+          "ro": "Zahăr brun închis"
         },
-        "qty": 5,
-        "unit": "pcs"
+        "qty": 2,
+        "unit": "tbsp"
       },
       {
         "aisle": "pantry",
-        "key": "caraway",
+        "key": "smoked-paprika",
         "name": {
-          "en": "Caraway seeds",
-          "ro": "Semințe de chimen"
+          "en": "Smoked paprika",
+          "ro": "Boia afumată"
         },
         "qty": 1,
         "unit": "tbsp"
       },
       {
         "aisle": "pantry",
-        "key": "paprika",
+        "key": "chili-powder",
         "name": {
-          "en": "Sweet paprika",
-          "ro": "Boia dulce"
+          "en": "Chili powder",
+          "ro": "Pudră de chili"
         },
         "qty": 1,
-        "unit": "tsp"
-      },
-      {
-        "aisle": "pantry",
-        "key": "mustard",
-        "name": {
-          "en": "Mustard",
-          "ro": "Muștar"
-        },
-        "qty": 1,
-        "unit": "tsp"
-      },
-      {
-        "aisle": "pantry",
-        "key": "oil",
-        "name": {
-          "en": "Oil",
-          "ro": "Ulei"
-        },
-        "qty": 3,
         "unit": "tbsp"
       },
       {
         "aisle": "pantry",
         "key": "salt",
         "name": {
-          "en": "Salt",
-          "ro": "Sare"
+          "en": "Kosher salt",
+          "ro": "Sare grunjoasă"
         },
-        "qty": 3,
+        "qty": 2,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "garlic-powder",
+        "name": {
+          "en": "Garlic powder",
+          "ro": "Usturoi pudră"
+        },
+        "qty": 1.5,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "onion-powder",
+        "name": {
+          "en": "Onion powder",
+          "ro": "Ceapă pudră"
+        },
+        "qty": 1.5,
         "unit": "tsp"
       },
       {
         "aisle": "pantry",
         "key": "black-pepper",
         "name": {
-          "en": "Ground black pepper",
-          "ro": "Piper negru măcinat"
+          "en": "Black pepper",
+          "ro": "Piper negru"
         },
-        "qty": 0,
-        "unit": ""
+        "qty": 1,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "dry-mustard",
+        "name": {
+          "en": "Dry mustard",
+          "ro": "Muștar pudră"
+        },
+        "qty": 1,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "cumin",
+        "name": {
+          "en": "Ground cumin",
+          "ro": "Chimion măcinat"
+        },
+        "qty": 1,
+        "unit": "tsp"
+      },
+      {
+        "aisle": "pantry",
+        "key": "yellow-mustard",
+        "name": {
+          "en": "Yellow mustard (binder)",
+          "ro": "Muștar galben (liant)"
+        },
+        "qty": 2,
+        "unit": "tbsp",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "bbq-sauce",
+        "name": {
+          "en": "Prepared BBQ sauce (choose this or homemade)",
+          "ro": "Sos BBQ cumpărat (alege asta sau cel de casă)"
+        },
+        "qty": 150,
+        "unit": "ml",
+        "optional": true
       },
       {
         "aisle": "pantry",
         "key": "ketchup",
         "name": {
-          "en": "Hot ketchup",
-          "ro": "Ketchup iute"
+          "en": "Ketchup (homemade sauce)",
+          "ro": "Ketchup (sos de casă)"
+        },
+        "qty": 180,
+        "unit": "ml",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "vinegar",
+        "name": {
+          "en": "Rice or cider vinegar (homemade sauce)",
+          "ro": "Oțet de orez sau de mere (sos de casă)"
         },
         "qty": 2,
+        "unit": "tbsp",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "worcestershire",
+        "name": {
+          "en": "Worcestershire sauce (homemade sauce)",
+          "ro": "Sos Worcestershire (sos de casă)"
+        },
+        "qty": 1.5,
+        "unit": "tbsp",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "soy-sauce",
+        "name": {
+          "en": "Soy sauce (homemade sauce)",
+          "ro": "Sos de soia (sos de casă)"
+        },
+        "qty": 1,
+        "unit": "tbsp",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "sriracha",
+        "name": {
+          "en": "Sriracha (homemade sauce)",
+          "ro": "Sriracha (sos de casă)"
+        },
+        "qty": 1.5,
         "unit": "tsp",
         "optional": true
       },
       {
-        "aisle": "produce",
-        "key": "potato",
+        "aisle": "pantry",
+        "key": "ginger",
         "name": {
-          "en": "Potatoes (oven potatoes side)",
-          "ro": "Cartofi (garnitură la cuptor)"
+          "en": "Ground ginger (homemade sauce)",
+          "ro": "Ghimbir măcinat (sos de casă)"
         },
-        "qty": 1000,
-        "unit": "g",
+        "qty": 0.5,
+        "unit": "tsp",
         "optional": true
       },
       {
-        "aisle": "produce",
-        "key": "chives",
+        "aisle": "other",
+        "key": "foil",
         "name": {
-          "en": "Chives (sauce)",
-          "ro": "Arpagic (sos)"
+          "en": "Heavy-duty aluminum foil",
+          "ro": "Folie de aluminiu rezistentă"
         },
-        "qty": 1,
-        "unit": "bunch",
-        "optional": true
-      },
-      {
-        "aisle": "dairy",
-        "key": "sour-cream",
-        "name": {
-          "en": "Sour cream (sauce)",
-          "ro": "Smântână (sos)"
-        },
-        "qty": 200,
-        "unit": "g",
-        "optional": true
-      },
-      {
-        "aisle": "dairy",
-        "key": "yogurt",
-        "name": {
-          "en": "Yogurt (sauce)",
-          "ro": "Iaurt (sos)"
-        },
-        "qty": 200,
-        "unit": "g",
-        "optional": true
+        "qty": 0,
+        "unit": ""
       }
     ]
   }
