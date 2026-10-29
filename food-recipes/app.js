@@ -1,394 +1,81 @@
-// Every relative URL (recipes/, images/) resolves against the app root, even while the
-// address bar shows a share path like r/<slug>/.
-const ROOT = new URL('.', document.currentScript.src).href;
-document.head.prepend(Object.assign(document.createElement('base'), { href: ROOT }));
-
-const UI = {
-  ro: {
-    eyebrow: 'Rețete autentice', title: 'Marius Food Collection',
-    sub: 'Rețete din țara de origine — comparate din mai multe surse, cu pași, timere și poze.',
-    open: 'Click pentru rețetă', reset: 'Resetează', footer: 'Gătit cu răbdare și surse verificate · 2026',
-    start: 'Pornește', stop: 'Oprește', done: 'Gata!',
-    shop: 'Listă de cumpărături', addList: '＋ Listă', inList: '✓ În listă', copy: 'Copiază', copied: 'Copiat!', clear: 'Șterge bifele',
-    pick: 'Alege rețetele', empty: 'Alege cel puțin o rețetă ca să vezi lista.', optional: 'opțional', toTaste: 'după gust',
-    openSource: 'Deschide originalul', fab: 'Cumpărături', allDone: 'Totul bifat 🎉', refs: 'Site-uri de referință', share: '🔗 Link', linkCopied: 'Link copiat!', refsTop: '📚 Site-uri de referință', visit: 'Deschide site-ul',
-    search: 'Caută o rețetă…', recipes: 'rețete', noMatch: 'Nicio rețetă cu aceste filtre.', clearFilters: 'Șterge filtrele'
-  },
-  en: {
-    eyebrow: 'Authentic recipes', title: 'Marius Food Collection',
-    sub: 'Recipes from their country of origin — compared across sources, with steps, timers and photos.',
-    open: 'Tap for recipe', reset: 'Reset', footer: 'Cooked with patience and checked sources · 2026',
-    start: 'Start', stop: 'Stop', done: 'Done!',
-    shop: 'Shopping list', addList: '＋ List', inList: '✓ In list', copy: 'Copy', copied: 'Copied!', clear: 'Clear ticks',
-    pick: 'Pick recipes', empty: 'Pick at least one recipe to see the list.', optional: 'optional', toTaste: 'to taste',
-    openSource: 'Open original', fab: 'Shopping', allDone: 'All ticked 🎉', refs: 'Reference sites', share: '🔗 Link', linkCopied: 'Link copied!', refsTop: '📚 Reference sites', visit: 'Open site',
-    search: 'Search a recipe…', recipes: 'recipes', noMatch: 'No recipes match these filters.', clearFilters: 'Clear filters'
-  }
+'use strict';
+const $ = id => document.getElementById(id);
+const base = new URL('./', document.currentScript.src);
+const asset = path => new URL(path, base).href;
+const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const read = (key, fallback) => {try{return JSON.parse(localStorage.getItem('good-table:'+key)) ?? fallback;}catch{return fallback;}};
+const write = (key, value) => {try{localStorage.setItem('good-table:'+key,JSON.stringify(value));}catch{}};
+const requestedLanguage = new URLSearchParams(location.search).get('lang');
+let language = (requestedLanguage || read('language','en')) === 'ro' ? 'ro' : 'en';
+let recipes = [], category = 'all', savedOnly = false, current = null, request = 0, returnFocus = null;
+let favourites = new Set(read('saved',[])), basket = new Set(read('basket',[]));
+const intervals = new Set();
+const copy = {
+ en:{browse:'Browse recipes',saved:'Saved recipes',shopping:'Shopping list',eyebrow:'A PERSONAL COLLECTION. A WORLD OF FLAVOUR.',headline:'Good food.<br>Made <em>at home.</em>',intro:'Recipes with a story, gathered from their roots.<br>Tested sources. Thoughtful steps. Worth your time.',explore:'Find your next favourite',note:'From our kitchen notebook<br>to your dinner table.',spotlight:'ON THE MENU TODAY',featurelabel:'A LITTLE PATIENCE. A PERFECT CRUST.',maincourse:'Main course',ticker1:'REAL INGREDIENTS',ticker2:'RECIPES WITH ROOTS',ticker3:'A LITTLE KITCHEN CURIOSITY',ticker4:'SOMETHING WORTH SHARING',collectionlabel:'THE RECIPE NOTEBOOK',collection:'What sounds good?',origin:'From',sortlabel:'Sort by',reset:'Reset filters ↺',closing:'A good recipe is<br>meant to be kept.',closingcopy:'Save a favourite. Make it your own.<br>Come back when you’re hungry.',footer:'Cook with curiosity. Eat with company.',back:'← Back to the notebook',addshopping:'+ Shopping list',all:'All recipes',main:'Mains',breakfast:'Breakfast',soup:'Soups',salad:'Salads',dessert:'Desserts',other:'Sides & more',search:'Find a recipe or ingredient…',everywhere:'Everywhere',order:'Notebook order',open:'Let’s cook',save:'Save recipe',unsave:'Saved ♥',empty:'No recipes here yet. Try another filter or save a favourite.',count:'recipes',loading:'Opening the recipe…',error:'Could not load this recipe. Please try again.',shopempty:'Your shopping list is waiting. Open a recipe and add its ingredients.',added:'Ingredients added to your shopping list',remove:'Remove from shopping list',clear:'Clear shopping list',taste:'to taste',copy:'Copy list',copied:'List copied',copyerror:'Could not copy. Select the list to copy it manually.',start:'Start timer',stop:'Stop timer',done:'Timer finished',clearchecks:'Reset cooking checkboxes'},
+ ro:{browse:'Vezi rețetele',saved:'Rețete salvate',shopping:'Cumpărături',eyebrow:'O COLECȚIE PERSONALĂ. O LUME DE AROME.',headline:'Mâncare bună.<br>Făcută <em>acasă.</em>',intro:'Rețete cu poveste, adunate de la origini.<br>Surse verificate. Pași clari. Merită timpul tău.',explore:'Descoperă următoarea preferată',note:'Din caietul nostru de rețete<br>direct pe masa ta.',spotlight:'ASTĂZI ÎN MENIU',featurelabel:'PUȚINĂ RĂBDARE. O CRUSTĂ PERFECTĂ.',maincourse:'Fel principal',ticker1:'INGREDIENTE ADEVĂRATE',ticker2:'REȚETE CU RĂDĂCINI',ticker3:'CURIozITATE ÎN BUCĂTĂRIE'.toUpperCase(),ticker4:'CEVA BUN DE ÎMPĂRTĂȘIT',collectionlabel:'CAIETUL DE REȚETE',collection:'Ce gătim astăzi?',origin:'Din',sortlabel:'Sortează',reset:'Resetează filtrele ↺',closing:'O rețetă bună<br>merită păstrată.',closingcopy:'Salvează o preferată. Adaugă-i stilul tău.<br>Revino când ți-e foame.',footer:'Gătește cu curiozitate. Mănâncă împreună.',back:'← Înapoi la rețete',addshopping:'+ Cumpărături',all:'Toate rețetele',main:'Fel principal',breakfast:'Mic dejun',soup:'Supe',salad:'Salate',dessert:'Deserturi',other:'Garnituri & altele',search:'Caută o rețetă sau un ingredient…',everywhere:'De oriunde',order:'Ordinea din caiet',open:'Să gătim',save:'Salvează rețeta',unsave:'Salvată ♥',empty:'Nicio rețetă aici. Încearcă alt filtru sau salvează o preferată.',count:'rețete',loading:'Se deschide rețeta…',error:'Rețeta nu a putut fi încărcată. Încearcă din nou.',shopempty:'Lista ta așteaptă. Deschide o rețetă și adaugă ingredientele.',added:'Ingredientele au fost adăugate',remove:'Elimină din lista de cumpărături',clear:'Golește lista',taste:'după gust',copy:'Copiază lista',copied:'Lista a fost copiată',copyerror:'Nu s-a putut copia. Selectează lista pentru a o copia manual.',start:'Pornește timerul',stop:'Oprește timerul',done:'Timpul a expirat',clearchecks:'Resetează bifele rețetei'}
 };
-const AISLES = ['produce', 'meat', 'dairy', 'pantry', 'other'];
-const AISLE = {
-  produce: { en: 'Produce', ro: 'Legume și fructe' }, meat: { en: 'Meat', ro: 'Carne' },
-  dairy: { en: 'Dairy & eggs', ro: 'Lactate și ouă' }, pantry: { en: 'Pantry', ro: 'Cămară' }, other: { en: 'Other', ro: 'Altele' }
-};
-const UNIT = { g: { en: 'g', ro: 'g' }, ml: { en: 'ml', ro: 'ml' }, pcs: { en: '', ro: '' }, bunch: { en: 'bunch', ro: 'legătură' } };
-const STEPS = [0.5, 1, 2, 3, 4];
-
-const $ = (id) => document.getElementById(id);
-const toggle = $('lang-toggle'), grid = $('cards'), reader = $('reader'), body = $('reader-body'),
-  shop = $('shop'), shopBody = $('shop-body'), fab = $('shop-fab');
-let index = [], refs = [], current = null, wakeLock = null;
-const timers = new Set();
-
-const lang = () => (toggle.checked ? 'ro' : 'en');
-const store = {
-  get: (k) => { try { return localStorage.getItem(k); } catch { return null; } },
-  set: (k, v) => { try { localStorage.setItem(k, v); } catch {} },
-  del: (k) => { try { localStorage.removeItem(k); } catch {} }
-};
-const load = (k) => { try { return JSON.parse(store.get(k) || '{}'); } catch { return {}; } };
-let list = load('list'); // { slug: servings multiplier }
-let got = load('got');   // { itemKey: true }
-const saveList = () => store.set('list', JSON.stringify(list));
-const saveGot = () => store.set('got', JSON.stringify(got));
-
-// --- home ---------------------------------------------------------------
-const SRC = { web: '🌐 Web', social: '▶ Social media', facebook: 'Facebook', instagram: 'Instagram', tiktok: 'TikTok', youtube: 'YouTube' };
-const COURSE = {
-  breakfast: { en: 'Breakfast', ro: 'Mic dejun' }, dessert: { en: 'Dessert', ro: 'Desert' }, soup: { en: 'Soup', ro: 'Supă' },
-  main: { en: 'Main course', ro: 'Fel principal' }, snack: { en: 'Snack', ro: 'Gustare' }, salad: { en: 'Salad', ro: 'Salată' }, appetizer: { en: 'Appetizer', ro: 'Aperitiv' }, sauce: { en: 'Sauce', ro: 'Sos' }, side: { en: 'Side dish', ro: 'Garnitură' }
-};
-const GROUPS = [
-  { id: 'source', title: { en: 'Source', ro: 'Sursă' }, vals: (r) => r.source?.tags || [], label: (k) => SRC[k] || k },
-  { id: 'country', title: { en: 'Country / language', ro: 'Țară / limbă' }, vals: (r) => (r.country ? [r.country.key] : []),
-    label: (k) => index.find((r) => r.country?.key === k).country[lang()] },
-  { id: 'course', title: { en: 'Type', ro: 'Tip' }, vals: (r) => r.course || [], label: (k) => (COURSE[k] ? COURSE[k][lang()] : k) }
-];
-const active = { source: new Set(), country: new Set(), course: new Set() };
-let query = '';
-const norm = (x) => x.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
-
-const visible = () => index.filter((r) =>
-  GROUPS.every((g) => !active[g.id].size || g.vals(r).some((v) => active[g.id].has(v))) &&
-  (!query || norm(`${r.title.en} ${r.title.ro} ${r.tagline.en} ${r.tagline.ro}`).includes(query)));
-
-function renderChips() {
-  const t = UI[lang()];
-  $('chips').innerHTML = GROUPS.map((g) => {
-    const vals = [...new Set(index.flatMap(g.vals))];
-    if (vals.length < 2) return '';
-    return `<div class="chip-group"><h3>${g.title[lang()]}</h3><div class="chip-row">` +
-      vals.map((v) => `<button type="button" class="chip${active[g.id].has(v) ? ' active' : ''}" data-g="${g.id}" data-v="${v}">${g.label(v)}</button>`).join('') +
-      '</div></div>';
-  }).join('') + (Object.values(active).some((s) => s.size) || query ? `<div class="chip-group"><button type="button" class="chip reset" data-reset="1">${t.clearFilters}</button></div>` : '');
+const t = key => copy[language][key] || key;
+const norm = s => s.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
+let toastTimeout;
+function toast(message){$('toast').textContent=message;$('toast').classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>$('toast').classList.remove('show'),2800);}
+function translate(){
+ document.documentElement.lang=language;
+ document.querySelectorAll('[data-t]').forEach(el=>el.innerHTML=t(el.dataset.t));
+ $('language').innerHTML=language==='en'?'EN / <span>RO</span>':'<span>EN</span> / RO';
+ $('search').placeholder=t('search');$('search').setAttribute('aria-label',t('search'));
+ const country=$('country').value;
+ $('country').innerHTML=`<option value="">${t('everywhere')}</option>`+[...new Map(recipes.filter(r=>r.country).map(r=>[r.country.key,r.country])).values()].map(c=>`<option value="${esc(c.key)}">${esc(c[language])}</option>`).join('');
+ $('country').value=country;$('sort').options[0].textContent=t('order');
+ document.querySelector('.feature-top > span:last-child').textContent=`${String(recipes.findIndex(r=>r.slug==='antricot-la-tigaie')+1).padStart(2,'0')} / ${recipes.length}`;
+ $('feature-title').textContent=language==='en'?'Pan-seared ribeye':'Antricot la tigaie';
+ render();
 }
-
-function renderCards() {
-  const t = UI[lang()], list_ = visible();
-  $('count').textContent = `${list_.length} / ${index.length} ${t.recipes}`;
-  grid.innerHTML = list_.length ? '' : `<p class="empty">${t.noMatch}</p>`;
-  list_.forEach((r, i) => {
-    const card = document.createElement('article');
-    card.className = 'card';
-    card.style.animationDelay = `${i * 0.1}s`;
-    card.style.setProperty('--card-theme', r.theme);
-    const s = r.source;
-    card.innerHTML = `
-      <div class="card-img"><img src="${r.image}" alt="${r.title[lang()]}" loading="lazy"></div>
-      <span class="card-tag">${r.origin} · ${r.time}</span>
-      ${s ? `<span class="card-source ${s.kind}">${s.badge[lang()]}</span>` : ''}
-      <div class="card-front-overlay">
-        <h2>${r.title[lang()]}</h2>
-        <p class="tagline">${r.tagline[lang()]}</p>
-        <div class="flip-hint">${t.open}</div>
-      </div>`;
-    card.addEventListener('click', () => goTo(r.slug));
-    grid.appendChild(card);
-  });
+function render(){
+ $('categories').innerHTML=['all','main','breakfast','soup','salad','dessert','other'].map(c=>`<button data-category="${c}" class="${category===c?'active':''}" aria-pressed="${category===c}">${t(c)}</button>`).join('');
+ $('saved').setAttribute('aria-pressed',String(savedOnly));$('saved').style.color=savedOnly?'var(--red)':'';
+ $('bag-count').textContent=basket.size;
+ const q=norm($('search').value.trim()),country=$('country').value;
+ let results=recipes.filter(r=>(!savedOnly||favourites.has(r.slug))&&(!country||r.country?.key===country)&&(category==='all'||(category==='other'?(r.course||[]).some(c=>['side','sauce','appetizer','snack'].includes(c)):(r.course||[]).includes(category)))&&(!q||norm([r.title.en,r.title.ro,r.tagline.en,r.tagline.ro,...(r.grocery||[]).flatMap(g=>[g.name.en,g.name.ro])].join(' ')).includes(q)));
+ if($('sort').value==='az')results.sort((a,b)=>a.title[language].localeCompare(b.title[language],language));
+ $('recipe-count').textContent=`${String(results.length).padStart(2,'0')} / ${recipes.length} ${t('count')}`;
+ $('cards').innerHTML=results.length?results.map(r=>`<article class="recipe-card"><button class="save" data-save="${esc(r.slug)}" aria-label="${esc(favourites.has(r.slug)?t('unsave'):t('save'))}: ${esc(r.title[language])}" aria-pressed="${favourites.has(r.slug)}">${favourites.has(r.slug)?'♥':'♡'}</button><button class="card-open" data-open="${esc(r.slug)}"><div class="card-photo"><img src="${asset(r.image)}" alt="${esc(r.title[language])}" loading="lazy"><span class="card-number">NO. ${String(recipes.indexOf(r)+1).padStart(2,'0')}</span></div><div class="card-meta"><span>${esc(r.country?.[language]||r.origin)}</span><span>◷ ${esc(r.time)}</span></div><h3>${esc(r.title[language])}</h3><p>${esc(r.tagline[language])}</p><div class="card-link"><span>${t('open')}</span><span>↗</span></div></button></article>`).join(''):`<p class="empty">${t('empty')}</p>`;
 }
-
-function renderUI() {
-  const t = UI[lang()];
-  document.documentElement.lang = lang();
-  $('t-eyebrow').textContent = t.eyebrow;
-  $('t-title').textContent = t.title;
-  document.title = t.title;
-  $('t-sub').textContent = t.sub;
-  $('t-footer').textContent = t.footer;
-  $('reader-reset').textContent = t.reset;
-  $('reader-share').textContent = t.share;
-  $('shop-copy').textContent = t.copy;
-  $('shop-clear').textContent = t.clear;
-  $('q').placeholder = t.search;
-  $('t-refs').textContent = t.refs;
-  $('refs-top').textContent = t.refsTop;
-  $('refs-top').parentElement.hidden = !refs.length;
-  $('refs').hidden = !refs.length;
-  $('refs-list').innerHTML = refs.map((r) => `<a class="ref-card" href="${r.url}" target="_blank" rel="noopener"><strong>${r.title}</strong><span>${r.description[lang()]}</span><em>${t.visit} ↗</em></a>`).join('');
-  renderChips();
-  renderCards();
-  updateFab();
+function showDialog(){if(!$('reader').open){returnFocus=document.activeElement;$('reader').showModal();document.body.style.overflow='hidden';}$('reader').scrollTop=0;}
+function actionLabels(){ $('save-recipe').hidden=!current;$('add-shopping').hidden=!current;if(current){$('save-recipe').textContent=t(favourites.has(current.slug)?'unsave':'save');$('add-shopping').textContent=t(basket.has(current.slug)?'remove':'addshopping');}}
+function cleanHtml(html){const template=document.createElement('template');template.innerHTML=html;template.content.querySelectorAll('script,iframe,object,embed,style,link,form,base').forEach(el=>el.remove());template.content.querySelectorAll('*').forEach(el=>{for(const attr of [...el.attributes])if(/^on/i.test(attr.name)||attr.name==='srcdoc'||(['href','src'].includes(attr.name)&&/^\s*(javascript|data|vbscript):/i.test(attr.value)))el.removeAttribute(attr.name);});return template.content;}
+async function openRecipe(slug,updateHash=true){
+ const r=recipes.find(r=>r.slug===slug);if(!r)return;intervals.forEach(clearInterval);intervals.clear();current=r;const id=++request;showDialog();actionLabels();$('reader-content').textContent=t('loading');if(updateHash)history.replaceState(null,'','#recipe='+encodeURIComponent(slug));
+ try{const response=await fetch(asset(`recipes/${r.slug}${language==='ro'?'.ro':''}.md`));if(!response.ok)throw Error(response.status);const sourceMarkdown=await response.text();const markdown=sourceMarkdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/,'');if(id!==request)return;if(!window.marked)throw Error('Markdown parser unavailable');$('reader-content').replaceChildren(cleanHtml(marked.parse(markdown)));
+ const updateProgress=composeRecipe($('reader-content'),r,sourceMarkdown);$('reader').classList.add('recipe-open');$('reader').setAttribute('aria-labelledby','recipe-title');$('reader-content').querySelector('h1').id='recipe-title';
+ $('reader-content').querySelectorAll('img').forEach(img=>{const src=img.getAttribute('src');if(src?.startsWith('images/'))img.src=asset('recipes/'+src);img.loading='lazy';});
+ $('reader-content').querySelectorAll('a').forEach(a=>{const href=a.getAttribute('href');if(/^https?:/i.test(href)){a.target='_blank';a.rel='noopener noreferrer';}else if(href?.startsWith('recipe:')){const slug=href.slice(7);a.href='#recipe='+encodeURIComponent(slug);a.onclick=e=>{e.preventDefault();openRecipe(slug);};}else if(href&&!href.startsWith('#'))a.href=new URL(href,new URL('recipes/',base)).href;});
+ $('reader-content').querySelectorAll('input[type=checkbox]').forEach((input,i)=>{input.disabled=false;const identity=input.dataset.check??String(i);input.dataset.check=identity;input.checked=read(`check:${r.slug}:${language}:${identity}`,false);input.setAttribute('aria-label',input.closest('li')?.textContent.trim()||`Ingredient ${i+1}`);});
+ const reset=document.createElement('button');reset.className='timer';reset.textContent=t('clearchecks');reset.onclick=()=>{$('reader-content').querySelectorAll('[data-check]').forEach(el=>{el.checked=false;write(`check:${r.slug}:${language}:${el.dataset.check}`,false);});updateProgress();};$('reader-content').append(reset);
+ // Recipe timers are marked with a stopwatch followed by a bold duration.
+ $('reader-content').querySelectorAll('strong').forEach(el=>{if(!el.previousSibling?.textContent.trimEnd().endsWith('⏱'))return;const raw=el.textContent;let seconds=0;for(const match of raw.matchAll(/(\d+(?:[.,]\d+)?)\s*(h(?:ours?|r)?|ore?|min(?:ute)?s?|s(?:ec(?:onds?)?)?)\b/gi))seconds+=Number(match[1].replace(',','.'))*(/^h|^or/i.test(match[2])?3600:/^min/i.test(match[2])?60:1);if(!seconds)return;const btn=document.createElement('button');btn.className='timer';btn.textContent=`${raw} · ${t('start')}`;let interval=null;btn.onclick=()=>{if(interval){clearInterval(interval);intervals.delete(interval);interval=null;btn.textContent=`${raw} · ${t('start')}`;return;}const end=Date.now()+seconds*1000;const tick=()=>{const left=Math.max(0,Math.ceil((end-Date.now())/1000));btn.textContent=left?`${t('stop')} · ${Math.floor(left/60)}:${String(left%60).padStart(2,'0')}`:t('done');if(!left){clearInterval(interval);intervals.delete(interval);interval=null;toast(t('done'));}};interval=setInterval(tick,500);intervals.add(interval);tick();};el.replaceWith(btn);});
+ }catch{if(id===request)$('reader-content').textContent=t('error');}
 }
-
-$('chips').addEventListener('click', (e) => {
-  const b = e.target.closest('.chip');
-  if (!b) return;
-  if (b.dataset.reset) { Object.values(active).forEach((s) => s.clear()); query = ''; $('q').value = ''; }
-  else { const s = active[b.dataset.g]; s.has(b.dataset.v) ? s.delete(b.dataset.v) : s.add(b.dataset.v); }
-  renderChips(); renderCards();
-});
-$('q').addEventListener('input', (e) => { query = norm(e.target.value.trim()); renderChips(); renderCards(); });
-
-// --- recipe reader ------------------------------------------------------
-// sums every "N unit" (so "2 h 30 min" = 9000); a range like "4–5 min" counts its upper end
-const toSeconds = (txt) => [...txt.matchAll(/(\d+)(?:\s*[–-]\s*(\d+))?\s*(h|min|s)\b/gi)]
-  .reduce((n, m) => n + +(m[2] || m[1]) * { h: 3600, min: 60, s: 1 }[m[3].toLowerCase()], 0);
-const fmt = (s) => {
-  const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), p = (n) => String(n).padStart(2, '0');
-  return (h ? `${h}:${p(m)}` : m) + `:${p(s % 60)}`;
-};
-
-function banner(r) {
-  const s = r.source;
-  if (!s) return '';
-  return `<div class="source-banner ${s.kind}"><span>${s.kind === 'reel' ? '▶' : '🌐'}</span><span>${s.label[lang()]}</span>` +
-    (s.url ? `<a href="${s.url}" target="_blank" rel="noopener">${UI[lang()].openSource} ↗</a>` : '') + '</div>';
+function shoppingItems(){const items=new Map();recipes.filter(r=>basket.has(r.slug)).forEach(r=>(r.grocery||[]).forEach(g=>{const key=`${g.aisle}:${g.key}:${g.unit||''}`;if(!items.has(key))items.set(key,{...g,key,qty:0});items.get(key).qty+=g.qty||0;}));return [...items.values()].sort((a,b)=>a.aisle.localeCompare(b.aisle));}
+function quantity(g){return g.qty?`${Math.round(g.qty*100)/100} ${g.unit||''}`:t('taste');}
+function openShopping(){intervals.forEach(clearInterval);intervals.clear();++request;current=null;$('reader').classList.remove('recipe-open');$('reader').removeAttribute('aria-labelledby');showDialog();actionLabels();const items=shoppingItems();$('reader-content').innerHTML=`<h1>${t('shopping')}</h1>`+(items.length?`<p>${recipes.filter(r=>basket.has(r.slug)).map(r=>esc(r.title[language])).join(' · ')}</p><button class="timer" id="copy-list">${t('copy')}</button> <button class="timer" id="clear-list">${t('clear')}</button>`+items.map(g=>`<label class="shop-item"><input type="checkbox" data-grocery="${esc(g.key)}" ${read('grocery:'+g.key,false)?'checked':''}>${esc(g.name[language])}<span>${esc(quantity(g))}</span></label>`).join(''):`<p>${t('shopempty')}</p>`);
+ $('clear-list')?.addEventListener('click',()=>{basket.clear();write('basket',[]);items.forEach(g=>write('grocery:'+g.key,false));render();openShopping();});$('copy-list')?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(items.map(g=>`${g.name[language]} — ${quantity(g)}`).join('\n'));toast(t('copied'));}catch{toast(t('copyerror'));}});
 }
-
-function updateAddBtn() {
-  const b = $('reader-add'), on = current && list[current.slug];
-  b.textContent = UI[lang()][on ? 'inList' : 'addList'];
-  b.classList.toggle('on', !!on);
+$('categories').onclick=e=>{const b=e.target.closest('[data-category]');if(b){category=b.dataset.category;render();}};
+$('cards').onclick=e=>{const save=e.target.closest('[data-save]'),open=e.target.closest('[data-open]');if(save){const slug=save.dataset.save;favourites.has(slug)?favourites.delete(slug):favourites.add(slug);write('saved',[...favourites]);render();}else if(open)openRecipe(open.dataset.open);};
+$('search').oninput=render;$('country').onchange=render;$('sort').onchange=render;
+$('reset').onclick=()=>{category='all';savedOnly=false;$('search').value='';$('country').value='';$('sort').value='default';render();};
+$('saved').onclick=()=>{savedOnly=!savedOnly;render();$('collection').scrollIntoView({behavior:'smooth'});};
+$('language').onclick=()=>{language=language==='en'?'ro':'en';write('language',language);translate();if($('reader').open){if(current)openRecipe(current.slug,false);else openShopping();}};
+$('feature').onclick=()=>openRecipe('antricot-la-tigaie');$('shopping').onclick=openShopping;
+$('close').onclick=()=>$('reader').close();
+$('reader').addEventListener('close',()=>{if($('reader').open)return;++request;intervals.forEach(clearInterval);intervals.clear();document.body.style.overflow='';current=null;history.replaceState(null,'',location.pathname+location.search);returnFocus?.focus();});
+$('reader').addEventListener('click',e=>{if(e.target===$('reader')){const rect=$('reader').getBoundingClientRect();if(e.clientX<rect.left||e.clientX>rect.right||e.clientY<rect.top||e.clientY>rect.bottom)$('reader').close();}});
+$('save-recipe').onclick=()=>{if(!current)return;favourites.has(current.slug)?favourites.delete(current.slug):favourites.add(current.slug);write('saved',[...favourites]);actionLabels();render();};
+$('add-shopping').onclick=()=>{if(!current)return;const added=!basket.has(current.slug);added?basket.add(current.slug):basket.delete(current.slug);write('basket',[...basket]);actionLabels();render();if(added)toast(t('added'));};
+$('reader-content').onchange=e=>{if(e.target.dataset.check!==undefined&&current)write(`check:${current.slug}:${language}:${e.target.dataset.check}`,e.target.checked);if(e.target.dataset.grocery)write('grocery:'+e.target.dataset.grocery,e.target.checked);};
+function followHash(){
+ if(location.hash.startsWith('#recipe='))openRecipe(decodeURIComponent(location.hash.slice(8)),false);
+ else {const legacy=location.hash.match(/^#\/([^/]+)(?:\/(en|ro))?\/?$/);if(legacy){if(legacy[2]){language=legacy[2];write('language',language);translate();}openRecipe(decodeURIComponent(legacy[1]));}}
 }
-
-async function openRecipe(r) {
-  current = r;
-  const file = `recipes/${r.slug}${lang() === 'ro' ? '.ro' : ''}.md`;
-  const md = (await (await fetch(file, { cache: 'no-cache' })).text()).replace(/^---[\s\S]*?---\n/, '');
-  body.innerHTML = banner(r) + marked.parse(md)
-    .replace(/(src=")images\//g, '$1recipes/images/')
-    .replace(/<a href="(https?:)/g, '<a target="_blank" rel="noopener" href="$1')
-    .replace(/⏱ <strong>(.*?)<\/strong>/g, (_, t) => {
-      const s = toSeconds(t);
-      return s ? `<button type="button" class="timer" data-s="${s}">⏱ ${t} · <span>${UI[lang()].start} ${fmt(s)}</span></button>` : `⏱ <strong>${t}</strong>`;
-    });
-  body.querySelectorAll('input[type=checkbox]').forEach((b, i) => {
-    b.disabled = false;
-    b.checked = store.get(key(i)) === '1';
-    b.dataset.i = i;
-  });
-  updateAddBtn();
-  reader.hidden = false;
-  document.body.classList.add('no-scroll');
-  reader.scrollTop = 0;
-  try { wakeLock = await navigator.wakeLock?.request('screen'); } catch {}
-}
-
-const key = (i) => `chk:${current.slug}:${lang()}:${i}`;
-
-function closeAll(keepHash) {
-  if (!keepHash && (location.hash || /\/r\//.test(location.pathname))) history.replaceState(null, '', ROOT);
-  reader.hidden = true;
-  shop.hidden = true;
-  document.body.classList.remove('no-scroll');
-  timers.forEach(clearInterval);
-  timers.clear();
-  wakeLock?.release?.();
-  updateFab();
-}
-
-function beep() {
-  try {
-    const ctx = new AudioContext(), o = ctx.createOscillator();
-    o.connect(ctx.destination); o.frequency.value = 880; o.start();
-    setTimeout(() => { o.stop(); ctx.close(); }, 900);
-  } catch {}
-  navigator.vibrate?.([300, 150, 300]);
-}
-
-function runTimer(btn) {
-  const label = btn.querySelector('span'), t = UI[lang()];
-  if (btn._iv) { // second tap stops
-    clearInterval(btn._iv); timers.delete(btn._iv); btn._iv = null;
-    btn.classList.remove('running'); label.textContent = `${t.start} ${fmt(+btn.dataset.s)}`;
-    return;
-  }
-  let left = +btn.dataset.s;
-  btn.classList.add('running');
-  btn._iv = setInterval(() => {
-    left--;
-    label.textContent = `${t.stop} ${fmt(left)}`;
-    if (left <= 0) {
-      clearInterval(btn._iv); timers.delete(btn._iv); btn._iv = null;
-      btn.classList.remove('running'); btn.classList.add('done');
-      label.textContent = t.done; beep();
-    }
-  }, 1000);
-  timers.add(btn._iv);
-  label.textContent = `${t.stop} ${fmt(left)}`;
-}
-
-body.addEventListener('click', (e) => {
-  const btn = e.target.closest('.timer');
-  if (btn) runTimer(btn);
-});
-body.addEventListener('change', (e) => {
-  if (e.target.matches('input[type=checkbox]')) {
-    e.target.checked ? store.set(key(e.target.dataset.i), '1') : store.del(key(e.target.dataset.i));
-  }
-});
-$('reader-reset').addEventListener('click', () => {
-  body.querySelectorAll('input[type=checkbox]').forEach((b) => { b.checked = false; store.del(key(b.dataset.i)); });
-});
-$('reader-add').addEventListener('click', () => {
-  list[current.slug] ? delete list[current.slug] : (list[current.slug] = 1);
-  saveList(); updateAddBtn();
-});
-
-// --- shopping list ------------------------------------------------------
-function aggregate() {
-  const map = {};
-  for (const r of index) {
-    const m = list[r.slug];
-    if (!m) continue;
-    for (const g of r.grocery || []) {
-      const k = `${g.aisle}|${g.key}|${g.unit || ''}`;
-      const o = map[k] ||= { k, aisle: g.aisle, name: g.name, unit: g.unit || '', qty: 0, opt: true, from: [] };
-      o.qty += (g.qty || 0) * m;
-      o.opt = o.opt && !!g.optional;
-      if (!o.from.includes(r.title[lang()])) o.from.push(r.title[lang()]);
-    }
-  }
-  return Object.values(map);
-}
-
-function fmtQty(o) {
-  if (!o.qty) return UI[lang()].toTaste;
-  let q = o.qty, u = o.unit;
-  if ((u === 'g' || u === 'ml') && q >= 1000) { q /= 1000; u = u === 'g' ? 'kg' : 'L'; }
-  q = (u === 'pcs' || u === 'bunch') ? Math.ceil(q - 1e-9) : Math.round(q * 100) / 100;
-  const label = UNIT[u] ? UNIT[u][lang()] : u;
-  return `${q.toLocaleString(lang() === 'ro' ? 'ro-RO' : 'en')}${label ? ' ' + label : ''}`;
-}
-
-function updateFab() {
-  const t = UI[lang()], items = aggregate(), left = items.filter((i) => !got[i.k]).length;
-  fab.textContent = `🛒 ${t.fab}${items.length ? ` (${left})` : ''}`;
-  fab.hidden = !reader.hidden || !shop.hidden;
-}
-
-function renderShop() {
-  const t = UI[lang()], items = aggregate();
-  const rows = index.map((r) => {
-    const m = list[r.slug];
-    return `<div class="recipe-row"><input type="checkbox" id="sr-${r.slug}" data-slug="${r.slug}" ${m ? 'checked' : ''}>` +
-      `<label for="sr-${r.slug}">${r.title[lang()]}</label>` +
-      (m ? `<span class="stepper" data-slug="${r.slug}"><button type="button" data-d="-1" aria-label="−">−</button><span>×${m}</span><button type="button" data-d="1" aria-label="+">+</button></span>` : '') + '</div>';
-  }).join('');
-  let html = `<h1>${t.shop}</h1><h2>${t.pick}</h2>${rows}`;
-  if (!items.length) html += `<p class="empty">${t.empty}</p>`;
-  else if (items.every((i) => got[i.k])) html += `<p class="empty">${t.allDone}</p>`;
-  for (const a of AISLES) {
-    const its = items.filter((i) => i.aisle === a).sort((x, y) => x.name[lang()].localeCompare(y.name[lang()]));
-    if (!its.length) continue;
-    html += `<section class="aisle"><h2>${AISLE[a][lang()]}</h2><ul class="shop-list">` + its.map((i) =>
-      `<li class="shop-item${i.opt ? ' opt' : ''}${got[i.k] ? ' done' : ''}" data-k="${i.k}"><label>` +
-      `<input type="checkbox" ${got[i.k] ? 'checked' : ''}><span><span class="qty">${fmtQty(i)}</span> ` +
-      `<span class="nm">${i.name[lang()]}${i.opt ? ` (${t.optional})` : ''}</span>` +
-      (i.from.length > 1 ? `<span class="from">${i.from.join(' + ')}</span>` : '') + '</span></label></li>').join('') + '</ul></section>';
-  }
-  shopBody.innerHTML = html;
-  updateFab();
-}
-
-function openShop() {
-  renderShop();
-  shop.hidden = false;
-  document.body.classList.add('no-scroll');
-  shop.scrollTop = 0;
-  fab.hidden = true;
-}
-
-shopBody.addEventListener('change', (e) => {
-  const li = e.target.closest('.shop-item');
-  if (li) {
-    e.target.checked ? (got[li.dataset.k] = true) : delete got[li.dataset.k];
-    saveGot();
-    li.classList.toggle('done', e.target.checked);
-    updateFab(); fab.hidden = true;
-    return;
-  }
-  const slug = e.target.dataset.slug;
-  if (slug) { e.target.checked ? (list[slug] = 1) : delete list[slug]; saveList(); renderShop(); }
-});
-shopBody.addEventListener('click', (e) => {
-  const b = e.target.closest('.stepper button');
-  if (!b) return;
-  const slug = b.parentElement.dataset.slug, i = STEPS.indexOf(list[slug]);
-  list[slug] = STEPS[Math.max(0, Math.min(STEPS.length - 1, i + +b.dataset.d))];
-  saveList(); renderShop();
-});
-$('shop-clear').addEventListener('click', () => { got = {}; saveGot(); renderShop(); });
-$('shop-copy').addEventListener('click', async () => {
-  const t = UI[lang()], items = aggregate();
-  const text = [t.shop, ...AISLES.flatMap((a) => {
-    const its = items.filter((i) => i.aisle === a);
-    return its.length ? ['', AISLE[a][lang()], ...its.map((i) => `${got[i.k] ? '[x]' : '[ ]'} ${fmtQty(i)} ${i.name[lang()]}`)] : [];
-  })].join('\n');
-  try {
-    if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) await navigator.share({ text });
-    else await navigator.clipboard.writeText(text);
-    $('shop-copy').textContent = t.copied;
-    setTimeout(() => { $('shop-copy').textContent = t.copy; }, 1500);
-  } catch {}
-});
-fab.addEventListener('click', openShop);
-
-// --- deep links: #/<slug>/<ro|en>, and share pages at r/<slug>/ ---------------
-const urlFor = (r) => new URL(`r/${r.slug}/${lang() === 'en' ? '?lang=en' : ''}`, ROOT).href;
-const goTo = (slug) => { history.pushState(null, '', new URL(`r/${slug}/${lang() === 'en' ? '?lang=en' : ''}`, ROOT).href); route(); };
-
-function route() {
-  const pm = location.pathname.match(/\/r\/([a-z0-9-]+)\/?$/);
-  const hm = location.hash.match(/^#\/([a-z0-9-]+)(?:\/(en|ro))?$/);
-  const slug = pm ? pm[1] : hm && hm[1];
-  const r = slug && index.find((x) => x.slug === slug);
-  if (!r) { if (!reader.hidden) closeAll(true); return; }
-  const want = pm ? (new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'ro') : (hm[2] || lang());
-  if ((want === 'ro') !== toggle.checked) { toggle.checked = want === 'ro'; renderUI(); }
-  if (reader.hidden || !current || current.slug !== r.slug) openRecipe(r);
-  if (!pm) history.replaceState(null, '', urlFor(r)); // old #/slug links get the preview-friendly address
-}
-window.addEventListener('hashchange', route);
-window.addEventListener('popstate', route);
-
-$('reader-share').addEventListener('click', async () => {
-  const url = urlFor(current), t = UI[lang()];
-  try {
-    if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) await navigator.share({ title: current.title[lang()], url });
-    else {
-      await navigator.clipboard.writeText(url);
-      $('reader-share').textContent = t.linkCopied;
-      setTimeout(() => { $('reader-share').textContent = t.share; }, 1500);
-    }
-  } catch {}
-});
-body.addEventListener('click', (e) => {
-  const a = e.target.closest('a[href^="recipe:"]');
-  if (a) { e.preventDefault(); goTo(a.getAttribute('href').slice(7)); }
-});
-
-// --- wiring -------------------------------------------------------------
-$('reader-close').addEventListener('click', () => closeAll());
-$('shop-close').addEventListener('click', () => closeAll());
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && (!reader.hidden || !shop.hidden)) closeAll(); });
-toggle.addEventListener('change', () => {
-  const r = reader.hidden ? null : current;
-  closeAll(true);
-  renderUI();
-  if (r) { history.replaceState(null, '', urlFor(r)); openRecipe(r); } else closeAll();
-});
-
-Promise.all([
-  fetch('recipes/index.json', { cache: 'no-cache' }).then((r) => r.json()),
-  fetch('references.json', { cache: 'no-cache' }).then((r) => r.json()).catch(() => [])
-]).then(([j, r]) => { index = j; refs = r; renderUI(); route(); });
+window.addEventListener('hashchange',followHash);
+(async()=>{translate();try{const response=await fetch(asset('recipes/index.json'));if(!response.ok)throw Error(response.status);recipes=await response.json();translate();followHash();}catch{$('cards').innerHTML='<p class="empty">Could not load the recipe notebook. Please refresh to try again.</p>';}})();

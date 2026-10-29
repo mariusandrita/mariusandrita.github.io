@@ -1,82 +1,27 @@
 <!doctype html>
-<html lang="ro">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marius Food Collection</title>
-<meta name="description" content="Rețete autentice din țara de origine, comparate din mai multe surse, cu pași, timere și poze. Authentic recipes from their country of origin.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f1e8"><meta name="description" content="A personal collection of recipes worth cooking. Explore, save, and bring something good to the table.">
+<title>The Good Table · Marius Food Collection</title>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Marius Food Collection">
-<meta property="og:title" content="Marius Food Collection">
-<meta property="og:description" content="Rețete autentice, cu pași, timere, poze și listă de cumpărături. Authentic recipes with steps, timers, photos and a shopping list.">
+<meta property="og:title" content="The Good Table · Marius Food Collection">
+<meta property="og:description" content="Recipes with a story, gathered from their roots. Tested sources. Thoughtful steps.">
 <meta property="og:image" content="https://mariusandrita.github.io/food-recipes/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://mariusandrita.github.io/food-recipes/">
 <meta name="twitter:card" content="summary_large_image">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261029-2"><script defer src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script><script defer src="recipe-view.js?v=20261029-2"></script><script defer src="app.js?v=20261029-2"></script>
 </head>
 <body>
-  <header>
-    <p class="eyebrow" id="t-eyebrow"></p>
-    <h1 id="t-title"></h1>
-    <p class="subtitle" id="t-sub"></p>
-    <div class="toggle-container">
-      <span>English</span>
-      <label class="switch">
-        <input type="checkbox" id="lang-toggle" checked>
-        <span class="slider round"></span>
-      </label>
-      <span>Română</span>
-    </div>
-    <p class="refs-link"><a href="#refs" id="refs-top"></a></p>
-  </header>
-
-  <section class="filters">
-    <input id="q" type="search" autocomplete="off">
-    <div id="chips"></div>
-    <p id="count" class="count"></p>
-  </section>
-
-  <main id="cards" class="grid"></main>
-
-  <section id="refs" class="refs">
-    <h2 id="t-refs"></h2>
-    <div id="refs-list" class="refs-list"></div>
-  </section>
-
-  <footer id="t-footer"></footer>
-
-  <button id="shop-fab" class="fab" type="button"></button>
-
-  <div id="reader" class="reader" hidden>
-    <div class="reader-bar">
-      <button id="reader-close" type="button" aria-label="Close">←</button>
-      <div class="bar-actions">
-        <button id="reader-share" type="button"></button>
-        <button id="reader-add" type="button"></button>
-        <button id="reader-reset" type="button"></button>
-      </div>
-    </div>
-    <article id="reader-body" class="reader-body"></article>
-  </div>
-
-  <div id="shop" class="reader" hidden>
-    <div class="reader-bar">
-      <button id="shop-close" type="button" aria-label="Close">←</button>
-      <div class="bar-actions">
-        <button id="shop-copy" type="button"></button>
-        <button id="shop-clear" type="button"></button>
-      </div>
-    </div>
-    <article id="shop-body" class="reader-body"></article>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
+<header class="masthead"><a class="wordmark" href="./" aria-label="The Good Table home">the good table<span>BY MARIUS</span></a><nav aria-label="Main navigation"><a href="#collection" data-t="browse">Browse recipes</a><button id="saved" data-t="saved">Saved recipes</button><button id="shopping" class="bag"><span data-t="shopping">Shopping list</span> <span id="bag-count">0</span></button></nav><button id="language" class="language" aria-label="Switch language">EN / <span>RO</span></button></header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow" data-t="eyebrow">A PERSONAL COLLECTION. A WORLD OF FLAVOUR.</p><h1 data-t="headline">Good food.<br>Made <em>at home.</em></h1><p class="intro" data-t="intro">Recipes with a story, gathered from their roots.<br>Tested sources. Thoughtful steps. Worth your time.</p><a class="primary" href="#collection"><span data-t="explore">Find your next favourite</span><span>↗</span></a><div class="hero-note"><span class="seal">✳</span><span data-t="note">From our kitchen notebook<br>to your dinner table.</span></div></div><button id="feature" class="feature" aria-label="Open featured recipe"><img src="recipes/images/antricot-la-tigaie/finished.jpg" alt="Pan-seared steak with asparagus"><span class="feature-top"><span data-t="spotlight">ON THE MENU TODAY</span><span>01 / 15</span></span><span class="feature-bottom"><span><small data-t="featurelabel">A LITTLE PATIENCE. A PERFECT CRUST.</small><strong id="feature-title">Pan-seared ribeye</strong><span class="feature-time">40 min + 6 h <span>·</span> <span data-t="maincourse">Main course</span></span></span><span class="circle-arrow">↗</span></span></button></section>
+<div class="ticker" aria-hidden="true"><span data-t="ticker1">REAL INGREDIENTS</span><b>✳</b><span data-t="ticker2">RECIPES WITH ROOTS</span><b>✳</b><span data-t="ticker3">A LITTLE KITCHEN CURIOSITY</span><b>✳</b><span data-t="ticker4">SOMETHING WORTH SHARING</span></div>
+<section id="collection" class="collection"><div class="section-heading"><div><p class="eyebrow" data-t="collectionlabel">THE RECIPE NOTEBOOK</p><h2 data-t="collection">What sounds good?</h2></div><p id="recipe-count" aria-live="polite"></p></div><div class="tools"><div id="categories" class="categories" aria-label="Recipe category"></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a recipe or ingredient…" aria-label="Search recipes"></label></div><div class="secondary-filters"><label><span data-t="origin">From</span> <select id="country" aria-label="Country"><option value="">Everywhere</option></select></label><label><span data-t="sortlabel">Sort by</span> <select id="sort" aria-label="Sort recipes"><option value="default">Notebook order</option><option value="az">A — Z</option></select></label><button id="reset" data-t="reset">Reset filters ↺</button></div><div id="cards" class="cards" aria-live="polite"><p>Opening the recipe notebook…</p></div></section>
+<section class="closing"><span>✳</span><h2 data-t="closing">A good recipe is<br>meant to be kept.</h2><p data-t="closingcopy">Save a favourite. Make it your own.<br>Come back when you’re hungry.</p></section>
+</main><footer><span>the good table <small> / MARIUS FOOD COLLECTION</small></span><span data-t="footer">Cook with curiosity. Eat with company.</span><span>© 2026</span></footer>
+<dialog id="reader"><div class="dialog-bar"><button id="close" data-t="back">← Back to the notebook</button><div><button id="save-recipe"></button><button id="add-shopping" data-t="addshopping">+ Shopping list</button></div></div><div id="reader-content"></div></dialog><div id="toast" role="status"></div>
+</body></html>
