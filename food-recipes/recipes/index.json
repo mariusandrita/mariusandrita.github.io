@@ -2371,5 +2371,125 @@
         "unit": ""
       }
     ]
+  },
+  {
+    "slug": "crispy-chicken-strips-bugs-bunny",
+    "image": "recipes/images/crispy-chicken-strips-bugs-bunny/finished.jpg",
+    "theme": "#d69a43",
+    "origin": "🇺🇸",
+    "time": "45 min",
+    "title": {
+      "en": "Crispy chicken strips",
+      "ro": "Fâșii de pui crocante"
+    },
+    "tagline": {
+      "en": "bugs.bunny.cooks: flour, a one-second cold-water dip, then flour again",
+      "ro": "bugs.bunny.cooks: făină, o secundă în apă rece, apoi iar făină"
+    },
+    "source": {
+      "kind": "reel",
+      "tags": [
+        "social"
+      ],
+      "badge": {
+        "en": "🎬 Local video · bugs.bunny.cooks",
+        "ro": "🎬 Video local · bugs.bunny.cooks"
+      },
+      "label": {
+        "en": "From supplied video speech and frames; added amounts are typical. Original post and platform unknown.",
+        "ro": "Din vorbirea și cadrele clipului furnizat; cantitățile adăugate sunt orientative. Postarea și platforma nu sunt cunoscute."
+      }
+    },
+    "country": {
+      "key": "us",
+      "en": "🇺🇸 USA",
+      "ro": "🇺🇸 SUA"
+    },
+    "course": [
+      "main",
+      "snack"
+    ],
+    "grocery": [
+      {
+        "aisle": "meat",
+        "key": "chicken-breast",
+        "name": {
+          "en": "Chicken breast (typical)",
+          "ro": "Piept de pui (orientativ)"
+        },
+        "qty": 600,
+        "unit": "g"
+      },
+      {
+        "aisle": "dairy",
+        "key": "eggs",
+        "name": {
+          "en": "Egg",
+          "ro": "Ou"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "flour",
+        "name": {
+          "en": "Plain flour (typical)",
+          "ro": "Făină albă (orientativ)"
+        },
+        "qty": 300,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "paprika",
+        "name": {
+          "en": "Sweet paprika (typical)",
+          "ro": "Boia dulce (orientativ)"
+        },
+        "qty": 4,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Fine salt (typical)",
+          "ro": "Sare fină (orientativ)"
+        },
+        "qty": 7,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "black-pepper",
+        "name": {
+          "en": "Black pepper (typical)",
+          "ro": "Piper negru (orientativ)"
+        },
+        "qty": 1,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "neutral-oil",
+        "name": {
+          "en": "Frying oil allowance (typical)",
+          "ro": "Necesar de ulei pentru prăjit (orientativ)"
+        },
+        "qty": 1000,
+        "unit": "ml"
+      },
+      {
+        "aisle": "other",
+        "key": "water",
+        "name": {
+          "en": "Cold drinking water (typical; check you have)",
+          "ro": "Apă potabilă rece (orientativ; verifică dacă ai)"
+        },
+        "qty": 1000,
+        "unit": "ml"
+      }
+    ]
   }
 ]
