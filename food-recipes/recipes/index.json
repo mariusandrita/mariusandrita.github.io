@@ -2491,5 +2491,421 @@
         "unit": "ml"
       }
     ]
+  },
+  {
+    "slug": "magret-de-canard",
+    "image": "recipes/images/magret-de-canard/finished.jpg",
+    "theme": "#b9703c",
+    "origin": "🇫🇷",
+    "time": "45–60 min",
+    "title": {
+      "en": "Duck breast with crisp skin",
+      "ro": "Piept de rață cu piele crocantă"
+    },
+    "tagline": {
+      "en": "For your 1 kg pack: score, render gently, rest, slice",
+      "ro": "Pentru 1 kg: crestează, topește grăsimea lent, lasă la odihnit, feliază"
+    },
+    "source": {
+      "kind": "web",
+      "tags": [
+        "web"
+      ],
+      "badge": {
+        "en": "🌐 4 French cooking sources",
+        "ro": "🌐 4 surse culinare franceze"
+      },
+      "label": {
+        "en": "French pan method compared across Magret de France, Régal, Ferme du Cousteau and Chef Simon; scaled to 1 kg.",
+        "ro": "Metodă franceză la tigaie, comparată în Magret de France, Régal, Ferme du Cousteau și Chef Simon; calculată pentru 1 kg."
+      },
+      "url": "https://lemagret.fr/la-cuisson-du-magret-canard/"
+    },
+    "country": {
+      "key": "fr",
+      "en": "🇫🇷 France",
+      "ro": "🇫🇷 Franța"
+    },
+    "course": [
+      "main"
+    ],
+    "grocery": [
+      {
+        "aisle": "meat",
+        "key": "duck-breast",
+        "name": {
+          "en": "Skin-on duck breasts",
+          "ro": "Piept de rață cu piele"
+        },
+        "qty": 1000,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "salt",
+        "name": {
+          "en": "Fine salt (to taste; typical allowance)",
+          "ro": "Sare fină (după gust; cantitate orientativă)"
+        },
+        "qty": 10,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "black-pepper",
+        "name": {
+          "en": "Black pepper (to taste; typical allowance)",
+          "ro": "Piper negru (după gust; cantitate orientativă)"
+        },
+        "qty": 1,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "slug": "hong-shao-niu-rou-mian",
+    "image": "recipes/images/hong-shao-niu-rou-mian/finished.jpg",
+    "theme": "#aa4e25",
+    "origin": "🍜",
+    "time": "5 h",
+    "title": {
+      "en": "Chinese braised beef noodle soup",
+      "ro": "Supă chinezească de vită cu tăiței"
+    },
+    "tagline": {
+      "en": "scallion__baby: shank, rib fingers and fragrant broth simmered for about four hours",
+      "ro": "scallion__baby: rasol, carne dintre coaste și supă aromată, fierte lent circa patru ore"
+    },
+    "source": {
+      "kind": "reel",
+      "tags": [
+        "social",
+        "instagram"
+      ],
+      "badge": {
+        "en": "🎬 Instagram · scallion__baby",
+        "ro": "🎬 Instagram · scallion__baby"
+      },
+      "label": {
+        "en": "User-supplied Instagram video and caption; metric quantities, gaps clearly marked. Link opens the creator’s matching article.",
+        "ro": "Clip și descriere Instagram furnizate de utilizator; cantități metrice, completări marcate. Linkul deschide articolul autoarei."
+      },
+      "url": "https://emilyywang.substack.com/p/chinese-braised-beef-noodle-soup"
+    },
+    "country": {
+      "key": "zh",
+      "en": "Chinese-language cuisine",
+      "ro": "Bucătărie de limbă chineză"
+    },
+    "course": [
+      "soup",
+      "main"
+    ],
+    "grocery": [
+      {
+        "aisle": "meat",
+        "key": "beef-shank-pieces",
+        "name": {
+          "en": "Whole beef shanks (weight unspecified)",
+          "ro": "Bucăți întregi de rasol (greutate neprecizată)"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "meat",
+        "key": "beef-rib-fingers",
+        "name": {
+          "en": "Boneless beef rib fingers",
+          "ro": "Carne dezosată dintre coastele de vită"
+        },
+        "qty": 1360,
+        "unit": "g"
+      },
+      {
+        "aisle": "produce",
+        "key": "tomato",
+        "name": {
+          "en": "Tomatoes",
+          "ro": "Roșii"
+        },
+        "qty": 3,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "carrot",
+        "name": {
+          "en": "Carrots",
+          "ro": "Morcovi"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "onion",
+        "name": {
+          "en": "Onion",
+          "ro": "Ceapă"
+        },
+        "qty": 1,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "garlic-clove",
+        "name": {
+          "en": "Garlic cloves",
+          "ro": "Căței de usturoi"
+        },
+        "qty": 5,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "ginger",
+        "name": {
+          "en": "Ginger (typical)",
+          "ro": "Ghimbir (orientativ)"
+        },
+        "qty": 40,
+        "unit": "g"
+      },
+      {
+        "aisle": "produce",
+        "key": "scallions",
+        "name": {
+          "en": "Scallions (3 cooking + 3 typical garnish)",
+          "ro": "Ceapă verde (3 pentru gătit + 3 orientativ pentru servire)"
+        },
+        "qty": 6,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "produce",
+        "key": "spinach",
+        "name": {
+          "en": "Spinach (typical)",
+          "ro": "Spanac (orientativ)"
+        },
+        "qty": 500,
+        "unit": "g"
+      },
+      {
+        "aisle": "produce",
+        "key": "cilantro",
+        "name": {
+          "en": "Cilantro (typical)",
+          "ro": "Coriandru verde (orientativ)"
+        },
+        "qty": 20,
+        "unit": "g",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "pickled-mustard-greens",
+        "name": {
+          "en": "Pickled mustard greens (typical)",
+          "ro": "Frunze de muștar murate (orientativ)"
+        },
+        "qty": 200,
+        "unit": "g",
+        "optional": true
+      },
+      {
+        "aisle": "dairy",
+        "key": "eggs",
+        "name": {
+          "en": "Eggs (typical)",
+          "ro": "Ouă (orientativ)"
+        },
+        "qty": 10,
+        "unit": "pcs",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "fresh-wheat-noodles",
+        "name": {
+          "en": "Fresh wheat noodles (typical)",
+          "ro": "Tăiței proaspeți din grâu (orientativ)"
+        },
+        "qty": 1000,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "doubanjiang",
+        "name": {
+          "en": "Spicy doubanjiang (volume)",
+          "ro": "Doubanjiang picant (volum)"
+        },
+        "qty": 60,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "soy-sauce",
+        "name": {
+          "en": "Regular soy sauce",
+          "ro": "Sos de soia obișnuit"
+        },
+        "qty": 120,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "dark-soy-sauce",
+        "name": {
+          "en": "Dark soy sauce",
+          "ro": "Sos de soia dark"
+        },
+        "qty": 120,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "oyster-sauce",
+        "name": {
+          "en": "Oyster sauce",
+          "ro": "Sos de stridii"
+        },
+        "qty": 30,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "rock-sugar",
+        "name": {
+          "en": "Rock sugar (approx.)",
+          "ro": "Zahăr candel (aprox.)"
+        },
+        "qty": 25,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "rice-cooking-wine",
+        "name": {
+          "en": "Rice cooking wine",
+          "ro": "Vin de orez pentru gătit"
+        },
+        "qty": 60,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "neutral-oil",
+        "name": {
+          "en": "Neutral oil (typical)",
+          "ro": "Ulei neutru (orientativ)"
+        },
+        "qty": 30,
+        "unit": "ml"
+      },
+      {
+        "aisle": "pantry",
+        "key": "chili-oil",
+        "name": {
+          "en": "Chili oil (typical)",
+          "ro": "Ulei picant (orientativ)"
+        },
+        "qty": 50,
+        "unit": "ml",
+        "optional": true
+      },
+      {
+        "aisle": "pantry",
+        "key": "star-anise",
+        "name": {
+          "en": "Star anise",
+          "ro": "Anason stelat"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "cao-guo",
+        "name": {
+          "en": "Chinese black cardamom / cao guo",
+          "ro": "Cardamom negru chinezesc / cao guo"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "cinnamon-stick",
+        "name": {
+          "en": "Cinnamon sticks",
+          "ro": "Batoane de scorțișoară"
+        },
+        "qty": 2,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "cloves",
+        "name": {
+          "en": "Cloves",
+          "ro": "Cuișoare"
+        },
+        "qty": 3,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "bay-leaf",
+        "name": {
+          "en": "Bay leaves",
+          "ro": "Foi de dafin"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "dried-chili",
+        "name": {
+          "en": "Dried chilies",
+          "ro": "Ardei iuți uscați"
+        },
+        "qty": 4,
+        "unit": "pcs"
+      },
+      {
+        "aisle": "pantry",
+        "key": "sichuan-pepper",
+        "name": {
+          "en": "Sichuan peppercorns (approx.)",
+          "ro": "Piper Sichuan (aprox.)"
+        },
+        "qty": 6,
+        "unit": "g"
+      },
+      {
+        "aisle": "pantry",
+        "key": "fennel-seeds",
+        "name": {
+          "en": "Fennel seeds (approx.)",
+          "ro": "Semințe de fenicul (aprox.)"
+        },
+        "qty": 6,
+        "unit": "g"
+      },
+      {
+        "aisle": "other",
+        "key": "water",
+        "name": {
+          "en": "Braising water initially (typical; extra as needed)",
+          "ro": "Apă inițială pentru fiert (orientativ; suplimentar după nevoie)"
+        },
+        "qty": 4000,
+        "unit": "ml"
+      }
+    ]
   }
 ]
